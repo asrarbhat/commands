@@ -121,8 +121,43 @@ you can share bind mounts accross conatiners as well
 
 by default volumes are read and write 
 you can make them read only by using volume-name:/app:ro now container won't write to local folder
-
-
+even here you put more specific anonymous volume if you want some files to be overridden
 
 for volumes files exist in both and are in sync,container overrides local 
+
+
+
+to remove a volume
+docker volume rm firstvolume
+
+you don't use bind mounts in production
+
+you can even use argumenets for dockerfile using ARG in dockerfile,but leave it for now
+put arg near where it is needed
+as even ARG makes its own layer
+
+
+DOCKER NETWORKS
+you can send web requests in your container,if you are sending request to some website.
+
+to send requests to local host replace localhost with host.docker.internal
+COOOOOOOOOOOOL
+
+for container to container,just use the name of container as docker builds internal network of all containers.
+docker contaner inspect cname you would get ip address here as well of that container
+no need to hardcard,just use names of containers.
+
+to create multiple NETWORKS
+docker network create first-net
+docker network ls
+docker run -d --name abd --network first-net mongo
+
+
+
+logs are important for debugging.
+
+
+
+
+
 
