@@ -1,0 +1,301 @@
+module 1:
+
+    it was just an introduction.
+
+module 2:
+
+    what is deep learning?
+        ML based on ANN
+    what is Machine Learning?
+        it is turining data into numbers and finding patterns
+        in those numbers 
+        How?
+            code and math.
+    
+    AI contains ML and ML contains DL.
+
+    traditional Programming: input + rules  => output 
+    Machine learning       : input + output => rules/approximate rules.
+
+    why ML or DL ?
+        for a complex problem,it is hard to think of all rules,Hence let the machine figure out all rules.
+    
+    you can pretty much do anything with ML.
+
+    Don't use ML if you can build good rule based system.
+
+    when rules are hard to figure out,use DL.
+    if data changes continuously use DL.
+    large data to discover insights,use DL.
+
+    first important step is to represent Inputs and Outputs in numbers in a meaninful and
+    efficient way.
+
+    google, Google machine learning handbook to see do's and dont's of ML.
+
+    when not to use DL?
+        when you need explainability.
+        patterns learned are not interpretable.
+        when traditional approach is better.
+        when errors are unacceptable.
+        when you don't have much data.
+    
+    common ML => for structured data => shallow algorithms
+        Random Forest
+        Naive Bayes
+        Nearest neighbour
+        SVM
+        etc
+    DL => good for unstructured data => text,voice,images etc
+        Neural networks
+        fully connected Neural networks
+        CNN 
+        RNN 
+        transformers 
+        etc
+    
+    Neural network:
+        a network or circuit of neurons.
+    
+    input -> numerical encoding -> learns representation,patterns,features,weights -> representation of output -> convert to human understandable output.
+
+    Anatomy of NN:
+        input layer -> hidden layer (learns patterns)-> output layer (outputs learned,represented/probabilities)
+
+    note: pattern<>embedding<>weights<>feature representation/vector
+          input<> feature
+    
+    Learning:
+        supervised: data + label
+        semi-supervised: Data + some labels
+        unsupervised : Data only
+        transfer learning: using trained mdoel on other problem
+    
+    in this course:
+        supervised learning and transfer learning
+    
+    some usecases of DL:
+        Recomandation systems
+        Tranlation
+        speech recognition
+        computer vision
+        NLP
+        sequence to sequence (seq2seq) like hindi to english
+        classification and regression
+    
+    DL model <> DL architecture
+
+    tensorflow:
+        used to build DL mdoels.
+        can write code in python and run on GPU/TPU
+        have access to prebuild DL models (tensorflow hub)
+        open-source
+        it allows preprocessing,model,deploy model in your application.
+        tensorflow.org
+    
+    TPU is for NN usually for tensorflow
+    ASIC : application specific integrated circuit
+
+    tensor:
+        tensorflow<> flow of tensors
+        vector is a tensor of rank 1
+        tensor<> multidimetional matrix.
+        Area is not a vector <> A vector can represent Area -> magnitude and perpendicular direction.
+    
+
+    using google colab:
+        tensorflow-fundamentals.ipynb
+        write comments in a cell and ctrl+M to convert it into text cell/markdown cell
+        shift+enter for new cell
+        esc+cmd +b from markdown cell to have next code cell
+        tensorflow is a framwork.
+        
+        importing tensorflow
+            import tensorflow as tf
+            print(tf.__version__) #2.3.0
+        it is very much like numpy
+
+        creating tensor with tf.constant
+            scalar=tf.constant(7) //ctrl+shift+space for documentation
+            input to tf.constant can be any tensor like object
+            scalar.ndim //0
+
+            creating a vector 
+                vector=tf.constant([1,2,3])
+                vector.ndim is 1
+            ndim is the length of its shape
+
+            create a matrix
+            matrix=tf.constant([[1,2,3],[4,5,6]])
+            shape is (2,3) and ndim is 2
+
+            data type would be most expressive one.
+            
+            matrix=tf.constant([[],[]],dtype=tf.float16) //using dtype parameter
+                can use int32,int64,float64 etc
+            
+            if shape is 2,3,4 then it has 4 columns and 3 rows and 2 2d matrices
+
+            basically ndim gives number of dimentions it takes in space.
+
+            a tensor is an n-dimentional array of numbers,where n can be from 0 to inf
+            1D tensor is a vector
+            if in doubt,code it out.
+
+            CREATING TENSORS WITH tf.Variable
+                 these ones are changeable
+            tensor=tf.Varialbe(your object)
+            tensor[0].assign(7) to change a Variable tensor. can't change one created using constant.
+
+            CREATING RANDOM TENSORS:
+                try always tf.constant initially and only make variable when changes are needed.
+                we use them to initialize the weights.
+                random_1=tf.random.Generator.from_seed(42)
+                random=random_1.normal(shape=(3,2))
+                ---------------.uniform(----------)
+                or use 
+                    tf.random.normal(shape=...)
+                    tf.random.uniform(shape=...)
+                
+                from a seed,you always get same tensor,given the same distribution,hence gives us reproduceability.
+
+            SHUFFLING THE ORDER OF TENSORS.
+                tf.random.shuffle(t1)
+                    it shuffles randomly across first dimention                
+                tf.random.shuffle(t2,seed=42)
+                     to get same shuffled always.
+                     keep global seed also 42 e.g tf.random.set_seed(42)
+                     have to set global seed as well
+                     important if you want it to be reproducible
+
+                we shuffle to get random distribution of categories.
+                so it doesn't learn only one type of pattern.
+
+            SEED:
+                global level
+                opeartion level
+
+                if both of them are set both seeds are used in conjunction to determine the random sequence.that is why shuffle with seed was giving different result.
+
+                tf.random.set_seed(42) to set the global seed
+
+            tf also has numpy like functions.
+                tf.ones([2,3]) can use tuple also
+                tf.zeros(shape=(2,3))
+
+            NUMPY TO TENSOR
+                the main difference between numpy and tf is that tf runs on GPU
+                tensor=tf.constant(arr)
+                capital letters for naming constant tensors
+
+                tensor=tf.constant([],shape=(2,3,4)) element numbers should be same for reshaping
+            
+            in colab Runtime,Run before to run all before.
+
+            GETTING INFO ABOUT TENSORS
+                t.ndim
+                t.shape
+                tf.size(tensor) total no. of items in tensor
+
+                two way to get something or do something
+                 either t.property or function
+                 or tf.function(tensor name)
+                
+            INDEXING
+                A[0,3:4,5:6]
+                A[0] first element in first dimetion but whole
+                A.dtype
+                A.shape[0]
+                A.numpy() to convert into numpy
+                A[...,tf.new axis] adds one more axis (2,2) to (2,2,1)   ... is same as  :,:,:,: and so on.
+                or tf.expand_dims(rank2,axis=-1) 2,2 to 2,2,1
+                if axis=0 then to 1,2,2 just extra []
+
+
+    TENSOR OPERATIONS:
+
+        tensor+10  original is unchanged
+        tensor=tensor+10
+
+        * / + - % work fine
+
+        or tf.multiply(tensor,10) <> tf.math.multiply()
+        it uses gpy and,orignal remains unchanged.
+        tf.math.add() you can skip math for some opeartions it is a shorthand.
+
+        basically to run on gpu use inbuilt functions.
+
+
+        matrix multiplication:
+            dot product of rows of first and columns of second.
+            * is for element wise multiplication
+            tf.matmul(t1,t2)
+            tf.linalg.matmul(t1,t2)
+            usually you can drop middle one.
+
+            @ in python fo matrix multiplication
+            t1@t2
+
+            tf.reshape(y,shape=(2,3))
+            tf.transpose(t)
+            tf.matmul(tf.transpose(x),x)
+        data types usually float32,int32
+        16 bit precision is 3 times faster and less memory
+        B=tf.cast(t,dtype=tf.float16) it is called reduced precision
+
+
+        aggregates:
+            condensing from more to less values
+                abs:
+                 to get absolute values:
+                    tf.abs(D)
+                tf.reduce_min(t)
+                tf.reduce_max(t)
+                tf.reduce_mean(t)
+                tf.reduce_sum(t)
+                tf.math.reduce_std(t) here t should be real 
+                tf.math.reduce_variance(t)
+
+        positional aggregates:
+             tf.argmax(t) return index of max 
+             np.argmax(A) also works
+             similarly argmin() 
+
+        squeezing tensor
+
+            removing single dimentions
+                tf.sqeeze(t) removes all 1 dimentions
+
+        one hot encoding:
+
+            l=[0,1,2,3]
+            tf.one_hot(l,depth=4) we get 4,4 matrix with first columns first element 1 rest 0 and second columns 2nd and so on
+            tf.one_hot(l,depth=4,on_value="hithere",off_value="hello")
+            l is the indices in depth
+
+            
+        h=tf.range(1,10)
+        tf.square(h)
+        tf.sqrt(t2)
+        tf.log(h)
+
+        tensor numpy compatibility
+            tf.constant(np.array(...))
+            arr.numpy(tensor) or tensor.numpy()
+        
+
+    using GPU/TPU
+        tf.config.list_physical_devices() to see where we are running our program. 
+        tf.config.list_physical_devices("GPU")
+        list of GPU's,would return empty list if none
+
+        go to runtime,change runtime type, click on GPU 
+        now it will have GPU also
+
+        CUDO -> DRIVER-> API by nvidia .inferface between tf and GPU
+        !nvidia-smi to see gpu
+        if you have access to CUDA enabled GPU, tf will automatically use it whenever needed.
+
+
+module 3:
+    
