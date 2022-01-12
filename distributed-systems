@@ -251,3 +251,100 @@ LECTURE 2: RPC and threads
             you can use shared memory or channels for threads to communicate.
             you might not need locks in this way.
             
+LECTURE 3: GFS: case study: how to build big storage.
+    storage is one of the most important abstraction when it comes to distributed systems.
+
+    and i was a sucessful and was used for a long time in real,world.
+
+    WHY IS IT HARD?
+        there are a lot of things to get right.
+        we want peformance,since disks are really slow usually
+            done using sharding=>splitting data across machines with replication.
+        we want fault tolerance:
+            using replication.
+            and they should be in sync.
+            with replication we risk consistency.
+        we want conisistency and we pay for it with low performance.
+
+        the ideal behaviour is like as if it is just one server with one copy of data => strong consistency.
+
+    BAD REPLICATION DESIGN:
+                we have two servers each with a replicated database and we want to keep them in sync.
+                now if you want to update both the databases and one of the update request fails,we get incosistent databases.
+
+    GFS:
+        gfs fixes it,we get better but not perfect design
+        it was built in 2003
+
+        given a vast data set that cannot be stored on a single disk.
+        they had logs,indexes,web pages etc.
+
+        now they wanted to process them quickly using map reduce.
+        
+        hence they wanted a big and fast storage system that was general and can be used for any application,hence
+        it should be reusable
+
+        to do bigness and fastness they needed to split the data into multiple machines.
+        even a single file would get split and,
+        failure recovery should be automatic.
+
+        GFS was designed to run on a single data center / machine room
+
+        it was for internal use only .
+
+        paper was publised in 2003
+
+        these ideas were not new.
+
+        but it described a system that already built hence makes it a milestone.
+
+        it used a single master.
+
+        google search can get away with inconsitencies and a bank cannot
+
+        MASTER:
+            keeps logs for checkpoints.
+            even the chunk servers know what chunks of which files they have so no need to store in disk.
+            lease expiration is for chunks then next chunk is primary,one where people read and perform computation on.
+
+
+        READ:
+            application/client has a file name and offset in mind and wants to read it from that offset.
+            these are send to master,and master return chunk handle and the list of servers to read from.
+
+            client caches these results to avoid asking master same info again and again.
+
+            now client asks the chunk server for that chunk and tells it the offset,
+            and chunk server has these files in ordinary linux files with handle as the name of that files
+            and returns the data to the client.
+
+            client would try to get chunks from different server on same rack in data house.
+
+        WRITES:
+
+            client wants to append something to a file.
+
+            client asks the master that it wants to append and asks it for last chunk.
+            got writing we only need to write to primary.
+
+            if no primary,then you have to update the most up to date chunk ones.
+
+            first step is to find up to date replica chunk=> this is happening in master.
+
+            master has version numbers so it can figure out which one has the up to date.
+
+            each chunk also know the verison number of chunks it has.
+
+            takes the primary,rest being secondary. the master increment teh version number and it sends to secondary
+            that here is the primary with this version so update yourself.
+
+            data is send to primary and second and data is stored in temprary files and then primary writes to end and tells all other to do the same.
+
+            once all secondaries reply sucess to primary and primary then replies sucess to client.
+            if any of them fails hence primary sends it failed.
+
+            three replicas per chunk by default.
+
+            master was the limitation as there was a single master.
+            and load on single master increasesd.
+            
