@@ -348,3 +348,156 @@ LECTURE 3: GFS: case study: how to build big storage.
             master was the limitation as there was a single master.
             and load on single master increasesd.
             
+LECTURE 4: PRIMARY BACKUP REPLICATION
+    if something crashes we still want availablity
+    and our tool would be replication.
+
+    by failure we mean failure of a single computer.
+        the computer simpy stops executing and that doesn't 
+        mean it is computing wrong results.
+        fail stop -> it stopped working
+        
+        eg. fan failed hence the cpu.
+    
+    we are not covering the 
+        bugs in software and design issues in hardware.
+
+    replication cannot help with bugs.
+
+    same for the case when hardware computes incorrectly.
+
+    kernel panic is also covered under here.
+
+    disks have error correction codes in case of bit flip 
+    same for network we have checksum.
+
+    there certainly are limitations to replicas.
+    we think failure in one machine is independent of each other.
+
+    there could be a corelation that failures hence if one fails 
+    then all fail
+    same for building buring down or an earthquake
+    hence for such cases we need replicas over distance.
+
+
+    is replication worth it?
+        since it uses thrice as much as disk space.
+        it is an economic question
+             it depends on the value of having online service.
+        things depend on the consequence of failure.
+        and ofcourse the cost.
+
+    approaches to replication:
+        state transfer.
+            given replicas of machine.
+            the primary sends the copy of its state/RAM and it is saved in case something wrong happens,this is send over 
+            network for backup
+        
+        replicated state machines.
+            something unexpected happens only when there is something
+            wrong in external events/inputs
+            hence you only backup those external events.
+            or operations.
+            operations are smaller than the states,hence this one is 
+            very efficient,although the assumptions are too strict.
+        
+        this lecture is about uniprocessors:
+
+        state transfer is more robust.
+
+        if primary fails go to backup server:
+            there is going to be an anomoly during the cross over.
+        and even second replica can fail hence we need third replica up now.
+        and the state is transfered to it and it is gonaa be expensive 
+        to transfer whole state.
+
+        what state to replicate:
+             we can be replicating every single thing machine are doing,every single bit of state,we don't care what is running on it,we are even replicating the register.
+             eg vmware replication.
+
+        HOW VMWARE FT WORKS:
+            VMWARE is virutal machine company,this was their starting point.
+
+        in the paper:
+            we have two machines running.
+            client sends request to primary
+            Virtual machine monitor(VMM) get the request 
+            and it sends the copy to backup VMM monitor.
+            and now both have the same copy of the input 
+            and both will process it the same way and be 
+            in synchronization.
+
+            primary would send reply to the client.
+            and so does the backup,but the VMM drops that packet.
+            this sending from primary to backup are called log events
+            on log channel.
+
+        fault tolerance:
+            if primary crashes,it stops getting log entries
+            which are usually periodic.
+
+            VMM monitor on backup figures out that the primary must
+            be dead so the backup goes live.
+
+            and now future requests goes to backup from now on 
+            and our backup has taken over.
+
+            if the backup fails similarly 
+            the primary would abandom the backup.
+
+            backup could take over by claiming primaries ethernet id.
+
+
+        NON DETERMINISTIC EVENTS THAT MIGHT HAPPEN:
+            inputs from external source.
+                that is why we are replicating in the first place.
+                otherwise if there is no state,we can start new server
+                directly.
+            recieving packets is basically an interrupt to cpu.
+
+            weird instructions:
+                like random number generator.
+            multicore parallelism
+                this is uniprocessor system only
+                because then the service would be running on multicore
+                and the intructions could be interleving and could
+                cause different results.
+                eg. getting locks before one another in program
+                different threads can get locks at different times
+            
+            log entry:
+                instruction at which interrupt occured.
+                type
+                data/packet
+            
+            interrupts have to occur at the same time,
+            if we want them to not divege.
+
+            VMM keeps track of these and sends to backup
+            and backup VMM has to do the same,it arranges with
+            cpu to cause the interrupt at the same instruction.
+            it might need some hardware support.to ask cpu to interrupt say after 1000 intstructions. all intel chips
+            now support it. this can be used to profile cpu as well.
+
+            VMM can be used to do what we learned in this lecture.
+
+            backup is always behind the primary.
+
+            NIC usually DMA'S data in the RAM.
+            we can't allow that in this case as we don't have control over such events hence cannot be replicated.
+            so we store them in virtual machine monitors private memory and then it writes to our VMM memory deterministically so it can be replicated
+
+        failure at ackward time is the crux of problems in distributed systems.
+
+        all these processing is happening in VMWare,VMWare is written in C.
+
+        this syncronous wait can be a peformance issue.
+        at this level servers don't have ip addresses.
+        as they are in LAN,and they communcate with MAC addresses.
+
+    if primary and replica cannot communicate,then we have split 
+    brain disaster and each one of them acts as if they are the ones who is alive:
+         to solve this there is an outside authority that decides which one is the real one.
+         eg putting Test and Set flag in disk that they share,and one that acquires gets to live.or we can have TESt and set server.
+    
+    
