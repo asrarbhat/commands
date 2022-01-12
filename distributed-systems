@@ -189,4 +189,65 @@ LECTURE 1
 
     modern data centers have fast network thoroughput so no need to run GFS and mapper on same machine.hence can be on different machines.
 
-    
+
+LECTURE 2: RPC and threads
+    we are using GO for labs
+        good support for threads and locking and convinient remote procedure call package.
+        it is type safe and memory safe.
+        it is garbage collected.
+        combination of threads and garbage collections is important.
+        in c++ you can't free memory until last thread stops working
+        and the langauge is simpler than c++
+
+    THREADS:
+        threads are the main tool to manage concurrency.
+        in GO threads are called go routines.
+        threads share address space.
+        threads have separate stack and pointers.
+        since they share address space,in principle they can access each others stack but we don't usually do that.
+        we use threads for multicore parallelism.
+
+        I/O concurrency:
+            waiting for multiple replies at a time.
+            and sending from multiple threads simultanoesly in the network
+            threads can share a port bout usually we don't do that,as that would be a bottleneck.
+
+        also to be doing something in background,instead of using that thing in main program and writing 
+        checks directly in main program,it should do checks in background.
+        like sleep for a second and do something again.
+
+        another line of thinking is to do asynchornous programming/ event driven programming.
+            it has a single thread and single loop that waits for anything that triggers something.
+        
+        threads are usually more linear and convinient to program and with asynchrous cannot be used to
+        harness multiple cores.
+
+        to use both parallalism and asynchornous, we can create as many threads as the no. of processors and 
+        each using event driven programming.
+
+        thread challenges:
+            since they share data. it is sometimes is critical. threads can share a cache.
+            it is very easy to get bugs where you share memory.
+            eg modifying the shared variable n=n+1 , it is called RACE condition.
+            can be solved using locks/mutexes.
+            mut.lock()
+            n=n+1
+            mut.unlock()
+
+            hnce making it atomic.
+            lock can be interior to a data structure if we want it to be that and it is a reasonbale strategy.although
+            the programmer might use outside as well it he/she is unfamiliar with the internal locks.
+
+            another problem with threads could be co-ordination.
+            you want another thread to wait until another thread generates the data.
+
+            we can use condition variables,to kick threads based on conidtion.
+            of wait call.
+
+            deadlock is also a problem with threads. and you run into this problem a lot.
+            
+            it is very difficult to find RACE as problem could happen once in billion. so we use automated tools to find them.
+
+            you can use shared memory or channels for threads to communicate.
+            you might not need locks in this way.
+            
