@@ -500,4 +500,52 @@ LECTURE 4: PRIMARY BACKUP REPLICATION
          to solve this there is an outside authority that decides which one is the real one.
          eg putting Test and Set flag in disk that they share,and one that acquires gets to live.or we can have TESt and set server.
     
-    
+LECTURE 5 : GO AND CONCURRENCY
+    using threads can sometimes makes problem easier.
+    threads don't necessarily make things complex.
+    it might simplify things.
+
+LECTURE 6: FAULT TOLERANCE: RAFT
+    single point of failure is a problem.
+    we also want to avoid split brain.
+
+    split brain-> two servers and two clients are there
+        and clients want to know who is the primary.
+        split brain arises when a client can talk to one but not other.
+        how should the system react ?
+        as modifying one and not other will make the system inconsistent.
+        but if you need it to talk to both in order to make progress.
+        it is then no better than having a single server.
+
+        hence waiting to both is a bad solution.
+        and talking to one and marking another as bad is not also 
+        a good solution and the problem could be the network.
+        as client always sends to both.
+
+    solutions:
+        network that could not fail
+            eg. wires in your laptop
+                or in your data houses.
+            we can rule out split brain.
+            hence if you cannot talk to both servers then,it must be
+            done.
+        second solution would be some kind of human intervention
+            human looks at machines and verifes if one of them is down
+            or turns off of them down.
+        partition: when these servers cannot talk to each other
+
+        majority vote solution:
+            have odd number of servers,hence no symmetry.
+            and majority rules.
+            majority decides the next step
+            it works even in case of partition.
+
+            the majority is always out of all,even if some of them have failed.
+            given 2f+1 servers you can stand f failures.
+            
+            raft is closer to this idea.
+        
+
+        RAFT:
+            takes form of a library.
+            
