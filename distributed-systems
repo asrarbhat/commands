@@ -3,7 +3,7 @@
 LECTURE 1
     distributed system: a set of co-opearting computers communicating over network,to get some coherent task done.
     eg. storage for websites or big data computations. or peer to peer file sharing are some of the examples.
-    a lot of infrastructure is done this way.
+    a lot of critical infrastructure is done this way.
 
     if you can solve a problem on single computer then always do it . it is easier.
 
@@ -12,10 +12,10 @@ LECTURE 1
     distributed systems are used for performance,we want parallelism
     and to tolerate faults.make multiple computers do the same thing and if one fails,another works .
 
-    and some problems are naturally spread across space /physical reason eg banks
+    and some problems are naturally spread across space/physical reason eg banks
 
     or for security goals. like i don't trust you so your stuff runs there and mine here and we communicate over internet
-    hence for insolation.
+    hence for isolation.
 
     most of this course is about peformance and fault tolerance.
 
@@ -25,8 +25,7 @@ LECTURE 1
     we can have partial failures.
     or some part of network is broken.hence partial failures make distributed systems hard.
 
-    it is hard of make performance increase linearly with increase in size of system. it take a lot of careful design to do
-    so.
+    it is hard of make performance increase linearly with increase in size of system. it take a lot of careful design to do so.
 
     somes problems have good known solutions whereas some don't
 
@@ -35,7 +34,7 @@ LECTURE 1
     there is a lot to research and a lot to find and solve.
     it is nice to know distributed systems if you love building systems.
 
-    this course is about infrastructure for applications.
+    this course is about infrastructure for applications/that clients use.
 
     INFRASTRUCTURES:
             STORAGE  //a lot known
@@ -44,12 +43,12 @@ LECTURE 1
 
     we want to simplify the tech/ build abstractions so it becomes easier to run applications
 
-    the dream to build distributed sytems that act like non distibuted system.
+    the dream is to build distributed sytems that act like non distibuted system.
     the behaviour is as simple as a single machine.
 
 
     IMPLEMENTATION:
-        eg remote procedure calls. RPC
+        eg remote procedure calls. RPC to mask the fact that we are communcating over a    network.
            threads //for concurrency
            concurrency control. //eg locks.
 
@@ -58,11 +57,10 @@ LECTURE 1
         alternative is to improve code and use better algorithms which is more expensive=> to pay programmers.
         hence you have to be careful about the design
 
-        eg web servers are easy to scale up.each server talks to DB and database is the bottleneck.hence hence we need some design
-        work there. 
+        eg web servers are easy to scale up.each server talks to DB and database is the bottleneck.hence we need some design work there. 
 
         it is hard of change code for performance then to use more hardware.
-
+        replicas should be in different racks just in case a rack crashes.
     FAULT TOLELRANCE:
         a single computer can run for years without going down.
         but if you have thousands of computers,odds are high that you will have some failed machine everyday.
@@ -123,11 +121,11 @@ LECTURE 1
 
     the assumption is that 
     data is like
-     input 1
-     input 2
-     input 3
-     and map works on each input and it produces a list of key value pair as output.
-     eg for wordcount problem key is the word and value is 1
+     input file 1
+     input file 2
+     input file 3
+     and map works on each input file and it produces a list of key value pair as output.
+     eg for wordcount problem, key is the word and value is 1
      each map produces an output for each key and value from that input only
 
      now collect all instances from all maps and produce key and value list.
@@ -162,20 +160,20 @@ LECTURE 1
 
     there are thousands of worker servers and a master server.
     master server commands to worker server to run given map function on given file.
-    and worker produces and file locally that it generates using emit() 
+    and worker produces a file locally that it generates using emit() 
     then the workers rearrange these files for reduce phase.each worker agrees on which keys it will run reduce on and every 
     other worker node has to send data to other worker nodes based on that information.hence 
     workers call reduce on all keys that it is alloted to work on.
     and writes in a new file in this distributed file system.where this whole thing acts as one file from all workers.
 
-    google used GFS google file service,which splits file into 64 kb chunks distributed uniformly over cluster.
+    google used GFS google file service,which splits file into 64 MB chunks distributed uniformly over cluster.
     hence for map reduce to work data is already in desired form.
 
     same machines run GFS and map reduce.
     each workers map works on related data stored on it.
     data usually is transfered in gigabit speed in these clusters.
 
-    network throughout has been the bottleneck for these systems.
+    network throughout has been the bottleneck for this system in paper.
 
     map reduce is not just about hadoop.
     shuffle is what happens after map.
@@ -187,7 +185,7 @@ LECTURE 1
     output of reduce is also stored in GFS.
     hence another round of network used to store output on GFS,since copies needed for fault tolerance and to be stored across machines.
 
-    modern data centers have fast network thoroughput so no need to run GFS and mapper on same machine.hence can be on different machines.
+    modern data centers have fast network throughput so no need to run GFS and mapper on same machine.hence can be on different machines.
 
 
 LECTURE 2: RPC and threads

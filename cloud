@@ -1,0 +1,54 @@
+NPTEL: CLOUD COMPUTING
+
+cs50:
+    students:
+        off premise storage,applications,machines.
+        you don't want to cool and fix stuff.
+    it is a rebranding of outsourcing jobs.
+    possible because speed is faster hence it is as good as photos being in your own space.
+
+    IaaS: Infrastructure as a service,started by amazon.
+    
+    easy to scale up and down (it is automatic/ autoscaling) when say your website gets mentioned on buzzfeed.
+    computers crash because they have finite resources,and cpu cycles,and it somepoint
+    routers drop data,or server starts using virtual space,and eventually server goes down.
+
+    you can do autoscaling based on traffic,say if 80% of threshold crossed scale up and vice versa,this is called elastic in aws.
+
+    downside: 
+        security:
+            giving whole data to someone elses computer.
+        can use private cloud:
+            like having your own servers.
+        you need internet access to access it.
+            hooks:
+                reaction to some reaction,like everytime i push to github,grab from there to amazon,it is called continuous deployment.
+                you run tests called continuous integration.
+        latency
+        
+        trust
+            note: github comes with github enterprise,you can run it on your  own server.
+        if something goes down:
+            you have no control over things.
+        
+        eg. somebody removed left-pad from node repository and when they did npm install in server it failed.hence cloud can be risky.
+
+    cloud saves space,time and work and labour.
+    servers can have 16 even 64 cpu's,and tens of gigabytes of Ram and terabytes of storage.
+
+    on cloud we use virtualization,so we don't have one os running on one machine.
+    and so resources are used appropriately. 
+
+    in virualization one machines acts like many and hypervisor is a software this allows us to do so,a hypervisor can run on hardware or on host os.
+
+    containerization is even light weight version of virtualization but containerization cannot replace virualtization as containers are just processes.
+
+    --
+
+
+
+module 1:
+    computing :
+        mean to solve any goal oriented activity.
+        or an executing algorithm.
+    

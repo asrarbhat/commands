@@ -297,5 +297,286 @@ module 2:
         if you have access to CUDA enabled GPU, tf will automatically use it whenever needed.
 
 
-module 3:
+module 3: neural network regression with tensorflow
+    
+    regression means output belongs to R 
+    how much,how many kind of questions,or co-ordinates of image.
+    
+    for help go to tensorflow documentation.
+
+    inputs<>input features.
+    very often algorithms already exist.yo only do new things in research.
+
+    import tensorflow as tf
+    X is usual name for input feature matrix
+    y usual output to be predicted.
+
+    input and output shapes:
+        no. of columns
+            like if 3 features (3,)
+                                3 columns ,it cannot be no. of rows as then we would need atleast 1 column hence it will be 2D tensor like [[1],[2]]
+        
+        if 1 feature to predict 1 output
+            (1,)                  (1,)
+        
+    steps in modelling with tensorflow:
+        create a model:
+            define the input and output layers,as well as the hidden layers of DL model.
+        compiling a model:
+            define the loss function,optimizer and evaluation matrix.
+        fitting a model
+
+    input and output should be tensors.
+
+    model=tf.keras.Sequential([
+        tf.keras.layers.Dense(1)  //here 1 is the no. of neurons.
+    ]) 
+    model.compile(loss=tf.keras.losses.mae,
+                  optimizer=tf.keras.optimizers.SGD(), or optimizer="sgd"
+                  metrics=["mae"]
+            ) 
+            mae: mean absolute error
+            sgd: stochastic gradient descent.
+            metrics is an evaluation metric.
+    model.fit(X,y,epochs=5)
+    his github mrdbourke
+    
+    plt.scatter(x,y)
+
+    always set random seeds before for reproduceability.
+
+    y_true and y_pred are cool names for those variables.
+
+    Sequential groups  a linear stack of layers into a tf.keras.Model.
+    optionally first layer can recieve an input_size parameter
+        model=tf.keras.Sequential()
+        model.add(tf.keras.layers.Dense(8,input_size(16,)))
+        model.add(another layer)
+
+    if layer uses float32 by default,cast it so, : if you get warning
+
+    to predict from a model
+        model.predict([17.0])
+    
+    we can improve model in:
+        model part //make model smaller or larger,adding or removing layers or neurons.
+        compiling part //optimizer from sgd to Adam,adam is amazing,and changing lr 
+        fitting part //more epochs.
+            
+            tf.keras.layers.Dense(100,activation="relu")
+            optimizer=tf.keras.optimizers.Adam(lr=0.001) //it is optimizers not optimizer in r-value
+        when trying to improve a model try one thing at a time,otherwise you won't know what actually worked.
+
+    try your model you small subset of data before running for whole data.
+    
+    loss="mae"
+    metrics=["mae"]
+
+    learning rate is the most important hyperparameter.
+
+
+    evalutaion the peformance of a model:
+        a typical workflow
+            build a model
+            fit it
+            evaulate
+            tweak it
+            evaulate it
+            tweat it
+            evaulate it
+            in loop
+        what we tweak are called hyperparameters
+            paremeters that we set
+        
+        when it comes to evaluation:
+            it is all about visualization.
+                visualize the data,model,training,predictions,evaultions.
+    
+            X=tf.range(-100,100,4) to use range in tf.
+
+        the three sets:
+            train 
+            test usually, 80 20 split
+
+            can use:
+                training set 70-80% of Data
+                validation set  about 10-15 % //like a practise set before final exam.
+                test set 10-15%
+        splitting the data
+            X_train = X[:40]
+            y_train = X[:40]
+            X_test = X[40:]
+            y_test = X[40:]
+
+        plt.figure=(figsize=(10,7))
+        plt.scatter(x,y,c="b",label="first")
+        plt.scatter(x1,y2,c="g",label="second")  //c is for color
+        plt.legend();
+
+        sometimes you manually need to define input shape and it can't automatically figure it out,in first layer.
+            tf.keras.layers.Dense(1,input_shape=[1]) if only one feature.
+        Dense<> fully connected.
+        model.summary() to see summary of model.
+        non-trainable paremeters: of model which is already trained and you use it.
+        trainable params: ones that we can update.
+
+        mode.fit(x,y,epochs=100,verbose=0) //different levels of verbose,0 means no output.
+
+        visualizing model
+            from tensorflow.keras.utils import plot_model
+            plot_model(model=model,show_shape=True)//can use to_file="abc.jpg" also to sve.
+                it prints graph of model which is cool
+
+        tf.keras.layers.Dense(...   ,name="second layer") makes model.summary() good.
+            can even put name for whole model as well.
+        
+        plot graph between y_pred and y_true
+
+        create a function if something comes in every model.
+
+        model.predict works also on list of inputs.
+
+        metrics for regression:
+            mean absolute error //mean of absolute error 
+            mean square error.  //mean of squared error.
+            tf.keras.losses.MSE()
+            another one is huber //less sensitive to outliers
+                tf.keras.losses.Huber()
+
+        model.evaulate(X_test,y_test)
+
+        always make sure that tensors have appropriate shape.
+
+    Running experiments to improve our model:
+        "experiment and visulize"
+        to improve model:
+            we can get more data.
+            we can change our model.
+            train longer.
+        
+        plot predictions vs true
+
+        squeezing a 2D matrix makes it 1D like an array.
+
+        epoches do not necessarily increase performance.
+            when overfitting.
+        Tensorboard is a component of tensorflow lobrary to help track modelling experiments.other same tool is weights and biases.
+
+    saving our models:
+        so we can use them outside of collab.
+        there are two main formats to save to:
+            The savedmodel format
+            the hdf5 format.
+        
+        using saved model format:
+            model.save("best_model")//it creates a directory.
+        saving in hdf5:
+            model.save("our_model.h5") //it creates a single file.
+        
+        loading a file:
+            new_model=tf.keras.models.load_model("best_model")
+            you can even train it again from now.
+            same for hdf5 type.
+            whole state is stored.
+        you can mount your google drive and copy you files in colab there.
+
+    you still use pandas to standardise the data.
+    pd.read_csv("url") also works.
+    better use one hot encolding inside of assigning 1,2,3 as they don't make sense.
+        category becomes a new binary feature.
+    
+        pd.get_dummies(df) does automatically for columns that qualify.
+
+    X=df.drop("output_column",axis=1)
+    y=df["output_column"]
+
+
+    train test split
+        from sklearn.model_selection import train_test_split   
+        X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.33,random_state=42)
+
+        we can now directly use pd dataframes in model.fit(df1,df2) which is cool.
+        pandas as tf are compatible.
+
+        model.evaulate(X_test,y_test) gives you mae or MSE
+    
+    Adam is amazing optimizer
+
+    if your neuron can only give output from 0-1 make sure desired output is also in same range.(standardise/normalize)
+
+    history=model.fit(...)
+    history is the loss curve.
+    pd.DataFrame(history.history).plot()
+    plt.ylabel("loss")
+    plt.xlabel("epochs")
+
+    plotting in pandas
+        pd["c1"].plot(kind="hist")
+    you do scaling/preprocessing in pandas.
+
+    just by normalization you can improve performance.
+
+neural network classification:
+    classification problems:
+        when output is from a finite set.
+        e.g binary classification:
+                spam and not spam
+        multiclass classification:
+            which food is in the picture.
+        
+        multilabe classification:
+            when you have multiple labels for an input,eg what is this article all about,it selects multiple labels in output.
+    
+    in images we have 3 color channels as RGB
+
+    input and output shapes:
+        shape: for image [None,224,224,3]
+                    or for batched ones
+                    [32,224,224,3] where 32 is the batch size   [batchsize,width,height,color_channels]
+                    32 is a very common batch size.
+        output shape could be [3] for three classes.
+
+    in architecture:
+        tf.keras.Input(shape=(224,224,3)) //first layer. //just define the shape no neurons added.
+        tf.keras.layers.Dense(3,activation="softmax") //last layer  //can use sigmoid for binary classification.
+
+        while compiling:
+            loss=tf.keras.losses.CategoricalCrossentropy()
+            optimizer would be adam
+            metrics=["accuracy"]
+
+        model.fit(X_train,y_train,epochs=5)
+        model.evaluate(xtest,ytest)
+    
+    google a recipe for neural networks have standard steps.
+    binary classification can be done with only one output neuron as well.
+    you use model.evaulate on test data,to see how good it is doing.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
