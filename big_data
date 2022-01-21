@@ -16,7 +16,7 @@ introduction:
     
     hadoop:
         came in 2006
-        maskot of hadoop is a yellow element.
+        maskot of hadoop is a yellow elephant.
 
         distributed storage and distributed processing system.
         it is an opensource software platform.
@@ -152,4 +152,106 @@ hdfs:
             hadoop fs -copyToLocal first/u.data ./
             or hadoop fs -get first/u.data ./
             fs here is generic
-            we should use dfs but hadoop dfs is now depricated so use use hdfs dfs 
+            we should use dfs but hadoop dfs is now depricated so use use hdfs dfs introduction
+
+mapreduce:
+    one of the core pieces of hadoop along with hdfs and yarn.
+
+    distributes the processing of data on your cluster.
+
+    divides your data up into partitions that are mapped/transformed and Reduced/aggregated by mapper and reducer functions you define.
+
+    an application master monitors your mapper and reducers on each partitions,hence resilient to failure.
+    conceptual model:
+        MAPPER converts raw asource data into key/value pairs.
+        data => mapper => k1:v k2:v k1:v
+            keys can be duplicate.
+        next step is shuffle and sort.
+            output is same key but value now is list of values.
+        now the REDUCER processes each key and does something on it.
+
+        RAW INPUT -> MAPPER -> KEY/VALUE -> SHUFFLE AND SORT -> KEY/VALUE -> REDUCER -> KEY/VALUE
+
+    how mapreduce works underneath:
+        mappers run of different nodes in the cluster,each mapper processing a partition of data.
+        for shuffle and sort,cluster has to communicate.
+        reducers also run of cluster and process a given set of keys.
+        final result is also communicated buy whole cluster if it is to be written,and copies to be made.
+
+    ANATOMY OF A MAPREDUCE JOB:
+        client node asks YARN
+        YARN talkes to Node manager of each node.and keep eye on each node.
+        node manager also gets data from hdfs.
+    
+    MapReduce is natively written in java
+    Streaming allows interfacing to other languages (i.e Python)
+
+            MapTask/ReduceTask -> key/values -> streaming Process -> output back to MapTask/ReduceTask.
+    
+    Handling failure:
+        Application master monitors worker tasks for errors or hanging
+            restarts as needed
+            preferably on a different node.
+        
+        what if the application mster goes down:
+            yarn can try to restart it.
+        
+        what if an entire Node goes down:
+            this could be the application master
+            the resource mamager will try to restart it
+        
+        what if the resource manager does down:
+            can set up high availability using zookeeper to have a hot standby.
+        
+    sometimes it can be hard to conform your problem to map reduce.
+
+writing the mapper using python.
+
+from mrjob.job import MRJob   //abstracks away streaming,mr means mapreduce. 
+from mrjob.step import MRStep
+
+class RatingsBreakdown(MRJob):
+
+    def steps(self):
+        return [
+        MRStep(mapper=self.mapper_get_ratings,
+               reducer=self.reducer_count_ratings)
+        ]
+    def mapper_get_ratings(self,_,line):           //  _ is a key
+        userID,movieID,rating,timestamp=line.split('\t')
+        yield rating,1
+    
+    def reducer_count_ratings(self,key,values):
+        yield key,sum(values)
+    
+if __name__=="__main__":
+    RatingsBreakdown.run()
+
+
+
+installing python,mrjob:
+    pip3 install mrjob
+    you can install it on sandbox as well.
+    mrjob is for streaming to run python code.
+to run the job:
+    to run locally for checking:
+        python3 RatingsBreakdown.py input.txt  //test on small data
+    to run on hadoop:
+        python3 RatingsBreakdown.py -r hadoop --hadoop-streaming.jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar input.txt or hdfs://data/input.data
+
+        if you give local file,it gets copied to hdfs first.
+    
+sort and shuffle can be used for sorting data.
+
+    multi-stage jobs:
+        you can chain mapreduce:
+            def steps(self):
+                return [
+                    MRStep(mapper=self.mapper_get_ratings),
+                    reducer=self.reducer_count_ratings),
+
+                    MRStep(reducer=self.reducer_sorted_output)
+                ]
+            
+
+"abc".zfill(5) in python fills zeros at the begining to make length 5
