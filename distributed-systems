@@ -196,6 +196,8 @@ LECTURE 2: RPC and threads
         combination of threads and garbage collections is important.
         in c++ you can't free memory until last thread stops working
         and the langauge is simpler than c++
+    
+    in distributed computing,a remote procedure call is when a computer program causes another procedure to execute in a different address space usually on another ocmputer on a shared network,which is coded as if it were a normal local procedure call,it is a client-server interaction.it is a form of inter proess communiction(IPC) each language has package for this,can be encoded in json etc as well.
 
     THREADS:
         threads are the main tool to manage concurrency.
@@ -206,13 +208,13 @@ LECTURE 2: RPC and threads
         we use threads for multicore parallelism.
 
         I/O concurrency:
-            waiting for multiple replies at a time.
+            waiting for multiple replies at a time./multiple inputs taken simulatenously
             and sending from multiple threads simultanoesly in the network
-            threads can share a port bout usually we don't do that,as that would be a bottleneck.
+            threads can share a port but usually we don't do that,as that would be a bottleneck.
 
         also to be doing something in background,instead of using that thing in main program and writing 
         checks directly in main program,it should do checks in background.
-        like sleep for a second and do something again.
+        like sleep for a second and do something again.we write a thread in background to do so.
 
         another line of thinking is to do asynchornous programming/ event driven programming.
             it has a single thread and single loop that waits for anything that triggers something.
@@ -224,7 +226,7 @@ LECTURE 2: RPC and threads
         each using event driven programming.
 
         thread challenges:
-            since they share data. it is sometimes is critical. threads can share a cache.
+            since they share data. it is sometimes critical. threads can share a cache.
             it is very easy to get bugs where you share memory.
             eg modifying the shared variable n=n+1 , it is called RACE condition.
             can be solved using locks/mutexes.
@@ -232,15 +234,13 @@ LECTURE 2: RPC and threads
             n=n+1
             mut.unlock()
 
-            hnce making it atomic.
-            lock can be interior to a data structure if we want it to be that and it is a reasonbale strategy.although
-            the programmer might use outside as well it he/she is unfamiliar with the internal locks.
+            hence making it atomic.
+            lock can be interior to a data structure if we want it to be that and it is a reasonbale strategy.although the programmer might use outside as well as he/she is unfamiliar with the internal locks.
 
             another problem with threads could be co-ordination.
             you want another thread to wait until another thread generates the data.
 
-            we can use condition variables,to kick threads based on conidtion.
-            of wait call.
+            we can use condition variables,to kick threads based on condition of wait call.
 
             deadlock is also a problem with threads. and you run into this problem a lot.
             

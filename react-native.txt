@@ -1,0 +1,116 @@
+MOSH HAMEDANI:
+    
+    how to build fast and reactive mobile apps.
+
+    built on top of react and instead of targetting browser this targets browser.
+
+    a framework for building neative apps using Javascript.
+
+    native means they are not web apps that look like mobile apps,they run on mobile without browser.
+
+    they can run on ios and Andriod.
+
+    there need not to be different codebases for android and ios.
+
+    facebook,instagram,uber eats,skype etc are built this way.
+
+    we can build react native apps using:
+            Expo Cli
+            React Native ClI 
+        
+    better use Expo for beginner friendly experience.
+
+    setting up development env:
+        run node version 12 or higher.
+        install expo Cli
+            npm install -g expo-cli 
+        install expo client on both ios and Android devices.
+
+        install vscode with extentions React Native Tools , React-Native/React/Redux snippets,prettier for formatting,material icon theme, save apply format on save.
+
+    our first app:
+        expo init firstapp    //in terminal.
+        use mangage workflow there as option,blank one.
+         open your code in vscode.
+    
+    structure:
+        you get assets folder,to put audio,video,images that you want to bundle with app.
+        App.js, a basic react-native component.
+        View is like a div in web world 
+        Text is used to display text
+        we don't  have div,a like html,react native provides its own syntax for them.
+
+        you can use class components or function components,better use function components.
+        
+        import {StyleSheet,Text,View} from 'react-native';
+        export default function App(){
+
+            return (
+                <View style={styles.container}>
+                    <Text> hello there </Text>
+                </View>
+            );
+        }
+        const styles= StyleSheet.create({
+            container:{
+                flex:1,
+                backgroundColr:'#fff',
+                alignItems:"center",
+                justifyContent:"center",
+                },
+        });
+
+
+        in TERMINAL:
+            npm start
+             metro bundler compiles all your js code into a single file.
+
+            logs will appear in the same terminal session.
+        
+        how to run on ios simulator:
+            you need mac.
+                you need xcode.
+                it comes with a simulator.
+            in metro bundler in web all your need to do is to click on run on ios simulator.
+        react native uses fast refreshes hence automatically refreshes.
+        if doesn't refresh,go to expo app and click on refresh.
+
+        how to run on android simulator:
+            download android studio.
+        
+        docs.expo.io for documentation.
+
+        ctrl+m in emulator to see the options in expo,even in emulator we run it on expo.
+
+        to run on physical device is easier,just scan the qr code,install expo client,the network should be same,shake the device to see developer menu.
+
+
+    tools to debug:
+        using console.log() statements.
+        you can even see logs in browser,on the same port.
+
+        can debug in chrome:
+            though you can figure out things easily from the error.
+            just enable remote dubugging in expo client and now it will open in chrome.
+
+            in chrome open developer tools and do debugging,
+                in sources click on pause on exception,and run,and put break points accordingly.
+
+                you can even execute line by line in sources,when debugging.
+                can even put varialbes in watch list.
+            
+            once down close debugger in app to avoid low peformance.
+
+        debugging in vscode:
+            enable debugging in vscode.
+            since you have React native tools extention installed,click on debug in vscode,create launch.json,select config accoridingly.
+        
+        .vscode contains vscode configurations for that project.
+
+    publishing:
+        it will have public web url.
+        publish to expo for devlopment.
+        for production we put on app store.
+        in metro bundler click n publish.
+
+    adding jsconfig.json to project makes it a js project and not a node project.
