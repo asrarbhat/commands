@@ -311,3 +311,184 @@ shared responsilbity model diagram:
         hardware etc,availability,compute,database,networking,regions,edge location.
     you accept their policy when you use aws.
     you can't abuse the cloud.
+
+first AWS service:
+    IAM: Users & Groups
+    -------------------
+    IAM: identity and access management,Global service
+    Root account created by default,shouldn't be used or shared.
+    Users are people within your organization, and can be grouped.
+     eg group for developers and group of operations.
+    groups only contain users.
+    some users don't need to belong to a group
+    and a user can belong to multiple groups.
+
+    IAM: permissions
+    users or groups can be assigned JSON documents called policies.
+        it express what a group or a user can do.
+    these policies define the permissions of the users.
+    in AWS we appy the least privilege principle: don't give more permissions than needed.
+
+
+    practise IAM
+        search iam in search bar.
+        iam is a global service and it doesn't require a region selection.
+        click on users and add user.
+        create a group as well.
+        you can download .csv or send email.
+        you can add users ad admin.
+
+    IAM policies in depth:
+        group level policies get applied to all people in group.
+        inline policies for users that are not in any group.
+    policies structure:
+        consists of :
+            Version:policy language version,always include "2012-10-17"
+            Id:an identifier for the policy(optional)
+            Statement: on or more individual statements (required)
+            each statement:
+                Sid: an identifier for the statement (optional)
+                Effect: whether the statement allows or denies access(Allow,Deny)
+                Principal: account/user/role to which this policy applied to
+                Action: list of actions this policy allows or denies
+                Resource: list of resources to which the actions applied to
+                condition: conditions for when this policy is in effect (optional)
+
+        example:
+
+                {
+                    "Version":"2012-10-17",
+                    "Id":"S3-Account-Permissions",
+                    "Statement":[
+                        {
+                            "Sid":"1",
+                            "Effect":"Allow",
+                            "Principal":{
+                                "AWS":["arn:aws:iam::123456:root"]
+                            },
+                            "Action":[
+                                "s3:GetObject",
+                                "s3:PutObject"
+                            ],
+                            "Resource":["arn:aws:s3:::mybucket/*"]
+                        }
+                    ]
+                }
+
+    you can remove users from a group on gui.same for adding.
+    in users click on user and add permissions,you can copy your json.
+    a user can have multiple policies.
+    click on policies to see all available policies.
+
+    eg AdministratorAccess policy gives you access to everything
+            it is like
+                Effect:"Allow",
+                "Action":"*",
+                "Resource":"*"
+        you can see the permissons of a policy in polices tab and you can even search for one.
+
+        you can even create your own polices using json or gui tool.
+
+        IAM - Password POlicy
+            strong password:higher security for your account.
+            you can setup:
+                set a minimum length
+                require specific characters
+                allow IAM users to change their password
+                require to change after some time
+                prevent password re-use
+            MULTI factor Authentication-MFA
+                MFA = password you know +security device you own.
+                so even if password is stolen or hacked the account is not compromised.
+                MFA DEVICES:
+                    virtual MFA device liek google authenticator or authy.
+                    or U2F universal 2nd factor securty key
+                    you put it in your pendrive.
+        
+        click on account settings to change the password policy
+            check box what you want.
+        for root account setup the mfa.
+            if you lose mfa token you will be locked out of your account.
+            click on your account and then on my secuity credentials.
+            activate mfa.
+        
+    to access aws:
+        aws management console protected by password and mfa
+        aws command line interface (CLI) protected by access keys.
+        aws software developer kti sdk: protected by access keys.
+        
+        access keys are generated through the aws console.
+        users manage thieri own access keys
+        access keys are secret.
+
+    you can write scripts to automate things.
+    sdk is language specific apis
+    you embed things in your application.
+    can be done on python,javascript etc.
+    aws cli is build on aws sdk for python.
+
+    aws cli:
+        install the aws cli version 2
+        now open it.
+        aws --version
+        in linux just use it in terminal.
+    access key:
+        go to users,in security credentials create access key.
+        you get access key and access key id.
+    
+    in terminal:
+        aws configure
+            enter both and your region like eu-west-1
+        aws iam list-users 
+        if no permissions,you get nothing.
+    cloud shell is like terminal in browser,it is not global,it is only availabe in certain regions only.no need to configure.
+    you can upload and download files to cloudshell.
+    you can create files using touch etc.
+
+    IAM roles for Services:
+        some AWS service will need to peform actions on your behalf.
+        to do so we will assign persmission to aws services with IAM Roles.
+    EC2 instance is a virtual server,it might want to do some action on aws and to do so will create an IAM role.and it will have certain permission for access.
+    common roles:
+        EC2 instance roles
+        lambda function roles
+        roles for cloudformation.
+    you can click on roles and create roles.
+
+
+    IAM security tools:
+        iam credential report ( account-level)
+            a repor that lists all your account's users and the status of their various credentials.
+        
+        iam access advisor( user-level)
+            access advisor shows the service permissions granted to a user and when those services were last accessed.
+        can be used to revise policy.
+    
+    click on report and download csv 
+    for user click on access advisor.
+    if someone is not using a service we should remove those permissions from that user.
+
+    iam guidelines adn best practises:
+        do not use root account accept for aws account setup
+        do not give your credentials instead create new user.
+        assign users to groups and assign permissions to groups.
+        create a strong password policy.
+        use mfa.
+        create and use roles for giving permissions to aws services.
+        use access keys for cli
+        iam credentials report to analytics of users.
+    
+    shared responsible model:
+        what aws is responsible for and what you are responsible for.
+        aws is responsible for:
+            infrastructure,global network security.
+            configuratin and vunerablity analysis.
+            compliance validation.
+        you are responsible for:
+            users,groups,roles,policies,management,monitoring.
+            enable mfa on all accounts.
+            rotate all your keys often 
+            to apply appropriate permissions.
+            analyze access patterns and review permissions.
+            
+        

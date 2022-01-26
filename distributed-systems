@@ -282,7 +282,7 @@ LECTURE 3: GFS: case study: how to build big storage.
         hence they wanted a big and fast storage system that was general and can be used for any application,hence
         it should be reusable
 
-        to do bigness and fastness they needed to split the data into multiple machines.
+        to do bigness and fastness they needed to split the data into multiple machines. 
         even a single file would get split and,
         failure recovery should be automatic.
 

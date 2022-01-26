@@ -1,0 +1,61 @@
+what is iot?
+    the iot is the intelligent connectivity of physical devices driving massive gains in efficiecy busines growth and quality of life.
+
+    why:
+        efficiency
+        improves quality of life.
+    
+    iot is going to be everywhere.
+    it is used by IT,consumer,industry etc.
+
+    everything could be connected to each other and make them talk to each other.
+    and be connect to cloud.
+
+    in heart it is:
+        sensors and actuators + connectivity + people and processes.
+        using internet the data flows.
+        there are processes running on it.
+    sensors:
+        to sense light,humidity,sound,tilt,electricity,leaks,flow,gas,temperature,position etc 
+    connectivity:
+        using bluetooth,wifi,ethernet,satellite,etc.
+        we can control the device using internet.
+    people and proceses:
+        this data can be used for better decision making or to notify consumer,etc 
+        remote monitoring,automation etc 
+
+    eg smart thermostats,connected cars,activity trackers,smart outlets,etc 
+    2 billion devices in 2014
+
+    can be used in health,home,etc 
+
+    home and building security,building automation etc.
+
+building blocks of an IOT system:
+    hardware:
+        microcontroller:
+            ardruino,raspberry pi etc.
+        shields:
+            wifi,bluetooth etc 
+        electrical components:
+            resistors,copacitors,transistors,semiconductors etc.
+        electro-mechanical:
+            like a relay(like a switch in wire)
+    software:
+        IDE
+        drivers
+        libraries
+        database
+        cloud to log entries.
+        programming language.
+    
+    iot devices could be talking to each other as well.
+    we can use web sockets for devices to connect to each other.
+    
+    go to arduino to download the ide
+
+    every program is called a sketch.
+
+    bread board os used for demos.
+    
+     
