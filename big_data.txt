@@ -1,15 +1,23 @@
 introduction:
+
     hortonworks sandbox:
         
         it is a platform with hadoop and all other related tech installed.
-        you can install virualbox,and hortonworks sandbox,select virualbox 
-        while installing,it is 15gb.
+        you can install virualbox,and hortonworks sandbox(HDP -> hortonworks data platform ),select virualbox while installing,it is 15GB.
         open it and it will open in virtualbox,and click on import and start
         like anything else in virtualbox,it has centos inbuilt.
+        it gives you ip addresses to open in browser to acceses it via ambari.
+
         login: maria_dev password is also the same.to open ambari on port 8888
         and you can do stuff using ambari,without knowing what happens underneath.
 
         hortonworks merged with cloudera.
+
+        #english -> tab delimited data.
+
+        in hive view you can upload table with any delimited character from choices. it creates a table within hive.you can now run query on it.
+
+        #english -> drum roll please
 
     grouplens.org 
         for free datasets
@@ -23,51 +31,64 @@ introduction:
         since it is distributed so ofcourse it needs a cluster to work on.
         it is horizontal scaling.
             horzontal scaling hopefully linear.
-        it is not just for batch processing anymore.
+        it is not just for batch processing anymore.there are ways to expose it for OLTP.
 
-        foundation of hadoop is GFS and mapreduce both by google.2003-2004
+        foundation of hadoop is GFS for HDFS and mapreduce both by google.2003-2004
         hadoop was built by yahoo.
 
+        hadoop was the name of the creators son's elephant toy.
+
+        why:
+            data is darn big.
+            verical scaling doesn't cut it.
+            horizontal scaling is linear.
+        
     hadoop ecosystem:
+
+        hdfs,yarn,mapreduce are inbuilt in hadoop everything else is an add on.
+
         at bottom is HDFS:
             hadoop distributed file system.
                 makes all hard drives look like one and keeps copies of data.
+    
         on top of HDFS we have YARN:
             yet another resource negotiator:
-                for the management of processing resources.
+                for the management of processing resources during processing.it decides what gets to run when,which nodes are availabe etc.
+
         on top of yarn is mapreduce.
-            mapreduce is programming metaphor/model for processing.
+            mapreduce is programming model for processing across a cluster.
+        
         pig and hive sit on top of mapreduce:
-            hive is more sql like database.
+            hive is like sql and makes everything look like a sql database.
             pig is high level sql like scripts without writing python or java,and gets converted into mapreduce.
         
         apache ambari :
-            gui too for cluster view etc so see what is going on,and to analyse the resources
+            gui tool for cluster view etc so see what is going on,and to analyse the resources.
             you can manage cluster using this.
             it sits on top of everything,you can execute queries as well.
+        
         MESOS: alternative for yarn,sits on hdfs.
 
         SPARK: sits at same level as mapreduce,to run query on data,scala is used
-                to do so preferrably. can be used for ML,streaming etc.
+                to do so preferrably. can be used for ML,streaming etc.extremely fast.
         
         TEZ: like spark,more optimal,used with hive,hive with tez is faster.
 
         apache HBase: nosql database,it is fast and for very large transactions
-                      it can expose data stored in your cluster,it is on top of hdfs.
-                      can be used for oltp.
+                      it can expose data stored in your cluster,it is on top of hdfs,can be used for oltp.For very large transactions.
         
         apache storm: to process in time streaming data,like from sensors.
-                        it is on top of nothing
+                      it is on top of nothing,it is alternative to spark streaming.
 
         oozie:  a way of scheduling jobs in your cluster,when there are many steps.
-        zookeper: for co-ordination in cluster which nodes are up etc and which are down
-                  keeping track of shared state.
+        zookeper: for co-ordination in cluster which nodes are up etc and which are down.keeping track of shared state.
         
         data ingestion:
             getting data into your  system.
-                kafaka : collects data from any source
-                flume  : for weblogs to your cluster
-                sqoop  : tieing your hdfs with relational database
+                kafka : collects data from any source.
+                flume  : for weblogs to your cluster.
+                sqoop  : tieing your hdfs with relational database.
+        
         external data storage:
             mysql
             mongodb
@@ -91,7 +112,7 @@ hdfs:
         broken into blocks of each 128MB blocks.
         split across computers,for parallel processing.
         in order to handle failures,we replicate.
-        can run on commodity computers: normal basic computers,to gpu etc
+        can run on commodity computers: normal basic computers,no gpu etc
     hdfs architecture:
                         name node
             
@@ -112,17 +133,18 @@ hdfs:
 
         namenode resilience:
             backup metadata:
-                namenode write to local disk and NFS mounts,and we can start new namenode.
+                namenode write to local disk and NFS mounts,and we can start new namenode,if you can tolerate some down time.
             or use secondary namenode
                 maintain copy at all time.
                 although at a time only one active namenode.
-            HDFS federation:
-                each namenode mangages a specific namespace volume
-                although this is not namenode resilience type.
+        HDFS federation:
+            if one namenode is having too much of load.
+            each namenode mangages a specific namespace volume/directory.
+            although this is not namenode resilience type.
             
         HDFS high availability:
-            hot stadby namenode using shared edit login
-            zookeeper trck active namenode.
+            hot standby namenode using shared edit login
+            zookeeper track of active namenode.
             uses extreme measures to ensure only one namenode is used at a time.
         
 
@@ -135,9 +157,14 @@ hdfs:
 
         hadoop is written in java underneath the hood.
 
-        using commad line to use hdfs.
+        click on hdfs in ambari to copy data.
+            it also shows you namenode and datanodes.
+            click on file view,to create directory or copy files etc.
+            you can rename etc,pretty much everything and also download.
+
+        using command line to use hdfs.
             to connect to hortonworks
-                maria_dev@127.0.0.1 or anthing using ssh
+                maria_dev@127.0.0.1 at port 2222 using ssh
             
             hadoop fs -ls        to list files.
             hadoop fs -mkdir     first 
@@ -151,8 +178,8 @@ hdfs:
             hadoop fs to see all commands.
             hadoop fs -copyToLocal first/u.data ./
             or hadoop fs -get first/u.data ./
-            fs here is generic
-            we should use dfs but hadoop dfs is now depricated so use use hdfs dfs introduction
+            fs here is generic,we should use dfs but hadoop dfs is now depricated so use use hdfs dfs.
+            can change the permissions as well. 
 
 mapreduce:
     one of the core pieces of hadoop along with hdfs and yarn.
@@ -162,6 +189,7 @@ mapreduce:
     divides your data up into partitions that are mapped/transformed and Reduced/aggregated by mapper and reducer functions you define.
 
     an application master monitors your mapper and reducers on each partitions,hence resilient to failure.
+
     conceptual model:
         MAPPER converts raw asource data into key/value pairs.
         data => mapper => k1:v k2:v k1:v
@@ -173,38 +201,41 @@ mapreduce:
         RAW INPUT -> MAPPER -> KEY/VALUE -> SHUFFLE AND SORT -> KEY/VALUE -> REDUCER -> KEY/VALUE
 
     how mapreduce works underneath:
-        mappers run of different nodes in the cluster,each mapper processing a partition of data.
+
+        mappers run on different nodes in the cluster,each mapper processing a partition of data.
         for shuffle and sort,cluster has to communicate.
-        reducers also run of cluster and process a given set of keys.
-        final result is also communicated buy whole cluster if it is to be written,and copies to be made.
+        reducers also run on cluster and processes a given set of keys.
+        final result is also communicated by whole cluster if it is to be written,and copies to be made.
 
     ANATOMY OF A MAPREDUCE JOB:
-        client node asks YARN
-        YARN talkes to Node manager of each node.and keep eye on each node.
+        client asks YARN Resource manager (it decides what runs where)
+        anything that runs a mapreduce job has a NodeManger installed in it,that keeps track of what that node is doing,is it up etc.
+        node manager has Mapreduce Application master which keeps track of every map and reduce task running on that node.
+        YARN resource manager talks to Node manager of each node.and keep eye on each node.
         node manager also gets data from hdfs.
     
     MapReduce is natively written in java
     Streaming allows interfacing to other languages (i.e Python)
 
-            MapTask/ReduceTask -> key/values -> streaming Process -> output back to MapTask/ReduceTask.
+            MapTask/ReduceTask -> key/values -> streaming Process -> output back to MapTask/ReduceTask. done using stdin and stdout.
     
     Handling failure:
         Application master monitors worker tasks for errors or hanging
             restarts as needed
             preferably on a different node.
         
-        what if the application mster goes down:
+        what if the application master goes down:
             yarn can try to restart it.
         
         what if an entire Node goes down:
             this could be the application master
-            the resource mamager will try to restart it
+            the resource manager will try to restart it
         
         what if the resource manager does down:
             can set up high availability using zookeeper to have a hot standby.
         
     sometimes it can be hard to conform your problem to map reduce.
-
+map reduce is building block but it is not used in practise.
 writing the mapper using python.
 
 from mrjob.job import MRJob   //abstracks away streaming,mr means mapreduce. 
@@ -546,4 +577,68 @@ the ideal in big data is to make sql like syntax run on the platform for process
         Dataset is a general term encompossing Dataframe.
     you can expose a jdbc server to your dataframe in spark sql.
     sparksql is so cool.
+
+working with relational data:
+----------------------------
+hive:
+    lets us write standard sql queries on a distributed file system,
+    it can run on mapreduce or tez jobs on cluster.
+
+    HiveQL is very familiar to mysql
+    interactive.
+    easy OLAP 
+    higtly optimized.
+    can use jdbc with it.
+    it is not for OLTP 
+
+    pig,spark allows more complex stuff .
+    it work on a text file.
+    high latency in HiveQL 
+    pretty much MySQL with some extentions.
+    has views.
+
+    eg.
+    for hive you would need database.
+    upload table,you can upload csv from hdfs or local,give name to columns.
+    these files come under default database,as tables.
+
+        select * from ratings
+        where movieID>2;
     
+    can do joins etc as well.
+
+    learn hive and spark as your goto tools.
+
+
+    how hive works:
+        data copies from a distributed filesytem into hive.
+    we can store data in partitioned subdirectories,can be used for optimization if you want to work on specific partitions.
+
+    to save query .hql file.
+
+
+    INTEGRATE MYSQL AND HADOOP:
+        mysql is used for oltp.
+        sqoop is used to import or export data to and from relational database.
+        it kicks off a mapper as in mapreduce to do so where multiple mapper map from mysql to hdfs.same for exporting.
+
+                          mysql
+        mapper mapper mapper mapper mapper mapper 
+                           hdfs
+        
+        its is a command line thing.
+
+        to import 
+
+        sqoop import --connect jdbc:mysql://localhost/movielens --driver com.mysql.jdbc.Driver --table movies
+        
+        for directy importing into hive. just add --hive-import at last.
+                    movielens is database here.
+        
+        for export:
+            sqoop export ........... --export-dir /apps/hive/movies
+        
+    
+    
+        
+

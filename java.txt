@@ -1,0 +1,349 @@
+openjdk ->opensource java development kit
+SE: standard edition,there are different editions like EE is for enterprise edition.and Micro 
+jdk: java development kit = compiler plus JRE 
+JRE: java runtime environment,to run the program by user,it contains JVM and class libraries,class loader etc
+
+java 1.2 = java 2 product similarly for jdk 16.
+
+jdk contains compiler and runtime environment.
+
+editor: intellij,eclipse,netbeans.
+
+introduction:
+    Anatomy of a java function:
+        return type   name(parameters){//curly brace here.
+
+        }
+    every java program has atleast 1 function,called main.
+
+    name of function -> verbs eg sendEmail
+
+    a class is a container for related function used to organise code.
+        clas Main{
+            void main(){
+
+            }
+        }
+            functions inside a class is called a method.
+    
+    access modifers are keywords that say who can access a method etc.
+
+    PascalNamingConvention for classes : first letter of each word is capital.
+    camelNamingConvention for methods and variables: apart from first word all start with an upper case.
+
+    a package is used to group related usually domain in reverse for base package.
+        eg com.googe
+    
+    inside project inside src,inside package Main.java 
+
+    package com.google;
+    public class Main{
+        public static void main(String[] args){ //main is always static 
+            //comment
+            System.out.println("hi");
+        }
+    }
+
+    System is in java.lang package hence imported automatically.
+    f for fields and m for methods in intelliJ 
+    System.out is an instance of PrintStream class and println is its method.
+    
+    " " for strings.
+
+    System is a final class.
+        and out is a static field in it.
+    PrintStream is java.io.PrintStream
+
+    final class System{
+        public static final PrintStream out;
+    }
+
+    java execution:
+        source code (.java file ) -> java compiler -> ByteCode .class file 
+                                    javac Main.java 
+
+        .class gets saved in out folder in our project.
+        .class file is device independent .it cna run on any device,which is why JVM exists in the first place so our byte code becomes device independent,as JVM is for each specific device and does the translation for us.
+    
+        java Runtime environment:
+            which executes your byte code on hardware.
+            byte code -> JVM -> native code for hardware
+
+            invoking jvm from src 
+            java com.google.Main
+        
+    
+    developed by james gosling in 1995 at SUN,acquired by Oracle in 2010.
+
+    originally called oak. now java inspired by java coffee,thats why its logo has coffee.
+
+    four editions:
+        SE
+        EE  : comes with extra libraries etc for enterprises. 
+        ME  : Micro edition for mobile devices.
+        java card for smart cards.
+
+    VARIABLES:
+        to store data temporarly 
+        int age=30;
+        System.out.println(age);
+        int a=3,b=4; don't declare a lot of variables in single line.just one in a line.
+
+        types
+            primitive             reference for storing complex objects
+            for storing simple
+            values 
+
+            byte 1 byte -128 to 127 
+            short 2 bytes
+            int 4 bytes 
+            long 8 bytes 
+            float 4 bytes 
+                1.4E-45 to 3.4e38 if more gives infinity,7 significant digits.
+            double 8 bytes  upto 15 digits.
+            char 2 bytes  maximum 65540,min is 0 overflow here as well like others.same way underflow.
+            boolean 1 byte 
+
+        float f=1.2f by default double, otherwise error. 
+        long l=1l as by default int
+        char ch='a';
+        boolean isEligible=false;
+
+        use meaninful names like isEligible
+
+        reference types:
+            import java.util.Date //java.sql also provides Data so be careful to choose right package everytime.
+
+            Date now=new Date(); //new allocates memory in heap.
+
+            now.getTime()
+
+        in java we have 8 primitive types.
+
+        java has garbage collector to free heap storage automatically.
+
+        reference types are copied by references,primitive by value.
+
+        String message= new String("hi there");
+            in java.lang hence automatically imported.
+            short hand String message = "hello there";
+
+            concatenation:
+                String message = "hello" + "world";
+            
+            methods for String:
+                message.endsWith("hello"); returns boolean.
+                        .startsWith("hi")
+                        .length():
+                        .indexOf("hey"); //returns of first occurence or -1 if not found.
+                        .replace("hi","hello") it returns a new String.
+                String is immutable.
+                        .toLowerCase();
+                        .toUpperCase();
+                        .trim();//removes spaces from begining and end.
+                
+            named arguments to methods like name:3,age:4
+            parameters vs arugments:
+                parameters are holes and arugments are real values.
+
+            escape sequence \" etc \\
+            new line \n tabs \t 
+    
+    Array is a reference type,to stores a list of numbers.
+        int[] number=new int[5];
+        number[0]=1;
+        number[10]=3 gives exception
+        can't print directly.
+            import java.util.Arrays;
+            Arrays.toString(number)   => overloaded method for all kinds of arrays.
+        int[] numbers={1,2,3};
+        numbers.length;
+
+        Arrays.sort(number); it is an inplace sort.
+            sort is also overloaded.
+        
+        int[][] numbers=new int[2][3];
+        number[0][1]=3;
+        Array.deepToString(numbers); //to print the matrix.
+        int[][] numbers ={{1,2,3},{3,4,5}}
+    
+    constants
+        final float pi=3.14f;
+        now a constant hence cannot change,and use PI as a name,contants in CAPS 
+    Golden Rule
+                                            general methods in OOPs:
+                                try   object.method(); or ClassName.method(object);
+    
+    Arithmatic expressions.
+        *,+,-,/,%
+        double result=(double)10/(double)4; casting.
+        integer division gives integer.
+
+        x++,x--,++x,--x
+        augumented/comound operator
+            x+=2
+        implicit casting byte>short>int>long>float>double
+            to more expressive it is done implicitly.
+        
+        to cast to less expressive we have to do it explicitly.
+        int a =(int) b+2;
+
+        also there is precedence of * over + etc,use parenthesis.
+
+    for String to anything else.
+        Integer.parseInt(str);
+        Short.parseShort();
+        Float.parseFloat();
+        
+            all these wrapper classes in java.lang.
+        
+    Math class in java.lang
+    Math.round(2.1) returns long.
+    Math.ceil();
+        .floor();
+        .max(1,2);
+        .random(); returns a double [0,1]
+    
+    (int)(a*b) important as casting happens first.
+
+    Reading input:
+        import java.util.Scanner;
+        Scanner scanner=new Scanner(System.in) System.in refers to where to get input from.
+        Byte age=scanner.nextByte();
+        in System.out.println there is implicit call to toString() method of each argument.
+        .nextFloat()
+        .nextDouble()
+        .next() for one token
+        .nextLine() for whole line
+        .nextInt()
+        to read a character next().charAt(0);
+        .nextLine().trim() is cool.
+    
+    Math.pow(a,b)
+    don't use magic numbers in your code,use final variables.
+
+    comparison operators:
+        x==y
+        x!=y
+        >,<,>=,<=
+        returns true or false.
+    
+    logical operator:
+        t>20 && t<30
+            left to right evaluation and short circuiting.
+        ||,!
+    
+    variable names hasDegree,isEligible/
+
+    if (boolean expression){
+
+    }
+    else if (boolean expression){
+
+    }
+    else{
+
+    }
+
+    scope of variables is within the code block {} called block scoped,python is function scoped.
+
+    instead of writing conditions in if ()
+    always write
+        boolean isEligible=age>18
+        if (isEligible)
+        best way to code.the best way to make code readable.
+    
+    DRY: don't repeat yourself,if a calculation is appearing multiple times,assign it to a variable.
+    if if duplication makes code readible go for readability over exception.
+
+    don't put calucations in for loop if nothing is changing like x/y in condition as it would calculate it everytime.
+
+    ternary opeartor:
+    String a= 3>4? "hi there" : "hello";
+
+    switch(variable){
+        case "admin":-----------
+                     break;
+        default:---------
+
+    }
+    you can use strings in java inside switch condition.
+
+    for loop
+        for(int i=0;i<10;i++){
+
+        }
+    while (boolean){
+
+    }
+    do{
+
+    }while(condition)
+    break,continue,while(true)
+
+    for strings input.equals("quit") as == only does reference comparison.
+    it returns boolean and compareTo gives a number which is 0 if equal,like first-second.
+
+    String[] fruits={"apple","banana"}
+    for each loop:
+    for(String fruit:fruits){
+        sout(fruit);
+    }    
+    only forward and no index.
+
+
+    clean coding:
+        any fool can code that computers can understand,good programmers read code that humans understand.
+                                                        Martin fowler
+        the goal is to write modifialbe and maintainable code.
+
+        creating methods:
+            public static int greetUser(String name){
+                return 1;
+            }
+            public here means available everywhere/can be made private,can be called outside.
+            static means this belongs to class and not objects.
+            no need to define above main.
+        
+        refactor => changing code without changing functionality/behaviour. usually by breaking into methods.
+
+        if many loops use one method and generalize.
+
+        if something is repetative,put it in a method.
+
+        methods should not be more than 20 lines.
+
+        one method should be doing one thing.
+
+        always reduce weight of main method.
+
+        compile time error<> syntax error.
+
+        runtime error <> semantic error.
+
+        can't use reserverd keywords for variable name.
+
+        ctrl + x for cut and copy.
+
+        don't pollute main method.
+
+        even inputs in another method.
+        
+        try to write code wehre code is to be modified only at one place.
+
+        don't declare varialbes before use if not necessary.
+
+        declare private static fields if same fields in every method.
+
+    debugging:
+        click on grey area to insert a break point.
+        can add variables to watch.
+        click on rerun to rerun.
+    packaging into jar: java archieve,it is compiled code.
+        right click file>project structure>artifacts>+>jar>from modules and select main class >build artifact in build options.
+        find it in out in artifacts.
+        you get a .jar file.
+
+        to run a jar file 
+            java -jar abc.jar
+        

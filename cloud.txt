@@ -490,5 +490,94 @@ first AWS service:
             rotate all your keys often 
             to apply appropriate permissions.
             analyze access patterns and review permissions.
-            
+
+
+From aws management console you you choose service like iam or ec2 etc whichever you want to work with.
+
+to see billing details click on account and my billing.
+click on bills to see the bills.
+    and break down of that bill.
+
+you can create budget for maximum you want to spend.you will recieve alerts.
+
+EC2:
+    ec2 is one of the most popular aws offering.
+    ec2 is elastic compute cloud = infrastructure as a service.
+    it mainly consists of:
+        renting virtual machines EC2
+        sotring data on virtual drives EBS 
+        distribute load across machines ELB 
+        scaling the services using an auto scaling group ASG 
+    knowing EC2 is fundamental to understand how the cloud works.
+
+    EC2 sizing & configuration options:
+        os -> linux,windows,mac os
+        how much cpu and cores.
+        how much ram 
+        how much storage space 
+            network attached EBS,EFS 
+            hardware (EC@ instance storage )
+        network card: speed of the card,public ip address.
+        firewall rules: secuity group.
+        bootstrap script (configure at first launch):EC2 user data.
+    EC2 user data:
+        it is possible to bootstrap our instances using an EC2 user data script.
+        bootstrapping means launching commands when a machine starts.
+        the script is only run once at the instane first start.
+        EC2 user data is used to automate boot tasks such as:
+            installing updates
+            installing software
+            downloading common files from teh internet
+            anything you can think of.
+        they run with root user.
+    ec2 instances can have different cpus ram etc.
+
+    search ec2 and go to ec2 console.
+    choose the region close to you.
+    choose AMI,amazon machine image=>basically your os.
+
+    you can paste your bootstrap sh script there .
+    you can stop restart terminate an instance.
+    the public ip is not static by default.
+
+
+    EC2 instance types:
+        there are general purpose,compute optimized etc.
+        m5.2xlarge
+            here m is instance class
+            5 is generaton (AWS improves them over time.)
+            2x large represents size within the instance class.
+
+        general purpose are great fro diveristy of workloads such as web servers,or code repositories.
+
+        balance between:
+            compute
+            memory 
+            networking
+        start with t.
+        compute optimized:
+            great for compute intensive tasks that require high performance.
+                batch processing.
+                media transcoding
+                high perrormance web server.
+                high performance computing (HPC)
+                scientific modelling.
+                dedicated gaming servers.
+            name starts with c 
+        memory optimized:
+            for processing large datasets.
+            like high performance ralational /non relational databases
+            distributed web scale cache stores.
+            im memory databases.
+            real time processing.
+            names start with R as in RAm ans x and z.
+        storage optimized:
+            great for storage intensive tasks that require hgh sequential read and write to large data sets on local storage.
+            use cases:
+                oltp
+                realtional/non relational databases.
+                data warehousing
+                distributed file system.
+        
+
         
