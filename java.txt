@@ -347,3 +347,466 @@ introduction:
         to run a jar file 
             java -jar abc.jar
         
+---------------------------------------------------------------------------------------------------------
+
+OOP:
+    programming paradigms:
+        procedural
+        functional
+        object oriented
+        event driven
+        logic 
+        aspect oriented
+    oop and functional are most famous.
+    js is event-driven/asynchrounous.
+
+    oop have state(fields/data) and behaviour
+    in functional data and behaviour are different.
+
+    problem solving:
+        process of defining a problem,identifying and comparing different solutions,and picking one that best solves that problem with respect to context and contraints.
+    we choose programming paradigm based on text.
+    oops for graphical interfaces etc.
+    we can use multiple paradigms in a single project.
+
+    benefits:
+        reduced complexity
+        easier maintainence
+        code reuse
+        faster development
+    class:
+        blueprint/template for an object
+    object:
+        instance of a class
+    
+    oops is not just about using classes.
+
+    encapsulation and abstraction are the foundations of OOP.
+
+    creating classes:
+
+        we should add each class in new file,in some package.
+        package abc;
+        public class Textbox{
+            public String text;
+            public void setText(String text){
+                this.text=text;//if same same then use this,this refers to current object.
+            }
+        }
+        public class is available to all classes who want it,it is an access modifers.
+
+        in main
+            Textbox t1=new Textbox();
+            or var t2=new Textbox();
+            t1.setText("hi there")
+            t1.text 
+        in a class there are fields and methods.
+
+        all objects inherit from Object class.
+
+        all objects are set to null by default,gives rise to NUllPointerException,doing things to null object hence always intitiaze reference types.
+
+        primitive types are stored in stack and reference types in heap.
+        the value of a reference type is an address in heap.
+
+        oop is a way of thinking,not just fields methods and classes.
+
+        references are in stack,when no references at all to a memory garbage collector kicks in.
+
+        java automatically deallocates memory.
+
+        unused objects by garbage collector.
+
+        procedural programming is using function call and doing things as your alogrithm says.
+
+        encapsulation:
+            bundle the data and methods taht operate on the data in a single unit called class.
+            we just want related things together and things become easy to keep track of.
+
+        write as independent code as possible.
+
+        try to have methods no or very less parameters and provide data via constructor.
+        methods in Main were static as there is no object there.
+        obj.salary=20 works
+
+        we use getters and setters to get and put data from and to object and also put validation there.
+        do validation of fields inside that class only.don't do that in main class using "if"
+
+        public variables are accessable outside class so use private and getters and setters.hence not accessible outside that class.
+
+        just because you use class doesn't mean you are doing oop. you could be doing procedural programming while using classes etc.
+
+        sphetti code: everything is connected to everything else and it is messy.
+
+        can 
+                throw new IllegalArgumentException("salary cannot be zero");
+
+        make fields private.
+
+        exception if not handled,terminates the program.
+
+        abstraction:
+            hiding details to make interface clean and to reduce complexity or to not allow operations that can cause errors.
+        
+        coupling: the level of dependency between classess.
+
+        there is always coupling between classes but we try to make it minimal as more couploing means more cost of changes.
+        
+        we want to hide details and expose some getters and setters so that internally we can change and modify things easily.
+
+        it is ok for methods coupled within the class.
+
+        we can make methods private also.
+        private int getAbba(){}
+
+        abstraction reduces coupling to a degree where the only coupling there remains would be the existence of that class as other class are using it,internally we can easily modify it.
+
+        if class A uses class B then A is dependent on B.
+
+        we don't want one changed class and one thousand broken classes.
+
+        coupling points are the code lines that creates coupling.
+
+        make methods private if you don't need outside it reduces coupling,and we can change private methods easily.
+
+        your api for other classes to use should be minimal.
+
+        less coupling means less places of modification.
+
+        alt + enter to create a method after already using it in intelliJ
+
+        constructor:
+            method that puts objects in initial valid state.
+            which is minimal requirement.
+            a special method that is called when  we careate a new object.
+
+            java automatically creates constructor puts all to default called default constructor.
+
+            public class Employee{
+                private int a;
+                public Employee(int b){ //java creates this automatically if you don't and this is what you call after new.it has no return type.
+                    b=a;//not recomended,call b=setA(b) to set and do validation etc.
+                }
+            }
+            if you provide constructor,default constructor is not created.
+        one method can call another method inside it.
+        method overloading:
+            same method different no. of arugment or different arguments.
+            not a nice practice to use method overloading
+            constructor overloading also not recomended.use defualt arguments instead.
+
+            calling overloaded method of same name this(a,b,c) only for constructor this way.
+
+            overloading makes sense if you are doing to two integers and then overloading for two doubles.
+
+        static members:
+            belong to class
+            class can have instance members and static memebers.
+            public static int a=3;
+            in constructor can modify it useing a++ or anywhere.
+
+            static methods:
+                public static void xyz(){
+
+                }
+            can be called using class name or instance.
+            they can only see other static methods and members.
+            we can't access instance methods inside static method.
+
+            main method is static so JVM can call it directly. without need for object.
+
+            if all members sharing an object create a static member like a Scanner object.
+
+            don't use too many static methods.
+
+            can make it static and private
+            private static.
+
+            each class should have one job.
+
+            even Integer.parseInt is a static method,as it is obvious.
+
+    creating a jar file using terminal
+        compile code first
+        create Manifest.txt 
+            Main-class: HelloWorld
+        jar cfm HelloWorld.jar Manifest.txt HelloWorld.class
+        java -jar HelloWorld.jar 
+
+        to include multiple files 
+        javac *.java 
+        jar cfm HelloWorld.jar Manifest.txt *.class
+
+    in procedural programming we just have a bunch of funtions calling each other.
+
+    each class should have one kind of responsibilies.
+
+    the great thing about static method is that you don't need to create objects before using them and it is nice.
+
+    in a nutshell oop is about intitiazing objects using constructor and all data via constructor and then get anything you want using a method without any parameters.
+
+    create a class for all constants and use in other classes so there is only one place to modify.
+    instead of having same variables in all classes.
+
+    inheritance: third principle of oop
+    -----------------------------------
+
+    to reuse code and have.
+    there is baseclass/parent/parent class,sub/child.
+    put all common code in one super class.
+    eg public class UIcontrol{
+
+    }
+    public class TextBox extends UIcontrol{
+
+    }
+    inherits all features and methods from parent.
+
+    the Object class:
+        every class inherits from Object class directly or indirectly 
+        hence giving every class some features and methods.
+            var obj=new Object();
+                Object is in java.lang
+                obj.equals()
+                obj.toString() returns package name @ hashcode in hexadecimal as string.
+                obj.notify();
+                    .hashCode(); it returns the hash. it is a number.
+                    .equals() by default compares by reference and not value.
+    in class:
+        there are fields,private methods,public methods,constructor.
+        at top put fields then constructor and then public method and then private methods.
+    constructor:
+        first constructor of parent and then of child is run.
+        if parent has parameters then pass that as first in child constructor on super.
+        public TextBox(){
+            super(a); //if parent has defualt constructor then we can skip this.
+            child thing
+        }
+
+    access modifier:
+        public are accessable outside class
+        private are not accessable outiside class.
+        private members are not inherited by subclass or even private methods.
+        protected are public in that package and not available in ohter packages,and are inherited even by other package classes. protected is a bad programming practise.
+
+        default vlaue:
+            package private.
+            public in package and private outside that package,also not recomended.
+            always use private and public.
+        
+        import package.Classname;
+    
+    overiding methods:
+        creating your own method instad of using parents same parameters.
+        same parameters return type etc.
+
+        using annotation
+        @Override
+        public String toString(){
+
+        }
+        annotations give extra information to compiler,it is a label.
+
+        println calls toString method for all its input objects.hence no need to call overided method.
+
+    upcasting and downcasting:
+        upcasting is casting object to one of its super types
+        downcasting is toone of its sub types.
+
+        every child object is a valid parent object,as inheritance is a IS-A relationship.
+        object can hence be passed as so and as it has all parent members.
+        upcasting is automatic,hence can be given as input.
+
+        for downcasting:
+            var t= (Textbox) control;
+            now you can use Textbox methods as well.
+        parent is not necessarily a child,hence downcasting would give error if here control was not Textbox that was casted into UIcontrol earlier.
+
+        for a parent you can substitute any child.
+
+        hence always check types:
+            a instanceof Textbox to check if it is instance of desired class.as if paremeter accepts UIcontrol but you want Textbox .
+        parent cannot be casted into child.
+
+    comparing objects:
+        01==02 compares references.
+    
+    obj1.equals(obj2) also compares references.
+
+    we can override equals() method.
+        public boolean equals(Object obj){ //since we are overriding and paremeter type has to be same hence Object type.and use instanceof to check type.
+            var other=(myclass) obj;
+            return other.x==x;
+        }
+        can also put if this==obj in case they are same objects.
+        if you assign an object to parent type,then you can only use its method that parent allows if you can typecast it back to orignal type and use other methods etc.
+    polymorphism:many forms
+    -----------------------
+    note: even though private members are not inherited,that doesn't mean public method won't be allowed to use them similary settings and getters and constructor  etc do the work normal way.
+
+        you can have multiple children of UIControl and each method overriding the methods of parent is its own way.
+        Control[] controls={new Textbox(),new DropDown()}
+    
+    abstract classes:
+        it doesn't mean anything in real,hence abstract
+        cannot initiate,just provide some common code for sub classes.
+        obj.getClass() to get class of a given object.
+
+        public abstract class Abc{
+            public abstract void render();//abstract here forces chld to define it.
+        }
+        you have to define child also as abstract if you are not Defining abstract methods.
+        define an abstract method and every class will have its own implementation hence polymorphism.
+
+        you can have non abstract method as well in abstract class for common code.
+
+        with polymorphism we get rid of using if else to cover cases.
+
+    final classes and methods:
+    --------------------------
+         can't extend final class.
+         we cann't override final method.
+
+         public final class Abc{
+
+         }
+         public final int {
+
+        } in any class need not to be final class.
+
+        String class is final as String is immutable.
+    
+    deep inheritance not recomended,it causes coupling.
+    java has no multiple inheritance as diamond problem,ambiguity,which one to choose of fields and methods.
+        YAGNI : you aren't gonna need it.
+
+    INTERFACES:
+    ------------
+        we use interfacers to build loosely coupled extensible,testable applications.
+        if class A uses Class B we say A is dependent on B.
+
+        we want loose coupling eg by private methods.
+
+        with interface we get complete independency.
+
+        public interface Draggable{
+            void drag();
+        } 
+        it only includes methods declaration.
+
+        class A -> interface <- class B 
+
+        interface defines what should be done.
+            classes define how it should be done.
+        
+        interface is a chef and you need a chef as long as it does the job you don't care who the chef is.
+        and chef can be replaced with another chef but if chef as to be john,you are screwed.
+
+        interfaces are used to minimize the impact of changes.
+
+        able postfix used or Can eg CanCalculate or I to name.
+
+        everything in an interface is public,methods are abstract,as private would be meaninless.
+        you define and change alogrithms underneath easily.
+
+        public interface TaxCalculator{
+            double calculateTax();
+
+        }
+
+        interface has no state/data.
+        we cannot instantiate an interface.
+
+        public class C implements TaxCalculator{
+
+        }
+        can be like extends A implements B 
+
+        every class that implements interfaca has to define those methods.
+        also use:
+            @Override 
+            and make methods public.
+        
+        interface is like a contract.
+        abstract is like partially completed class used to share code.
+
+
+        for multiple use class A implements B,C,D{}
+
+        Dependency injection:
+        ----------------------
+        other classes pass you your dependency,you don't create it.
+        and to define variables you only use interface name,and then get it using constructor or methods.
+        hence your code is only dependent on interface.
+        private interfaceA x;
+
+        we can pass a dependency using a constructor or a setter or a regular method.
+        similarly in method definition,the parameter would be of type that interface not the class.
+        don't use anything from outside class,until it is needed.
+
+        constructor injection:
+            passing dependency using constructor.
+
+        it is called programming against interfaces.
+
+        we didn't create an object hence no object.
+        
+        main will give input an object of that clas whihc implements that interface.
+        hence loose coupling.
+        we can also create setter for it,setter injection.
+
+        put getters and setters at the end.
+
+        constructor injection is best and recomended as you might forget calling setters sometimes.
+
+        or just put the dependency as input to a method so we don't use it anywhere else hence rest of the code is independent,called method injection,where the parameter is interface type not class type.
+
+        divide your inteface into small intefaes foucsing on single capability.
+        it is called inteface segregation principle.
+
+        constructor injection is the best way,as it exposes all dependency.
+
+        the coupling with interfaces is small and limited to interfaces.
+
+        you can have fields in interface,they are static,and public and cannot cannot change hence final,don't use them.could be used to have magic numbers in one place.but still don't use them.
+
+        interfaces are just contracts and why should other classes even know of such constants as the classes uses the interface will be aware of its existence and it doesn't make sense.
+
+        can declare static methods in interfaces like static double abc (){code} with whole code,don't don't them it has logic and logic can change and is not good to be at interface level,instead use abstract class in such case.
+
+        interface is about whats not hows.
+
+        coupling to an interface is the best kind of coupling.
+
+        create small interfaces and then to make a combination of them as your depency use inhertance among them.
+            public interface UIWidget extends Draggable,Resizable{
+                void resize()
+            }
+        an interface can have multiple parents,as there is no ambiguity as there is no implementation.
+        each interfcae should be doing one thing.
+
+        each interface in one file.
+
+        eg having an interface for video encoder so tommorow we can change it easily as long as the interface is same.
+
+        create interface for all dependencies.
+
+        use protected in an abstract class to make it inheritiable.
+
+        you can create private methods in interface,so if you get repetative code used in static methods you can extract them into a private method. and it is terrible thing that happened to java.
+
+        public interface B extends C,D
+        public class C implements B,C,D 
+        interfaces make unit testing easy.
+
+        you create interface and ask poeple to implement it.
+
+        interface should only have public methods in that that are not static.
+
+        if you want to share code use,abstract classes and inherit.
+
+        some people are abusing classes ability to implement multiple interfaces as a hack for multiple inheritance,they treat interfaces like classes and put a lot of code there.
+
+        abstract classes are there to share code.
+        
+
