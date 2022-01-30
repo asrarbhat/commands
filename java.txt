@@ -809,4 +809,16 @@ OOP:
 
         abstract classes are there to share code.
         
+        how to oop:
+           escapsulation by class
+           abstraction by private keyword.
+           intefaces to deal with external dependencies.
+           inheritance for code reusability.
+        
+
+course 3:
+----------
+    exceptions:
+    -------------
+    
 

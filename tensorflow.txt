@@ -7,7 +7,7 @@ module 2:
     what is deep learning?
         ML based on ANN
     what is Machine Learning?
-        it is turining data into numbers and finding patterns
+        it is turning data into numbers and finding patterns
         in those numbers 
         How?
             code and math.
@@ -22,9 +22,10 @@ module 2:
     
     you can pretty much do anything with ML.
 
-    Don't use ML if you can build good rule based system.
-
+    Don't use ML if you can build good rule based system. rule 1 in googles machines learning guide.
+    
     when rules are hard to figure out,use DL.
+    or when a long list of rules.
     if data changes continuously use DL.
     large data to discover insights,use DL.
 
@@ -172,6 +173,7 @@ module 2:
                 so it doesn't learn only one type of pattern.
 
             SEED:
+                operations that rely on a random seed derive from two seeds.
                 global level
                 opeartion level
 
@@ -220,7 +222,7 @@ module 2:
         * / + - % work fine
 
         or tf.multiply(tensor,10) <> tf.math.multiply()
-        it uses gpy and,orignal remains unchanged.
+        it uses gpu and,orignal remains unchanged.
         tf.math.add() you can skip math for some opeartions it is a shorthand.
 
         basically to run on gpu use inbuilt functions.
@@ -234,7 +236,7 @@ module 2:
             usually you can drop middle one.
 
             @ in python fo matrix multiplication
-            t1@t2
+            t1@t2 for list.
 
             tf.reshape(y,shape=(2,3))
             tf.transpose(t)
@@ -281,7 +283,7 @@ module 2:
 
         tensor numpy compatibility
             tf.constant(np.array(...))
-            arr.numpy(tensor) or tensor.numpy()
+            tensor.numpy(),np.array(tensor)
         
 
     using GPU/TPU
@@ -292,7 +294,7 @@ module 2:
         go to runtime,change runtime type, click on GPU 
         now it will have GPU also
 
-        CUDO -> DRIVER-> API by nvidia .inferface between tf and GPU
+        CUDA -> DRIVER-> API by nvidia .inferface between tf and GPU
         !nvidia-smi to see gpu
         if you have access to CUDA enabled GPU, tf will automatically use it whenever needed.
 
