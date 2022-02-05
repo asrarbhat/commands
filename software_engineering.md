@@ -1,0 +1,27 @@
+## OOP from nptel
+
+- started in early 1980's
+- UML became an ISO standard in 2004.
+- Object Modelling using UML.
+- UML is modelling langauage using which you can document and design things.
+- UML is independent of methodology.
+- methodologies are tied to notations.
+- modelling is an abstraction mechanism.
+    - we capture only important aspects and ignores the rest.
+    - different models obtained when different aspects are ignored.
+- view:  different perspective of a softawre.
+    - users view.
+    - structural view.
+    - behavioural view.
+    - implementation view.
+    - enivironmental view.
+- users view using usecase diagrams,it is the starting point.
+- structural view using class diagram and object diagram.
+- behavioural view using sequence digram state chart etc.
+- implementation view using component diagram.
+- enviromental view using deployment diagram.
+- a use case is a way user is gonna interact with that component.
+- there may be dependecies between use cases.
+- typically name of a use case is a verb.
+- use case diagram serves as a requirements specification.
+- 

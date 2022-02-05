@@ -301,17 +301,24 @@ module 2:
 
 module 3: neural network regression with tensorflow
     
+
     regression means output belongs to R 
     how much,how many kind of questions,or co-ordinates of image.
     
     for help go to tensorflow documentation.
 
+    always use one hot encoding for categorical data,even if order exists.
+
     inputs<>input features.
+    inputs are the input layer,hence shape is same as the no. of inputs.
+    usually activation is Relu,actifvation could be put as None
+
     very often algorithms already exist.yo only do new things in research.
 
     import tensorflow as tf
     X is usual name for input feature matrix
     y usual output to be predicted.
+    plt.scatter(X,y)
 
     input and output shapes:
         no. of columns
@@ -369,7 +376,7 @@ module 3: neural network regression with tensorflow
             optimizer=tf.keras.optimizers.Adam(lr=0.001) //it is optimizers not optimizer in r-value
         when trying to improve a model try one thing at a time,otherwise you won't know what actually worked.
 
-    try your model you small subset of data before running for whole data.
+    try your model on small subset of data before running for whole data.
     
     loss="mae"
     metrics=["mae"]
@@ -389,7 +396,8 @@ module 3: neural network regression with tensorflow
             in loop
         what we tweak are called hyperparameters
             paremeters that we set
-        
+        when it comes to model,experiment,experiment,experiment.
+
         when it comes to evaluation:
             it is all about visualization.
                 visualize the data,model,training,predictions,evaultions.
@@ -406,9 +414,9 @@ module 3: neural network regression with tensorflow
                 test set 10-15%
         splitting the data
             X_train = X[:40]
-            y_train = X[:40]
+            y_train = y[:40]
             X_test = X[40:]
-            y_test = X[40:]
+            y_test = y[40:]
 
         plt.figure=(figsize=(10,7))
         plt.scatter(x,y,c="b",label="first")
@@ -416,36 +424,37 @@ module 3: neural network regression with tensorflow
         plt.legend();
 
         sometimes you manually need to define input shape and it can't automatically figure it out,in first layer.
-            tf.keras.layers.Dense(1,input_shape=[1]) if only one feature.
+            tf.keras.layers.Dense(1,input_shape=[1]) if only one feature,and use 1, if each row in []
         Dense<> fully connected.
-        model.summary() to see summary of model.
-        non-trainable paremeters: of model which is already trained and you use it.
+        model.summary() to see summary of model.tells you how many paremeters in model.
+        non-trainable paremeters: of model which is already trained and you use it.like in transfer leanring.
+    
         trainable params: ones that we can update.
 
-        mode.fit(x,y,epochs=100,verbose=0) //different levels of verbose,0 means no output.
+        mode.fit(x,y,epochs=100,verbose=0) //different levels of verbose,0 means no output. 1 means for each one and 2 means one per epoch.
 
         visualizing model
             from tensorflow.keras.utils import plot_model
-            plot_model(model=model,show_shape=True)//can use to_file="abc.jpg" also to sve.
+            plot_model(model=model,show_shape=True)//can use to_file="abc.jpg" also to save.
                 it prints graph of model which is cool
 
         tf.keras.layers.Dense(...   ,name="second layer") makes model.summary() good.
             can even put name for whole model as well.
         
-        plot graph between y_pred and y_true
+        plot graph between y_pred and y_true to see how well it is doing.
 
-        create a function if something comes in every model.
+        create a function if something comes in every model.like plotting.
 
         model.predict works also on list of inputs.
 
         metrics for regression:
-            mean absolute error //mean of absolute error 
+            mean absolute error //mean of absolute error //best one
             mean square error.  //mean of squared error.
             tf.keras.losses.MSE()
             another one is huber //less sensitive to outliers
                 tf.keras.losses.Huber()
 
-        model.evaulate(X_test,y_test)
+        model.evaulate(X_test,y_test)  //for test test to check accuracy and .predict during deployment.
 
         always make sure that tensors have appropriate shape.
 
@@ -462,7 +471,7 @@ module 3: neural network regression with tensorflow
 
         epoches do not necessarily increase performance.
             when overfitting.
-        Tensorboard is a component of tensorflow lobrary to help track modelling experiments.other same tool is weights and biases.
+        Tensorboard is a component of tensorflow library to help track modelling experiments.other same tool is weights and biases.
 
     saving our models:
         so we can use them outside of collab.
@@ -474,7 +483,7 @@ module 3: neural network regression with tensorflow
             model.save("best_model")//it creates a directory.
         saving in hdf5:
             model.save("our_model.h5") //it creates a single file.
-        
+        can load in c during production.
         loading a file:
             new_model=tf.keras.models.load_model("best_model")
             you can even train it again from now.
@@ -498,7 +507,7 @@ module 3: neural network regression with tensorflow
         X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.33,random_state=42)
 
         we can now directly use pd dataframes in model.fit(df1,df2) which is cool.
-        pandas as tf are compatible.
+        pandas and tf are compatible.
 
         model.evaulate(X_test,y_test) gives you mae or MSE
     
@@ -526,7 +535,7 @@ neural network classification:
         multiclass classification:
             which food is in the picture.
         
-        multilabe classification:
+        multilabel classification:
             when you have multiple labels for an input,eg what is this article all about,it selects multiple labels in output.
     
     in images we have 3 color channels as RGB
@@ -543,7 +552,7 @@ neural network classification:
         tf.keras.layers.Dense(3,activation="softmax") //last layer  //can use sigmoid for binary classification.
 
         while compiling:
-            loss=tf.keras.losses.CategoricalCrossentropy()
+            loss=tf.keras.losses.CategoricalCrossentropy() //BinaryCrossentropy() for binary classification
             optimizer would be adam
             metrics=["accuracy"]
 
@@ -554,10 +563,14 @@ neural network classification:
     binary classification can be done with only one output neuron as well.
     you use model.evaulate on test data,to see how good it is doing.
     
+    andrei karpathy is in tesla deep learning he has guide also.
+
+    visualization of data is key to good modelling.
     
+    it is important to introduce nonlinearity to make model fit data.
+
     
-    
-    
+
     
     
     

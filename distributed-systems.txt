@@ -368,7 +368,7 @@ LECTURE 3: GFS: case study: how to build big storage.
             split brain problem: when two machines think they are primary.
                 usually due to network partition.
             
-LECTURE 4: PRIMARY BACKUP REPLICATION
+LECTURE 4: PRIMARY BACKUP REPLICATION of program.
     if something crashes we still want availablity
     and our tool would be replication.
 
@@ -425,8 +425,13 @@ LECTURE 4: PRIMARY BACKUP REPLICATION
 
         state transfer is more robust.
 
-        if primary fails go to backup server:
-            there is going to be an anomoly during the cross over.
+        in state transfer backup could lag during failure,hence when we start it it would not be in same state.
+
+        making the synchronization absolute is a gigantic task.
+
+        if primary fails switch to backup elegantly server:
+            there is going to be an anomoly during the cross over.in ideal world we want nobody to notice.
+        
         and even second replica can fail hence we need third replica up now.
         and the state is transfered to it and it is gonaa be expensive 
         to transfer whole state.
