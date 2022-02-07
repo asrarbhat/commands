@@ -818,7 +818,161 @@ OOP:
 
 course 3:
 ----------
-    exceptions:
+    concurrency:
     -------------
+    Thread class in java.lang package.
+    sout(Thread.activeCount()) it is a static method.
+        one normal and one garbage collection etc.
+        sout(Runtime.getRuntime().availableProcessors())
+
+        Thread t1=new Thread()
+        public class A implements Runnable{
+            @Override
+            public void run{
+                sout("abc");
+            }
+        }
+        Thread t=new Thread(new A());
+        t.start()
+        Thread takes a Runnable object as an argument where Runnable object is of class that implements Runnable.it only has one method which is public and returns void and takes no parameter.
+
+        pausing a Thread.
+            Thread.sleep(5000)  five seconds. put it in try catch as it could throw exeception.otherwise error . try{} catch(InterruptedException e){e.printStackTrace();} if you try to interrupt a thread that is sleeping.
+        
+        sout(Thread.currentThread().getNmae()) /  .getId() 
+        each Thread has a name and an id.
+
+        you can create thousands of threads in a loop.
+
+        joining a thread.
+        t2.join() wait for t2 to complete.like downloading a file and then waiting for it to complete then start scanning it with next thread.
+        if you use Thread.sleep in main thread and it is UI then UI will freeze so be careful there.
+
+
+        t.interrupt() it just sends an interrupt request,it is upto that thread to decide if it wants to do anything about  it.
+        in that Thread you can write
+            if (Thread.currentThread().isInterrupted()){
+                break or whatever or return.
+            } in loop. and if it is sleeping for that we already saw to put that in interrupt exception.
+        
+        concurrency issues:
+            shared resources.
+            like shared data,called race condition.
+            or if one modifes and another doesn't see that is called visibility issue,different threads get different view.
+            we should write thread safe code.
+        
+        the class with run can have constructor etc as well or any other methods as well.
+        even with join you have to handle InterruptedException. as it is as good as sleep.
+
+        you should create a list of threads and and add to them and you can use join for any of them later.
+
+        stratagies to write thread-safe code.
+            not sharing data: confinement.
+            immutablity : shared data cannot be changed.
+            synchronization: not allowing multiple access at a time using locks.
+                problem: deadlocks
+            or use atomic objects.
+                eg atomic integers,if you increment atomic integer it would be done in one step.
+            partition data into segments: where thread can access a segment concurrently.
+        
+        how to write a class:
+            fields,constructor,methods,getters,setters.
+        
+        confinement:
+            like creating an array for input to each thread and each thread modifies the given element for them in array and at the end we combine the result accordingly.
+        locks:
+            import java.util.concurrent.locks.Lock;
+            private Lock l= new ReentrantLock();  Lock is an interface.
+            before critical section
+            l.lock();
+                CRITICAL CODE     
+            l.unlock(); //this should be in finally section if it can throw an exception.
+
+            the synchronized keyword:
+                no need of locks.
+
+                instead a method with critical section
+                synchronized(this){  "this" here is called a monitor
+                    critical section
+                }
+                for all objects of that class only one thread will execute that code.
+                passing this is a bad practise here,as monitor object is associated with this then if you can using another monitor as this as monitor object again then you cannot even enter that code.as synchronized would associate lock with an object,which you want to be modifed carefully.causes unnecessary waits.
+
+                hence use 
+                synchronized(total){ here you can create new Object as total then put any critical code inside even if you don't use total ever,it is kinda naming critcal sections.
+                    critical code 
+                }
+
+                public synchronized void increment(){
+
+                }
+                this is as good as using synchronized(this)
+                which is not the good practise.
+
+
+        the volatile keyword:
+            private volatile boolean x;
+                keeps changing so add to main memory from cache always hence solves visibility problem.
+        
+        Thread signalling:
+            while(!status.isDone()){} this would waste cpu cycles as it is waiting.
+            every object has wait and notify. inherited from Object class
+            some variable v
+            v.wait(); current threads goes to sleep until other thread changes v.
+            wait until its value changes or some thread changes it,handle uninterrrupedException here as well.and have to call it in synchronized block,where the monitor is same block.
+            v.notifyAll() after changing.
+                in synchronized block
+                or just v.notify() if only one thread waiting.
+                same variable as monitor.
+            
+            don't use them
+        
+        Atomic objects:
+            we have atomic classes
+            we have atomic boolean,integer etc.
+            private AtomicInteger a= new AtomicInteger();
+            a.increment();
+            a.getAndIncrement(); etc. returns value and then increments.
+
+            they are cool.
+            for counters they are cool
+        Adders:
+            faster than atomic objects.
+            private LongAdder total=new LongAdder();
+
+            total.intValue(); to get the value.
+            total.increment();
+            better than atomic types.
+        
+        synchronized collections:
+
+            Collection<Integer> collection=new ArrayList<>();
+                                        = Collections.synchronizedCollection(new ArrayList<>());
+                                        now all the methods have synchronization code.
+                                        even method is synchronized now.
+        
+            they use locks.
+        
+            this can have performance issues.
+            so use concurrent collections in that case,uses partitioning of data.
+        
+        concurrenct collections:
+            Map<Integer,String> map=new HashMap<>();
+            regular hashmap
+
+                                = new concurrenctHashMap<>();
+            the methods remain the same,beauty of programming against the interfaces,just changed the name and everything else remains same.
+        
+        
+
+
+            
+
+
+
+
+
+
+        
     
 

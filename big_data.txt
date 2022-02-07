@@ -107,6 +107,62 @@ introduction:
 
 
 hdfs:
+    hdfs youtube:
+        128MB size blocks.
+        3 replicas by default.
+        gfs under hdfs and gmr under mr
+        file system is a software that is an interface between your hardisk and you.
+        s3 is also like hdfs.
+        ntfs block size is 16kb
+        of ext block size is 512kb
+        opposite of distibuted is standalone.
+        two types of distributed systems, master and slave and peer to peer.
+         is a peer to peer.
+        in master slave there is single point of failure/communication(spoc/spof)
+        hadoop is master slave distributed system.
+        now we have hadoop 2 and 3.
+        cluster is a bunch of machines and each machine is called a node.
+        64mb block size in hadoop 1
+        block size is configurable.
+        replication is also configurable.
+        3 replicas hence 1 original and 2 copies.
+
+        in a cluster choose one as master and rest as data nodes.
+        install hadoop in all machines and the configurations decide master and slave.you install hadoop on say ext file sytem.
+
+        make one machine as master by running jp1 process in it and run jp2 process in data nodes.
+
+        you also have edge node to recieve client requests.and then request goes to specific node.
+
+        you install hdfs on top of ext file system.
+
+        during write the master divides the data into blocks in meta data and does replications and creates meta data for where to saves the meta data,and client would get this meta data.
+
+        the nodes acknowledge each other about write sucess.
+
+        client and slave sent heatbeat every 3 seconds,it is called heartbeat communication.depending on failure it called by dealt.
+
+        in case of failure,it would replicate the failed node on alive nodes.
+        hence keeping replicas still 3.
+
+        zookeeper keeps track of all namenodes and heartbeat is what it uses to do so.
+
+        installation:
+            prerequisites:
+                jdk atleast jdk8
+                java --version
+            download hadoop
+            tar xzf abc.tar.gz to unzip
+            add to bashrc
+                export HADOOP_HOME=/home/hdoop/hadoop3.1.2
+                export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+                source ~/.bashrc
+            in HADOOP_HOME/etc/hadoop/hadoop-env.sh
+                give java path 
+                export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
+            
+
+
     hadoop distributed file system
     to handle big data:
         broken into blocks of each 128MB blocks.

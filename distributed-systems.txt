@@ -538,7 +538,7 @@ LECTURE 6: FAULT TOLERANCE: RAFT
         and clients want to know who is the primary.
         split brain arises when a client can talk to one but not other.
         how should the system react ?
-        as modifying one and not other will make the system inconsistent.
+        as mtiodifying one and not other will make the system inconsistent.
         but if you need it to talk to both in order to make progress.
         it is then no better than having a single server.
 
