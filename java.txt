@@ -962,9 +962,384 @@ course 3:
 
                                 = new concurrenctHashMap<>();
             the methods remain the same,beauty of programming against the interfaces,just changed the name and everything else remains same.
-        
-        
 
+
+    lambda expressions:
+        were introduced in java 8,it is a functional programming concept.
+        it was introduced to give us functional programming.
+
+        functional interface:
+            an interface with single abstract method.
+            can have default methods though/with implementation ones.
+
+        package xyz;
+        public interface Printer{
+            void print(String message);
+            default void printTwice(String message){
+                sout("hi")
+            } default is a bad programming practice
+        } 
+        even if there are static methods,it is still a functional interface.
+
+        public class ConsolePrinter implements Printer{
+            @Override
+            public void print(String message){
+                sout("hi");
+            }
+        }
+
+        sometimes we don't want to create a class just to implement a single function. when programming against interfaces.
+
+        Anonymous inner classes.
+            if we want class for one instance.
+            given an interface Printer.
+
+            greet(new Printer(){
+                public void print(String message){
+                    sout("hello");
+                }
+            })
+            here now we created a class with no name, it is called anonymous inner class.
+        
+        java 8 gives us lambda expressions as better alternative.
+
+        lambda expressions: like an anonymous function.
+            we want functions on its own without belonging to a class.
+            greet((String message)->{
+                sout(hello);
+            } )  arrow is called the lambda opearator
+            hence a functional interface can be implemented using lambda expressions.
+            we can even remove the type, compiler figures it out automatically.
+            (message,second)->{}
+            for single parameter we can skip parenthesis.
+            message->{}
+            if single line we can even remove brackes.
+            message->sout("hi")
+            
+            we can even store lambda expressions in a variable.
+
+            Printer printer=message -> sout("hi");
+
+            lambda expressions are objects used to represent anonymous classes.
+
+            you can access static fields in the inner lambda expressions directly.
+            and you can even access instance methods.
+
+            this in lambda expression refers to enclosing object,where as in anonymous classes it refers to the anonymous class itself.
+
+            anonymous classes can have state but not the lambda expressions.
+
+
+            Method reference:
+                sometimes all we do in lambda expression is passing the parameter to an existing method.
+                eg in 
+                message->System.out.println(message)
+                we can reference this method directly.
+                like
+                    greet(System.out::println)
+                can even reference same class or static method etc
+                lets say you are in clas Abc that has a method print as we
+                 then greet(Abc::print) this greet is also called in Abc.
+                
+                for instance methods.
+                greet(objectname::method)
+
+                for constructor:
+                greet(Abc::new) 
+                
+                with method reference we write conpact and easy to use lambda expressions.
+            
+            Build in functional interfaces.
+                 in java.util.function.
+
+                 we have four types of functional interfaces in java.
+                    consumers
+                    suppliers
+                    function
+                    predicate.
+                
+                consumers:
+                    single arugment and returns nothing hence it consumes.
+                supplilers:
+                    no arguments and returns a value.
+                function:
+                    maps a value to different value.
+                predicate:
+                    returns a criteria if satisfied by the value.
+                
+                the consumer interface:
+                    void accept(T t)
+                    it could have a default method in interface.
+                    biconsumer takes 2 arguments.
+                    int consumer takes integer.
+
+                    using consumer interface.
+                        list.forEach expects a consumer interface.
+                        list.forEach(item->{sout(item)})
+                    
+                    chaining consumers.
+                        List<String> list=List.of("a","b","c");
+                        Consumer<String> print=item->sout(item);
+                        Consumer<String> printUpperCase=item->sout(item.upper())
+
+                        list.forEach(print.andThen(printUpperCase)) it calls second consumer on item not its output as there is none of its output.
+                        andThen is a default method in consumer interface.
+                        you can use:
+                            print.andThen(printUpperCase).andThen(print) so on and so forth.
+                the supplier interface:
+                    T get()
+                    Supplier<Double> getRandom=()->Math.random();
+                    getRandom.get() to call it.
+                    we also have like IntSupplier.
+                the function interface:
+                    takes an arugment and returns a value.
+                    R apply(T t)
+                    can have multiple parameters.
+
+                    Function <String,Integer> map=str->str.length();
+                    map.apply("sky"); 
+                composing functions:
+                    Function<String,String> replaceColon=str->str.something;
+                    Function <String,String> addsomething same way 
+
+                    replaceColon.andThen(addsomething).apply(input)
+                        can assign it to a value.
+                    
+                    or use.
+                        addBrackes.compose(replaceColon).apply(argument.)
+                    
+                the predicate interface:
+                    used to filter data.
+                    boolean test(T t)
+                    can have multiple arguments.
+
+                    Predicate<String> isLongerThan5=str->str.length>5;
+                    isLongerThan5.test("sky");
+                
+                combining predicates.
+                    Predicate<String> hasLeftBrack=str->str.startsWith("{");
+                    Predicate<String> hasRightBrace=
+                    Predicate<String> hasBoth=hasLeftBrack.and(hasRightBrace);
+                    hasBoth.test("hi there");
+                    can even use or,or first.negate().
+                
+                the binary Operator interface.
+                    all these interfaces in java.util.function
+
+                    binary operator is a special kind of operator that takes two arugments and returns one it infact is a special type of function.
+
+                    takes two of type T and returns of type T 
+
+                    BinaryOperator<Integer> add=(a,b)->a+b;
+                    add.apply(1,2);
+
+                the Unary Operator interface:
+                    takes T and returns T 
+                    UnaryOperator<Integer> square=n->n*n;
+                    another like increment.
+                    increment.andThen(square).apply(2);
+                    can assign to anything.
+                
+
+                in java functional interfaces can be used to do functional programming.
+    Excepiton Handling:
+        what are exceptions:
+            NUllPointerException is a class in java.lang
+            so exception is an object that gives information about the error.
+
+            there are several exception classes in java.
+            the line that throws error-> offending line.
+
+            stacktrace is the stack status at the time the error occurs.
+            it gets printed.
+
+        if an exception can occur in a method,we say that method threw an exception.
+
+        the java runtime looks for the exception handler,in reverse order in stack.
+            if there isn't one,the program stops with printing stack trace.
+        
+        as a good developer you should either handle them or prevent them from happening.
+
+        types of exceptions:
+            we have three types of exceptions in java, checked,unchecked/runtime, and error
+        
+            checked exceptions are the ones that we devleopers should anticipate,and handle properly,like reading a file,good developers always handle.
+            And java compiler forces you to handle checked Exceptions.
+
+            var reader=new FileReader("abc.txt")
+                throws fileNotFoundException.
+            
+            unchecked Excepitons or runtime exceptions,these occur during run time, like passing Null as an arugment,these are programming errors. these should be prevented from happening in the first place with good programming pracitses and a lot of testing and automated testing.
+
+            RuntimeExceptions:
+                NUllPointerException
+                ArithmeticException like divide by zero.
+                IllegalArgumentException
+                IndexOutOfBoundsException
+                IllegalStateException
+            
+            Error:
+                an error external to our applications
+                like stackoverflow or outofmemory etc.
+            
+
+            Hierarchy of Exception classes in java:
+                    at top Throwable class with defines common characteristics of all Exceptions like error message in stacktrace.
+
+                    below it are two classes  Exception  and Error 
+                    Error and all its subclasses represent errors that are external to our application.
+                        like out of memory 
+                    Exception Class is for all checked and unchecked exceptions.
+
+                    Under Exceptions we have RuntimeException as parent for unchecked exceptions.
+                    
+                    checked Exceptions are under Exception even RuntimeException is also under it.
+            
+            Throwable inherits from Object directly.
+
+            Handling exceptions:
+
+                try{
+                    risky code
+                }
+                catch(fileNotFoundException e){
+                    sout("doesn't exist")
+                    or sout(e.getMessage())
+                    e.printStackTrace(); //prints that red text.
+                }
+
+                control moves to catch block when exception happends.
+            
+                catching multiple types of exceptions:
+                    try{
+
+                    }
+                    catch(fileNotFoundException e){
+
+                    }
+                    catch(IOException e){
+
+                    }
+
+                    the order of the catch blocks matters,as if it caught the exception already,put more specific exceptions at the top.
+                
+                combining exceptions
+                    catch (IOException | ParseException e){
+
+                    }
+            
+            the finally block:
+                try{
+
+                }
+                catch(){
+
+                }
+                finally{
+                    release resources,databases,network etc. but it cannot read what is is try as try has local scope so declare variable before. if needed set it to null. can use if to check if the variable is null. you might need to even handle file closing.
+                    finally is always executed,if exceptions occur or not.
+                }
+
+            better way of releasing external resources:
+                declare resources as part of try block
+
+                try(var reader=new FileReader("abc.txt")){
+                    this is called try with resource statment
+                    no need to close resources explicitly,the java compiler would transform it into above type.and  add finally block.
+
+                    for this to work the this class should implement AutoClosable interface.
+                }
+                you can create multiple objects like
+                    try(
+                        var a= new something;
+                        var b= new something else;
+                    ){
+
+                    }
+                
+
+        throwing exceptions:
+
+            public void deposit(float value){
+                if value<){
+                    throw new IllegalArgumentException();
+                } this is called defensive programming,coding in a defensive manner.
+            }
+
+            although code becomes noisy.
+            don't pollute every method with validation,perform this only when taking input from users.
+            hence always validate at the boundary of your exceptions.
+
+            we wanna throw exception in a method and have the caller of the method handle it.
+
+                this means this method may throw an exception.
+                public void deposit(float value) throws IOException{
+                    if something{
+                        throw new IOException();
+                    }
+                }
+                now java compiler forces user to put it in a try catch block.
+            
+            logging of error in real world applications is important.
+
+            if the code in catch gets executed,we are not telling the user the error happened.
+            as if we just printed something in terminal from server side,and something should happen in client side as well.
+
+            so we rethrow the exception:
+                 in catch{
+                     logging 
+                     throw e;
+                     and put in method that it Throws that kind of exeception
+                 }
+                 and this you can handle for client 
+                only used in certain cases.
+
+            generic exception classes:
+                catch(Exception e)
+                or Throwable e 
+
+            
+            custom exeception:
+                public class MyException extends Exception{
+                    optionally takes a constructor
+                    public MyException(String message){
+                        super(message);
+                    }
+                    publci MyException(){
+                        super("hi there");
+                    }
+                }
+                    always use suffix Exception to name Exceptions
+
+
+            chaining exceptions:
+                wrapping an exeception inside a more generic exceptions
+                like a bank withrow can fail because of many possiblities.
+                    liek InsufficientFundsException;
+                    like ConnectionFailedException; etc
+                
+                we we wrap all in one generic and then figure out what caused that one.
+
+                - first add a more general purpose exception.
+
+                now in deposit :
+                    var fundException= new InsufficientFundsException();
+                    var accountException= new accountException();
+
+                    accountException.initCause(fundException);
+                    throw accountException;
+
+                    or take parameters from constructor of generic exception
+                        public accountException(Exception cause){
+                            super(cause);
+                        }
+                    now you can use accountException(new fundException())
+                
+                at the handling side:
+                    e.printStackTrace();
+                    will give details.
+                    e.getCause() returns a throwable that was the cause.
+                    
 
             
 
