@@ -1339,9 +1339,384 @@ course 3:
                     e.printStackTrace();
                     will give details.
                     e.getCause() returns a throwable that was the cause.
-                    
 
+
+    
+    Generics:
+        you add packages to file directory where your Main file is.
+
+        to create list of any type we can create array of Objects hence heterogenous.
+
+        private Object[] item= new Object[10];
+        since object is parent to all,events ints it can convert of Integer.valueOf(1)
+
+        but it is a bad programming practise,as we don't know which is which in that array.hence hard to assign,need casting but it can be useful at times,we can return Object from a method and typecast accordingly.
+
+        the idea with generics is that if you have list data structure we should be able to put any kind of type in it instead of defining the same for strings,integers etc individually.
+        we can do it with Objects but it is not a good practise.
+
+        so we have Generics.
+
+        public class GenericList<T> { here ti s a parameter for class,can use any letter T,E T is used as it stands for Template/Type E is for element.
+            private t[] items= new T[10]; this gives error as it cannot instantiate T, as it does't know what type it is so we use.
+            private T[] items=(T[]) new Object[10];
+            private void add(T items){
+
+            }
+            public T get(int index){
+
+            }    
+        }
+        to instantiate we use new GenericList<String>();
+        classes can also have parameters like objects.
+        GenericList<Integer> list=new GenericList<>();
+        with generics the type has to be reference type.
+
+        list.add(1) java automatically wraps it into integer class it is called boxing.
+        int n=list.get(0);  unboxing.
+
+
+        constrained/bounded parameters
+        public class GenericList<T extends Number>{
+            now T has to only be Number or its child.
+        }
+
+        Numbers is in java.lang.Numbers
+
+        Constraint can even be interface.
+        even for interfaces we use extends keyword 
+
+        < T extends Comparable & Runnable> 
+        Comparable is used for comparing and hence can be used for sorting.
+        Integer etc already implement Comparable.
+
+        type erasure:
+            internally compiler uses Object class to cresate Generics, it replaces T's with Object clas like earier thats why new Object[10] works when instantiating.
+            when yoiu apply constrant it becomes of that constraint type.
+            for intefaces replaces with that interface.
+            for multiple interfaces it takes left most interface.
+
+            the only difference is compile time safety nothing more.
+        
+        Comparable interface:
+            to compare two objects:
+                to determine the order.
+            public class User implements Comparable<User>{even Comparable interface is Generic type 
+                @Override
+                public int compareTo(User o){
+                    < return -1 or negative 
+                    == return 0
+                    > return 1 or positive 
+                    to use u1.compareTo(u2)
+                    
+                    like 
+                    return points-o.points
+                }
+            }
+        
+         Generic methods:
+            can declare inside a non-generic class
+            like
+                public class Utils{
+                    public static <T> T max(T first,T second){
+                        can use T extends Comparable<T> and then use comapareTo method.
+                    }
+                }
+                publc static <K,V> void print(T keys,V values){
+                     <K,V> are put before return type.
+                }
+                same for public class Key<U,V>{
+
+                }
             
+            Generic classes and inheritance:
+                 instructor is subclass of User,you can assign instructor to User or use inplace of it,but cannot pass GenericList<instructor> for GenericList<User> to solve it you need to copy one by one or use wildcards.
+                 as GenericList of instructor is not a subtype of GenericList of User.as internally all use Objects.
+            
+            wildcards:
+                like in methods put
+                public static void print(GenericList<?> user){
+                    here ? repsents unknown type.
+                    now you can pass GenericList of anything as argument.
+                    java internally creates an anonymous object type under the hood for T 
+                    we can have multiple wildcard,we can assign results of that to an Object class object.
+                    
+                    we can restrict the wild card values.
+                        ? extends Number and now you can store these in Number variables in that class.
+                        but you cannot add to this list as you don't have access to the anonymous class created so you can use ? super Number here ? will be be now super class of Number hence we can add and cannot read.
+                }
+
+
+        used to deal with colletion of objects.
+        
+                    Iterable interface
+                    Collection interface
+            List           Queue            Set are also intefaces
+            ArrayList      Priority Queue   HashSet  these are classes.
+            LinkedList     
+
+        these classes implement these interfaces
+
+        iterable represents objects which can be used in for each.
+        collection extends itearable and adds extra functinalites,like add addAll, clear etc 
+        set represents colletion without duplicates.
+
+        to loop over an object implement Iterable interface.
+        Iterable is part of java.lang package.
+
+        e.g we want to use     ->     for(User item: Users)
+
+        public class GenericList<T> implements Iterable<T>{
+            @overide
+            public Iterator<T> iterator(){
+                it returns an Iterator Object,it is an object used to iterate over an object.
+                return null 
+            }
+        }
+
+        in main 
+        var iterator=genlistobj.iterator();
+        while(iterator.hasNext()){
+            var current=iterator.next();
+        }
+        internally this,hence for each loop is a syntax sugar.
+        or use
+        for(var item:genlistobj){
+            whatever. the above is what it gets converted into.
+        }
+
+        the Iterator interface in java.util.
+        it has four methods, two having default implementation
+        implement hasNext(),next()
+
+        eg.
+         inside our GenericList,create another class 
+         private class ListIterator implements Iteraotr<T>{
+             private GenericList list;
+             private int index=0;
+             public ListIterator(GenericList<T> list){
+                 this.list=list;
+                 we can access private members of above class as well since it is inside it.
+                 like list.items and items was private field of list.
+             }
+             @Override
+             public boolean hasNext(){
+                 return (index<list.count);
+             }
+             public T next(){
+                 return list.items[index++];
+             }
+         }
+
+        now in GenericList in iterator return new ListIterator(this);
+
+        Collection interface:
+            add(),remove(),contains() etc 
+
+    Collection<String> collection= new ArrayList<>(); these use E instead of T as in element.
+    collection.add("a")
+    sout(collection) also works 
+    Collections.addAll(collection,"a","b","c") ... means varialbe number of arugments in documentation.
+    collection.siz();
+    collection.remove("a");
+                .clear()
+                .isEmpty()
+                .contains("a")
+                .toArray() returns an Object array.
+                .toArray(new String[3]) to get String array
+                .toArray(new String[0]) to find size automatically.
+    
+    if you assign a String to Object then you can't use String methods to it.
+
+    program against interfaces:
+        Collection<String> other= new ArrayList<>();
+        c2.addAll(c1)
+        c1==c2 checks for reference
+        c1.equals(c2) checks if same content for collections.
+    
+    List interface:
+        list represent collection with index.
+        collection doesn't have index.
+        List<String> list= new ArrayList<>();
+        list.add("add")
+        list.add(0,"hi")
+        Collections.addAll(list,"a","ab")
+        list.set(0,"aa");
+        list.remove(0)
+        list.indexOf("a") -1 if not htere.
+        list.lastIndexOf("a")
+        list.subList(0,3) [0,3) it returns a list.
+    
+
+    sorting:
+        Collection.sort(customers) customers should implement Comparable interface. it sorts in place.
+        implements Comparable<thatClass>
+
+        the Comparator interface.
+            similar to Comparable inteface.
+            implements Comparator<classname>
+            public int compare(classname 01,classname 02){
+                
+            }
+        now using Comparator inteface we can sort:
+        Collections.sort(customers,new EmailComparator());
+        email comparator is the class implementing comparator,or use lambda expression.
+
+    Queue:
+        similar to list interface it extends Collection interface.
+        Queue<String> queue=new ArrayDeque<>();
+        queue.add("a")
+        queue.add("b")
+        queue.offer("d") offer and add do the same though might return different
+        queue.peek() to see top. returns null if not there queue.element() throws exception if not there.
+        queue.remove()
+        queue.poll() return null if not there and remove throws an exception.
+    
+    Set interface:
+        collection that contains no duplicates.
+        Set<String> set= new HashSet<>();
+        set.add("sky")
+        set.add("is")
+        the order is not guaranteed.
+        new HashSet(collectionofsametype)
+
+        set operations:
+            Set<String> set1= new HashSet<>(Array.asList("a","b","c"));
+            Arrays.asList creates a list.
+
+            Union.
+                set1.addAll(set2)
+            Intersection.
+                set1.retainAll(set2)
+            Difference:
+                set1.removeAll(set2);
+    
+    Map 
+        Map is in java.util.
+        it is not part of collection framework,it doesn't inherit form Iterable or Collection.
+
+        Map<String,Customer> map= new HashMap<>();
+        map.put("c2",c1)
+        map.get("e1") returns null if not there 
+        map.getOrDefault("e1",-1)
+        map.containsKey("ww")
+        map.replace("e1",c3)
+
+        it is not Iterable so cannot use for each loop.
+
+        for(var key: map.keySet())
+        map.entrySet()
+        map.values()
+        with entry you can use entry.getValue() and entry.getKey()
+    
+    STREAMS:
+        one of the important feature in java,that allows us to process data in declarative way.
+        like sql queries.
+
+        List.of(firstobj,secondobj,thirdobj) to create List.
+
+        imperative programming:
+            how to do stuff 
+        
+        delcarative programming:
+            What to be done eg SQL.
+        
+        streams were introduced to process data in functional way.
+
+        eg
+            every collection has a stream method.
+
+            list.stream() returns a stream object. filter expects a predicate funciton.
+            var x=list.stream().filter(movie-> movieg.getLIkes()>10).count()
+        
+        different ways to create a stream.
+            From a collection
+            From arrays
+            From an arbitary number of objects
+            infinite/finite streams.
+        
+        Collection<Integer> x;
+        x.stream() it has a stream method to get a stream object.
+
+        int [] arr={1,2,3}
+            arrays don't have stream() method.
+            but we have Arrays.stream(arr).forEach(n-> sout(n)) it expects a consumer.
+
+        creating stream
+            Stream.of(1,2,3,4,5)
+            var stream=Stream.generate(()->Math.random()) for infinite stream.
+            stream.forEach(n->System.out.println(n))
+            stream.limit(3).forEach() to only run 3 times.
+
+            Stream.iterate(seed:1,n->n+1) seed and a unary operator to generate the numbers.
+            you can apply limit.
+        
+        Mapping elements:
+            map()
+            flatMap()
+
+            movies.stream().map(movie->movie.getName()).forEach(name->sout(name))
+
+            don't assign to varialbes instead just chain.
+
+            Stream.of(List.of(1,2,3),List.of(4,5,6))
+            this is a stream of lists.
+
+                to work on individually on elements.
+
+                stream.flatMap(list->list.stream()) convert list to stream now use .forEach() like before.
+
+                flatMap is used to flaten a stream.
+        
+
+
+    The executive framework:
+        the working with Threads is complex so java 5 came up with this shit.
+
+        Thread issues:
+            we have limited number of threads available,as if we create a lot of threads we can run out of memory and crash the app.
+        
+        solution:
+            thread pool: a pool of threads called worker threads and they can be used to do some job and when the job is completed it goes back to thread pool.
+            these threads are not destroyed after completion,they can be reused to do some other task.
+
+            tasks wait in queue if all threads are busy.
+
+            hence we don't have to worry about creating threads directly,instead we submit our job to the thread pool.
+        
+        creating thread pool 
+            import java.util.concurrent;
+            ExecutorService/var executor=Executors.newFixedThreadPool(nThreads:2); 2 is the number of worker threads.
+            ExecutorService is an interface.
+
+            executor.submit(a runnable object) submitting a task 
+
+            you can submit as many tasks as you want,say in a loop.
+
+            executor keeps on waiting for tasks 
+            executor.shutdown() fo shutdownNow() to shutdown at that moment.
+            as a best practise run it in try finally block and put shutdown in finally.
+
+            the concurrency problems still remain,it just simplifies thread manipulation.
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

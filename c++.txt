@@ -622,7 +622,121 @@ the compiler itself.an implementation can provide standard headers however it wa
 .h in c is used to differentiate header files from txt etc
 
 LECTURE 3:
+
+
+
+
+OOP:
+    the problem with functional programming is that if data format changes in one function will ripple and every function needs to be changed. hence hard to maintain.
+
+    whereas in OOP data structure is hidden.
+    for small tasks better use functional programming.
+
+    it takes more design time to build an oop program.
+
+    std::vector is a class and so is std::string
+    std::vector<int> scores;
+
+    creating objects:
+        Account frank_count.
     
+
+    declaring a class:
+        class Class_Name better use capitals for class Names.
+         eg 
+            class Player{
+                std::string name;
+                int health;
+                int xp;
+
+                void talk(std::string text_to_say);
+                bool is_dead();
+            };
+
+            creating objects:
+                Player frank;
+                Player hero;
+
+                Player *enemy = new Player(); //enemy is a pointer to object.
+                delete enemy;
+
+            you can create array of objects:
+                Account accounts[] {first,second};
+            
+            std::vector<Account> also can be done.
+
+        
+        classes can be declared anywhere even in main but that would also define the scope of that class.
+
+        class Player{
+          //attributes
+            string name;
+            int health;
+            int xp;
+
+          //methods
+          void talk(string);
+          bool is_dead();   
+        };
+        
+        in main creating objects:
+            Player frank;
+            Plyaer hero;
+            Player *enemy {nullptr};
+            enemy=new Player;
+            delete enemy;
+
+        to access:
+            frank.balance
+            frank.deposit(1)
+         for pointers:
+            frank->balance;
+            frank->deposit(100)
+            or  (*frank).deposit(100)
+        
+        by defualt everything is private.
+            public:
+                string name;
+                int heath;
+            
+        for methods:
+            void talk(string name){
+                cout<<"hi";
+
+            }
+        
+        access modifiers:
+            public:
+                accessible everywhere.
+            private:
+                accessible only by member or friends of the class
+            protected:
+                used with inheritance
+        public:
+        anything from here is pubic until we find another.
+
+        void set_balance(double bal){
+            balance=bal;
+        }
+        to declare a method outside class:
+            double Account::get_balance(){
+                return balance;
+            }
+        
+
+
+        we generally separate class specification and implementation.
+
+        Account.h 
+            class Account{
+                private:
+                double balance;
+                public:
+                void set_balance(double bal);
+                double get_balance();
+            };
+            here we put the specification
+            
     
 
 

@@ -33,7 +33,7 @@ LECTURE 1
 
     there is a lot to research and a lot to find and solve.
     it is nice to know distributed systems if you love building systems.
-
+    Raft is for automatic cut over - fault tolerance.
     this course is about infrastructure for applications/that clients use.
 
     INFRASTRUCTURES:
@@ -42,7 +42,7 @@ LECTURE 1
             COMPUTATION //eg mapReduce 
 
     we want to simplify the tech/ build abstractions so it becomes easier to run applications
-
+ 
     the dream is to build distributed sytems that act like non distibuted system.
     the behaviour is as simple as a single machine.
 
@@ -94,7 +94,7 @@ LECTURE 1
 
                               strongly consistent system: get recent put  //very hard to achieve,needs fast communication,might need to read all replicas.
 
-                              weakly consistant system: you might see old put for some time.
+                              weakly consistant system: you might see old put for some time. a lot of systems are fine being weakly conisistent.
                               
 
         whenver designing replicas make sure their failure probability is independent of each other
@@ -187,17 +187,20 @@ LECTURE 1
 
     modern data centers have fast network throughput so no need to run GFS and mapper on same machine.hence can be on different machines.
 
+    google no longer uses GFS.
+
+    mapreduce doesn't take advantage of streaming and mapper etc work in batches.
 
 LECTURE 2: RPC and threads
     we are using GO for labs
-        good support for threads and locking and convinient remote procedure call package.
+        good support for threads and locking and convenient remote procedure call package.
         it is type safe and memory safe.
         it is garbage collected.
         combination of threads and garbage collections is important.
-        in c++ you can't free memory until last thread stops working
+        in c++ you can't free memory until last thread that is using that obbject stops working with it.
         and the langauge is simpler than c++
     
-    in distributed computing,a remote procedure call is when a computer program causes another procedure to execute in a different address space usually on another ocmputer on a shared network,which is coded as if it were a normal local procedure call,it is a client-server interaction.it is a form of inter proess communiction(IPC) each language has package for this,can be encoded in json etc as well.
+    in distributed computing,a remote procedure call is when a computer program causes another procedure to execute in a different address space usually on another computer on a shared network,which is coded as if it were a normal local procedure call,it is a client-server interaction.it is a form of inter proess communiction(IPC) each language has package for this,can be encoded in json etc as well.
 
     THREADS:
         threads are the main tool to manage concurrency.
@@ -224,6 +227,7 @@ LECTURE 2: RPC and threads
 
         to use both parallalism and asynchornous, we can create as many threads as the no. of processors and 
         each using event driven programming.
+        10 threads are good.
 
         thread challenges:
             since they share data. it is sometimes critical. threads can share a cache.
@@ -235,7 +239,7 @@ LECTURE 2: RPC and threads
             mut.unlock()
 
             hence making it atomic.
-            lock can be interior to a data structure if we want it to be that and it is a reasonbale strategy.although the programmer might use outside as well as he/she is unfamiliar with the internal locks.
+            lock can be interior to a data structure if we want it to be that and it is a reasonbale strategy.although the programmer might use outside as well as he/she is unfamiliar with the internal locks.and if datastructures use each other with locks,there might be a deadlock.
 
             another problem with threads could be co-ordination.
             you want another thread to wait until another thread generates the data.
@@ -252,7 +256,7 @@ LECTURE 2: RPC and threads
 LECTURE 3: GFS: case study: how to build big storage.
     storage is one of the most important abstraction when it comes to distributed systems.
 
-    and i was a sucessful and was used for a long time in real,world.
+    and it was a sucess and was used for a long time in real,world.
 
     WHY IS IT HARD?
         there are a lot of things to get right.
@@ -271,7 +275,7 @@ LECTURE 3: GFS: case study: how to build big storage.
                 now if you want to update both the databases and one of the update request fails,we get incosistent databases.
 
     GFS:
-        we had academia till then but nothing in practise till then.
+        we had academia till then but nothing in practise.
 
         gfs fixes it,we get better but not perfect design
         it was built in 2003
@@ -283,7 +287,7 @@ LECTURE 3: GFS: case study: how to build big storage.
         
         hence they wanted a big and fast storage system that was general and can be used for any application,hence it should be reusable.
 
-        they didn't want to tailored system for their specific need.
+        they didn't want tailored system for their specific need.
 
         to do bigness and fastness they needed to split the data into multiple machines. 
         even a single file would get split and,
@@ -322,7 +326,7 @@ LECTURE 3: GFS: case study: how to build big storage.
 
             even the chunk servers know what chunks of which files they have so no need to store in disk.
             lease expiration is for chunks then next chunk is primary,one where people read and perform computation on.
-            logs are fast writes.
+            logs are fast writes.append to logs is fast.thats how logs are usually designed.
 
 
         READ:
@@ -368,7 +372,7 @@ LECTURE 3: GFS: case study: how to build big storage.
             split brain problem: when two machines think they are primary.
                 usually due to network partition.
             
-LECTURE 4: PRIMARY BACKUP REPLICATION of program.
+LECTURE 4: PRIMARY BACKUP REPLICATION of program : fault tolerance
     if something crashes we still want availablity
     and our tool would be replication.
 
@@ -430,7 +434,7 @@ LECTURE 4: PRIMARY BACKUP REPLICATION of program.
         making the synchronization absolute is a gigantic task.
 
         if primary fails switch to backup elegantly server:
-            there is going to be an anomoly during the cross over.in ideal world we want nobody to notice.
+            there is going to be an anomoly during the cut over.in ideal world we want nobody to notice.
         
         and even second replica can fail hence we need third replica up now.
         and the state is transfered to it and it is gonaa be expensive 
@@ -459,7 +463,7 @@ LECTURE 4: PRIMARY BACKUP REPLICATION of program.
 
         fault tolerance:
             if primary crashes,it stops getting log entries
-            which are usually periodic.
+            which are usually periodic. say 100 times a second
 
             VMM monitor on backup figures out that the primary must
             be dead so the backup goes live.
@@ -470,7 +474,7 @@ LECTURE 4: PRIMARY BACKUP REPLICATION of program.
             if the backup fails similarly 
             the primary would abandom the backup.
 
-            backup could take over by claiming primaries ethernet id.
+            backup could take over by claiming primary's ethernet id.
 
 
         NON DETERMINISTIC EVENTS THAT MIGHT HAPPEN:
@@ -491,11 +495,11 @@ LECTURE 4: PRIMARY BACKUP REPLICATION of program.
                 different threads can get locks at different times
             
             log entry:
-                instruction at which interrupt occured.
+                instruction number at which interrupt occured. since the boot
                 type
                 data/packet
             
-            interrupts have to occur at the same time,
+            interrupts have to occur at the instruction time,
             if we want them to not divege.
 
             VMM keeps track of these and sends to backup
@@ -512,7 +516,8 @@ LECTURE 4: PRIMARY BACKUP REPLICATION of program.
             we can't allow that in this case as we don't have control over such events hence cannot be replicated.
             so we store them in virtual machine monitors private memory and then it writes to our VMM memory deterministically so it can be replicated
 
-        failure at ackward time is the crux of problems in distributed systems.
+        failure at awkward time is the crux of problems in distributed systems.
+        output rule: the primary cannot reply to client before sending log to backup.    m,8
 
         all these processing is happening in VMWare,VMWare is written in C.
 

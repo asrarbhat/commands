@@ -259,7 +259,7 @@ mapreduce:
     how mapreduce works underneath:
 
         mappers run on different nodes in the cluster,each mapper processing a partition of data.
-        for shuffle and sort,cluster has to communicate.
+        for shuffle and sort(like merge sort ),cluster has to communicate.
         reducers also run on cluster and processes a given set of keys.
         final result is also communicated by whole cluster if it is to be written,and copies to be made.
 
@@ -294,7 +294,7 @@ mapreduce:
 map reduce is building block but it is not used in practise.
 writing the mapper using python.
 
-from mrjob.job import MRJob   //abstracks away streaming,mr means mapreduce. 
+from mrjob.job import MRJob   //abstracts away streaming,mr means mapreduce. 
 from mrjob.step import MRStep
 
 class RatingsBreakdown(MRJob):
@@ -461,7 +461,7 @@ APACHE SPARK
     it lets you do ml,data mining,etc
     its scalable
 
-                               ------------------------->executor (cache,tasks)
+                               ------------------------->executor process (cache,tasks)
                               |                          |^   |^v
     driver program/spark context -------->cluster manager -->executor(cache,tasks)
                                            (spark,yarn,mesos)
@@ -476,7 +476,7 @@ APACHE SPARK
     it is not hard like mapreduce.
     it uses DAG to find fastest way to get there.
 
-    amazon yahoo,nassa ebay and many other use it.
+    amazon yahoo,nasa ebay and many other use it.
 
     can code in python,java or scala.
 
@@ -514,7 +514,7 @@ APACHE SPARK
 
         its an abstraction for distributed data so we see it as a single file.
     
-    the SparkContext
+    the SparkContext,it is an enviroment where your program runs.
         created by your driver program.
         is reponsilbe for making RDD's resilient and distributed.
         creates RDD's 
@@ -569,11 +569,12 @@ APACHE SPARK
         reduce: it allows you to do reduce like in map reduce.
          and more...
     
-    nothing actually happends in your driver program until one of these functions is called.
-    until calling any action,all it is doing is building these DAGs 
-    when action is called it would find the most optimal way to do so.
-    until action is called,nothing actually happens.
-    that is one of the main secrets to spark speed.
+    lazy evaluation:
+        nothing actually happends in your driver program until one of these functions is called.
+        until calling any action,all it is doing is building these DAGs 
+        when action is called it would find the most optimal way to do so.
+        until action is called,nothing actually happens.
+        that is one of the main secrets to spark speed.
 
     
     using python:
