@@ -72,6 +72,10 @@ university academy:
     properties of cloud computing:
         on demand.
     
+    mainframe computer is a high processing computer used for  business,it is not as fast as super computer.
+
+    
+    
 AWS CERTIFIED PRACTIONER:
 -------------------------
     cloud practitioner is a foundational certificate,

@@ -1,10 +1,10 @@
-MOSH HAMEDANI:
+MOSH HAMEDANI:it 
     
     how to build fast and reactive mobile apps.
 
     built on top of react and instead of targetting browser this targets browser.
 
-    a framework for building neative apps using Javascript.
+    a framework for building native apps using Javascript.
 
     native means they are not web apps that look like mobile apps,they run on mobile without browser.
 
@@ -18,7 +18,8 @@ MOSH HAMEDANI:
             Expo Cli
             React Native ClI 
         
-    better use Expo for beginner friendly experience.
+    better use Expo for beginner friendly experience. and on top of react native.
+    we might not have access to everything native to these devices,but expo provides api for pretty much everything.
 
     setting up development env:
         run node version 12 or higher.
@@ -26,22 +27,23 @@ MOSH HAMEDANI:
             npm install -g expo-cli 
         install expo client on both ios and Android devices.
 
-        install vscode with extentions React Native Tools , React-Native/React/Redux snippets,prettier for formatting,material icon theme, save apply format on save.
+        install vscode with extentions React Native Tools , React-Native/React/Redux snippets,prettier for formatting,material icon theme,format on save.
 
     our first app:
         expo init firstapp    //in terminal.
-        use mangage workflow there as option,blank one.
+        use manage workflow there as option,blank one.
          open your code in vscode.
     
     structure:
         you get assets folder,to put audio,video,images that you want to bundle with app.
         App.js, a basic react-native component.
-        View is like a div in web world 
-        Text is used to display text
-        we don't  have div,a like html,react native provides its own syntax for them.
+            View is like a div in web world 
+            Text is used to display text
+            we don't  have div,a like html,react native provides its own syntax for them.
 
         you can use class components or function components,better use function components.
         
+        import React from 'react';
         import {StyleSheet,Text,View} from 'react-native';
         export default function App(){
 
@@ -60,6 +62,7 @@ MOSH HAMEDANI:
                 },
         });
 
+        View gets mapped to UIview for ios and android view for andriod.
 
         in TERMINAL:
             npm start
@@ -70,15 +73,16 @@ MOSH HAMEDANI:
         how to run on ios simulator:
             you need mac.
                 you need xcode.
-                it comes with a simulator.
+                it comes with a simulator. run it.
             in metro bundler in web all your need to do is to click on run on ios simulator.
-        react native uses fast refreshes hence automatically refreshes.
+        react native uses fast refreshes hence automatically refreshes. ctrl+d to get options in expo.
         if doesn't refresh,go to expo app and click on refresh.
 
         how to run on android simulator:
             download android studio.
         
         docs.expo.io for documentation.
+        under manage workflow you can find all instructions.
 
         ctrl+m in emulator to see the options in expo,even in emulator we run it on expo.
 
@@ -94,7 +98,7 @@ MOSH HAMEDANI:
             just enable remote dubugging in expo client and now it will open in chrome.
 
             in chrome open developer tools and do debugging,
-                in sources click on pause on exception,and run,and put break points accordingly.
+                in sources click on pause on exception,and reload from expo client,and put break points accordingly.
 
                 you can even execute line by line in sources,when debugging.
                 can even put varialbes in watch list.
@@ -113,4 +117,116 @@ MOSH HAMEDANI:
         for production we put on app store.
         in metro bundler click n publish.
 
-    adding jsconfig.json to project makes it a js project and not a node project.
+    adding jsconfig.json to project makes it a js project and not a  typescript project.
+
+
+FUNDAMENTAL CONCEPTS:
+    core components and api's
+        View,Text,Image,Button,Touchables,Alert and so on.
+        head over to reactnative.dev/docs for documentation
+        a button would look like typical android button on android and typical ios button on ios.
+        we can customize look and file using styles.
+        there are api's to give access to native api's 
+        some api's are specific to android and same for ios.
+    
+    View
+
+        <View style={styles.container}>
+            <Text> Hello react native </Text>
+        </View>
+
+        we don't have div etc in reactnative, View is a like a div, it is a container component used to group things together.
+
+        const styles=StyleSheet.create({
+            container:{
+                flex:1, #it will grow horizontally and vertically to fill free space.
+                backgroundColor: "dodgerblue" //we can use rgb.
+
+            }
+        })
+
+        instead of View,use SafeAreaView if notch is an issue,it adds padding at the top. //import it
+
+    Text
+
+        <Text> hi there </Text>
+        you can't put text anywhere,it has to be in <Text>
+
+        it has props like 
+        <Text numberOfLines={1}> hi there</Text> it gives ... at the end
+
+        to make it clickable
+        <Text onPress={()=>console.log("hi")}> //or function name.
+
+    Image            to render images 
+
+        justifyContent: "center",
+        alignItems: "center"          //these two to put the container at center.
+
+        import Image from reactnative
+
+        <Image source={require('./assets/icon.png')}/> it is self closing.
+
+        require function returns a number,that is reference to our image.
+
+        for network images.
+
+        <Image source={{width:200,height:300,uri: "https..dhh.png }}/>  //need to metion dimetions.
+
+        props blurRadius={10} to make blurry.
+    
+    Touchables
+        Image doesn't have onPress
+        import TouchableWithoutFeedback from reactnative
+        put your image component in 
+        <TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
+
+        it has properties like onPress onLongPress etc.
+
+        TouchableWithoutFeedback when touched doesn't give any visual feedback.
+
+        TouchableOpacity is another way when clicked it becomes opaque for a fraction of a second.
+
+        TouchableHighlight its background becomes darker for a fraction of a second.
+
+        TouchableNativeFeedback is only for android.
+
+    Buttons:
+        <Button title="click me" onPress={()=>{}}/>
+        each platform gives different kind of button.
+
+        color="orange" prop for color.
+
+    Alerts:
+        onPress={()=>alert("button tapped")} like browser.
+    you need to import Alert and Button by the way.
+    Alert.alert("title","message",[{text:"yes",onPress:()=>{}},{text:"no",onPress:()=>{}}])
+
+    Alert.prompt("title","message",text=>{}) doesn't work in android.
+
+    Stylesheet api:
+        const styles=StyleSheet.create({
+            container:{
+                flex:1,
+                backgroundColor:"#fff"
+            }
+        })
+        this is not css.
+        style={styles.container} as prop
+        can give inline object style={{color:"#fff"}} or plane Javascript object.
+        but StyleSheet.create would validate our properties. and reactnative team has done some optimizations also.
+
+        you can also pass array of objects 
+        style={[styles.container,obj2]} right one overrides left one.
+    
+    styles should be placed below components not in separate files.
+
+    platform specific code:
+        SafeAreaView only works on ios.
+        import Platform module 
+        paddingTop: Platform.OS=== "andriod" ? 20 : 0;
+        import StatusBar
+        StatusBar.currentHeight to get it.
+    
+          

@@ -535,21 +535,24 @@ LECTURE 5 : GO AND CONCURRENCY
     threads don't necessarily make things complex.
     it might simplify things.
 
-LECTURE 6: FAULT TOLERANCE: RAFT
-    single point of failure is a problem.
-    we also want to avoid split brain.
+LECTURE 6: FAULT TOLERANCE: RAFT : how to get state machine replication correct.
+    single point of failure is a problem very often. good thing about one master is that is that it can't disagree with itself,hence more consistent. test and set server in VMWARE FT was the single point of failure.
 
-    split brain-> two servers and two clients are there
+    the goal is to avoid split brain.
+
+    we can build replicated test and set server.
+
+    split brain-> two test and set servers and two clients are there
         and clients want to know who is the primary.
         split brain arises when a client can talk to one but not other.
         how should the system react ?
-        as mtiodifying one and not other will make the system inconsistent.
+        as modifying one and not other will make the system inconsistent.
         but if you need it to talk to both in order to make progress.
         it is then no better than having a single server.
 
         hence waiting to both is a bad solution.
         and talking to one and marking another as bad is not also 
-        a good solution and the problem could be the network.
+        a good solution and the problem could be the network,and different clients could be talking to different test and set servers. hence split brain.
         as client always sends to both.
 
     solutions:
@@ -558,7 +561,7 @@ LECTURE 6: FAULT TOLERANCE: RAFT
                 or in your data houses.
             we can rule out split brain.
             hence if you cannot talk to both servers then,it must be
-            done.
+            down.
         second solution would be some kind of human intervention
             human looks at machines and verifes if one of them is down
             or turns off of them down.
@@ -570,12 +573,23 @@ LECTURE 6: FAULT TOLERANCE: RAFT
             majority decides the next step
             it works even in case of partition.
 
-            the majority is always out of all,even if some of them have failed.
-            given 2f+1 servers you can stand f failures.
+            the majority is always out of all not just ones that are live,even if some of them have failed.
+            given 2f+1 servers you can stand f failures. often called quarum systems as 2 out of 3 is called a quarum.
             
             raft is closer to this idea.
         
-
+            raft relies on the fact that any two majorities will have atleast one server in common.
+            raft was proposed in 1990's raft's idea was to deal with split brain.
+            paxos was first such system,and vsr,view stand replication. being used in industry since 2005.
         RAFT:
             takes form of a library.
+            raft is a consensus algorithm.
+            raft libraries coordinate with each other.
+            the server has some state and raft that recieves rpc's from clients.
+
+            clients can send put and get requests to leader server.
+            the request is recieved by raft and they raft replicas chit chat and put the request in their logs and then the request is commited in all replicas and at this point it is ok to execute it.and leader then sends the reply to the client.and all replicas do the operation from log.
+
+            logs help in doing things in order,and log has numbered slots,so it has track if anything got lost.
+
             
