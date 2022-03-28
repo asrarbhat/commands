@@ -186,6 +186,15 @@ lecture 9 : NAT
 lecture 10:
     net neutrality means all packets treated same.
 
+lecture 11: BGP 
+
+lecture 12: broadcast.
+    internet doesn't allow broadcast
+
+lecture 13: mac
+    you need mac to get ip address
+
+
     
 
 lecture 15: encrpytion and anonymity.
