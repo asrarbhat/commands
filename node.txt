@@ -1,0 +1,281 @@
+#zero to mastery
+    js engine runs js in browser.
+    1996 livewire was the backend for js.
+    node is js runtime: environment that allows to run JS outside browser.
+    js :1995 by netscape browser people.
+    runtime is code executed to execute your code eg. compiler + libraries etc.
+    node comes with its own api.
+    to install just download it and add the bin folder to path.it has node file in it.
+    node has LTS and current version.
+    node : to open in repl mode.
+    node -v or node --version
+    event loop asks V8 to execute callbacks.
+    v8 executes and then event loop executes for the rest of the code that is asynchronous.
+    node is v8 engine + libuv 
+    libuv is a C library used for asynchronous code,for other than what js can do,used for asynchronous IO.
+    2019 Deno was introduced.
+    2008 chrome came.
+    v8 was fast hence we made node in 2009 by ryandahl.
+    v8 and libuv communicate.
+    runtime environment is everything that my program needs to run: os + libraries + engine + compiler etc.
+    global/window is not part of JS.
+    in vscode install visual studio intellicode for autocompletion.
+    spidermonkey is used by firefox as an js engine.
+    node gives us process api .ti si a global object for all available.
+    ctrl+l in browser to clear.
+    command line arguments: process.argv[0] is /usr/bin/node  and [1] is abc.js and so on.
+    v8 is opensource,even Deno uses it.
+    global.process<>process,global is same as window in browser.
+    web2.0 was when websites became interactive.and user could provide data.
+    process.argv is array of strings.
+    + for concatenation of strings.
+    `${a+b}` for template string. in python f'{}' . ` is called backtick.
+    node globals:
+        console.log,process,module,__filename,require(),__dirname,setTimeout() etc.
+        anything in window or global are not js.they are features provided by node or browser.
+    even versions of node has LTS,hence always download even version.
+    node is basically a person writting a c++ program that combines V8 and libuv.
+    globals are variables and functions build in.
+    xml is like json,for sending data and it looks like html.
+    v8 lets node run js.
+    we have Node.js API's, like fs,http,path,when we call them they are handled by libuv.
+    libuv works in all oses
+    node.js bindings allow v8 to call low level api like fs,http written in c in lubuv.libuv deals with   input/output etc.
+    even python uses libuv.
+    web has client server architecture.
+    process.exit() to exit.
+    node is asynchronous.
+    callback function: function that we give to be executed later time,when some event occurs.
+    JSON.stringify({"food":"love"}), it is syncronous/blocking we get '{"food":"love"}'
+    v8<>node.js bindings <>libuv 
+    node.js bindings are written in c++ in src and lib contains js api provided.
+    use nvm to install different versions of node at any point in time: nvm use 16,nvm install 12,nvm install 14.7.0  nvm ls-remote to list,nvm uninstall 14 etc.
+    npm comes with node.
+    LTS versions go via maintenance phase,but odd versions do not go through maintenance phase.
+    ecmascript is a js standard ES6 is the latest big thing in 2016.
+    global are objects that are available without any imports.
+    cpp cc are two extentions for c plus plus code.
+    js is synchronous porgramming language,we can use asynchronous code in it
+    js does't support multithreading,because multi threading is hard.but node itself has multiple threads.Where main thread runs v8.
+    js is asynchronous in certain environments like node. 
+    libuv does I/O
+    libuv has eventloop that executes our code asynchronously.
+    we call asynchronous function in Node,it gets put on EventLoop which tells Os rn ti and notify when ready.
+    libuv has thread pools,hence it is a multithreading usually 4 threads.
+    not all operations are done by thread pool.
+    some are directly done by kernel eg. network things.
+    main thread runs V8 and event loop.
+    node has 1 main thread and 4 libuv threads.
+    event loo executes the callback functions ,hence code that is asynchronous,never come back to Js.only the changes it makes refect in main code.
+    eventloop in libuv is a code that executes our asynchronous callback.
+    when asynchronous operation expires eventloop executes callback.
+    callback stays in queue called callback queue,event loop executes in FIFO queue.
+    event queue<>callback queue.
+    there are several queues for different types of operationsfor callback queues.
+        timers,IO callbacks,setImmediate,close callbacks 
+
+        setTimeout,setInterval,setImmediate ,as soon as possible to be done.
+        event loop first checks times if any of them completed,then I/O callbacks,then setImmediate,then close callbacks like closing files.
+        event loop while(true){},
+        you can use Nginx,Apache with node
+    eventloop is in libuv 
+    netfix uses node.
+    
+    event driven:
+        one emitter can have multiple observers .
+        event driven programming.
+        it is called observer pattern as in how to do event driven programming,eg for a button etc it could be one to many relation.
+    
+    js is event driven.
+    process.on("exit",(code)=>{})executed when you exit. code is exit code.
+    even process is an instance of event emitter.
+    React uses event driven programming.
+    you can have multiple listeners for same even p.on("hi",function1) p.on("hi",funciton2) and both will get executed when event occurs.
+
+
+#Mosh Hamedani:
+    node is used for creating backend.
+    API: application programming interface.
+    for high scalabe,data intensive and real time apps.
+    it is superfast.compared to java etc even small code.
+    used in paypal,netflix even better than spring.
+    large opensource libraries
+    it is a runtime environment,it is not a programming language.
+    node is asynchronous/non blocking.eg waiter not waiting for completion,otherwise called syncronous/blocking.
+    in node you have single thread.
+    node has eventqueue,where it puts things.and thread doesn't wait for database when query.
+    node is ideal for io intensive apps.
+    it is not best for cpu intensive apps as there is single thread.like video encoding etc.
+    node --version
+    mkdir first-app
+    create file app.js 
+    node app.js to run it.
+    window,document are not defined in node ,they only  work in browser runtime environment.
+    code . to open the current folder in vscode.
+    node is a c++ program.
+
+    NODE MODULE SYSTEM:
+        console.log("hi there"); global object,and can be accessed anywhere in any file.
+        other global objects are like clearTimeout(),setInterval(),clearInterval(). setInterval is to call repeatedly.
+        window object represents global variables and functions in browser.
+        global.console.log();
+        in browser var variables are added to window,but in node things are scoped to module.not even functions.even if var is used,it is limited to that that module only.it is a nice choice by node.
+        as in global scopoe there is an overriding for objects of same name. which happens in browser.
+        every file is a module.
+        variables,functions are confined to that module.
+        console.log(module);,module is an object and it is not a global object.it is in every module in a wrapper function.
+        creating a module:
+            file: logger.js
+                module.exports.log=log;
+                module .exports is an object that is exported.
+            to load a module:
+                var logger= require("./logger.js") or skip .js 
+                noe logger is an object,you can use const also.
+            logger.log("hi");
+        intellisense shows methods etc.
+        jshint a.js in terminal to check for errors,as it gives better error messages.
+        if just one to export: module.exports=obj; now logger is a function not an object.
+        node wraps code in a function called module wrapper function to have module level variables like require etc to not have them global.
+            (function (exports,require,module,__filename,__dirname){
+                require is not global object,it is local to each module.
+                exports is a reference to module.exports, you cannot assign to exports but use exports.property to do things.
+                at the end module.exports is exported.
+                __filename,__dirname are complete paths.
+            }) it is an IIFE
+        
+        Built in modules in node :
+            os,fs,http,Path,Process etc.
+        const path=require("path");
+        var pathobj=path.parse(__filename); this object has useful properties related to this file.
+        
+        os module:
+            const os=require("os");
+            var t=os.totalmem();
+            var m=os.freemem();
+        
+        file system module:
+            const fs=require("fs");
+            const files=fs.readdirSync("./"); this is blocking,it reads all files are in folder,returns an array.
+            fs.readdir('./',function(err,files)=>{
+                if(err){}
+                else{
+                    files array.
+                }
+            }); err if error is there and files if successful.and this is asynchronous.
+        
+        event module:
+            event is a signal indicating something happened eg http listener.
+            const EventEmitter=require('events');
+                EventEmitter is a clas.
+            const emitter = new EventEmitter();
+            emitter.emit('messageLogged') this string is event name.
+            it is called raising an event.
+            emitter.on('messageLogged',function(){});
+            it is a listener. on is as good as addListener.
+            order is important,listener should be first.
+            we can have arguments to emit
+                .emit("hit",{id:1,url:""}) this is called event argument.
+                .on ("hit",function(arg){});
+                hence we can pass data about event.
+                we can use arrow functions.
+            emit should be of same object,won't listen for other obejects even if used across modules.
+            you can create a class and extend EventEmitter class.
+                this.emit() or obj.emit() in it.
+                obj1.on() or this.on() better way.
+            
+        http module:
+            const http=require('http');
+            const server: http.createServer(); create a web server it is an event emittr object.
+            server.listen(3000); here 3000 is a port.
+            server.on("connection",(socket)=>{console.log("hi")}); connection is prebuild event.
+            in browser localhost:3000
+            we can use require anywhere in code.
+            const server=http.createServer((req,res)=>{
+                if (req.url==="/){
+                    res.write("hit");
+                    res.end();
+                }
+                if another end point.
+            })
+            we can have many if blocks for various routes.
+            but it gets complex so we use express framework,build on top of http module.
+
+    NODE PACKAGE MANAGER(NPM):
+        it is a command line tool.
+        registry for modules.for pretty much every problem that you want to solve.
+        npmjs.com
+        npm -v 
+        comes with node,automatically.
+        node and npm are independent.
+        npm i -g npm@5.5.1 
+            install and g is for global not specific to that application,it might need for you to run as administrator.
+        package.json contains the information about your application dependencies.
+        npm init --yes or just npm init to create it.
+        npm install/i underscore ,it is added to package.json as dependency.
+        stores package the node_modules
+        every node module has package.json in ti even ones you download.
+
+        to use a module:
+            first assumes core modules 
+            then file or folder in current directory,that might have index.js in it 
+            node modules,look there now.
+        
+        underscore contains lots of utility functions.
+        var a=_.contains([11,2,3],2);
+
+        mongoose is a node package to deal with mongodb.
+
+        use JSON.strinify to send json from server as string.and JSON.parse to get object back.
+        
+        installing a module installs its dependencies as well,all in node_modules to avoid repetition.
+        if different versions then it will create node_modules folder within it.
+        
+        node_modules could grow to be a few hundred megabytes,but all dependencies are stored in package.json hence we can easily restore
+        to restore dependencies: npm install or npm i.
+        hence don't add node_modules to your source code in git you can use .gitignore file and add node_modules/ to it.
+        package-lock.json is for npm to do its job and it contains precise versions.
+
+        semantic versioning:
+            Major.Minor.Patch 
+            Patch is for bug fixes 
+            4.13.6 fix bug we get 4.13.7
+            minor adding new features without breaking api.
+            4.13.7 to 4.14.0
+            if potenitally break existing application then 4.13.6 to 5.0.0
+            ^4.13.6 means as long as major is 4 or 4.x 
+            ~1.8.3 means both major and minor have to be same. 1.8.x 
+            1.8.3 for exact version. you can edit ~ ^ in package.json accordingly.
+        
+        listing installed packages
+            npm list, it shows with versions and their dependencies
+            npm list --depth=0,to just see them and not their dependencies.
+            npm view mongoose,package.json of that file.
+            npm view mongoose dependencies to see dependencies
+            npm view mongoose versions,to see all versions.
+        installing specific version:
+            npm i mongoose@1.2.2 it overrides earlier version.
+        
+        updating local packages
+            npm outdated, to see whihc ones are outdated with respect to what is valid for then and current,latest,wanted available.
+        npm update,only of minor,patch releases updated to latest monor,patch.
+
+        npm i -g npm-check-updates
+        npm-check-updates or ncu 
+        ncu -u updates even major releases,but it only changes package.json 
+        to update: npm i 
+
+        dependencies can be development dependencies or production dependencies.
+        development dependencies should not go to production.
+
+        npm i jshint --save-dev    , added to dev dependencies in package.json,also in node_modules though.
+
+        uninstalling:  npm uninstall/un mongoose 
+        packages are particular to that project.
+
+        global packages : common to all -g to do so.
+        npm i -g mongoose.
+        npm -g outdated
+        npm un -g mongoose 
+        index.js is entry point to our packages.you can have a folder with package.json and an index.js as an entry point.or in package.json you can mention the entry point.
+
+        you can publish your own package as well.

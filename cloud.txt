@@ -80,19 +80,15 @@ AWS CERTIFIED PRACTIONER:
 -------------------------
     cloud practitioner is a foundational certificate,
     there are three levels:
-        foudational
+        foundational
         associate
         professional
     cloud practioner is a foundational certificate,equivalent of six months of fundamental aws cloud and industry knowledge.
 
-    
-
-    create a aws account,create a free tier account.
+    create an aws account,create a free tier account.
         on aws.amazon.com
     
     go to management console as root.
-
-
 
     what is cloud computing:
         a server contains a processor,and RAM and storage to store data.
@@ -138,7 +134,7 @@ AWS CERTIFIED PRACTIONER:
         five characteristics of cloud computing:
             on demand self service.
                 no need of human intervention.
-            broad network access: can be accessed by diverse clinet platforms.
+            broad network access: can be accessed by diverse client platforms.
 
             multi tenany and resource pooling: multiple customers can share the same infrastructure and applications with security and privacy.
             mutliple customers served from same physical machines
@@ -182,7 +178,7 @@ AWS CERTIFIED PRACTIONER:
             removes the need for your organization to manage the underly ing infrastucture.
             Focus on the deployment and management of your applications
         Software as a Service(SaaS)
-            completed product that is run and mange dby the service provider.
+            completed product that is run and manged by the service provider.
         
     on premise                 IaaS              Paas             Saas
      
@@ -219,7 +215,7 @@ AWS CERTIFIED PRACTIONER:
             pay for data storaged in the cloud.
         data transfer out of the cloud:
             for networking. 
-            data transer IN is free.
+            data transfer IN is free.
         
         solves the expensive issue of traditional IT.
 
@@ -229,7 +225,7 @@ AWS CERTIFIED PRACTIONER:
         2003 amazon infrastructure is one of their core strenth,idea to market.
         2004 launched publicly with SQS
         2006 Re-lauched publicly with SQS,S3,and EC2
-        2007 launded in europe
+        2007 launched in europe
 
         now dropbox,airbnb,netflex,nasa run on it.
 
@@ -247,7 +243,7 @@ AWS CERTIFIED PRACTIONER:
     AWS usecases:
         to build sophisticated and scalable applications.
         applicable to a diverse set of industries.
-        can be used for data analytics to host websites,to backup storage.
+        can be used for data analytics ,to host websites,to backup storage.
         gaming servers etc.
     
     AWS global infrastructure:
@@ -266,7 +262,7 @@ AWS CERTIFIED PRACTIONER:
         Most AWS serives are region-scoped.
     
     how to choose a region:
-        compliance: with data governance and legal requirements,data never leaves a region without your explicit permission,hence have to launch in that country.
+        compliance with data governance and legal requirements:data never leaves a region without your explicit permission,hence have to launch in that country.
         proximity to customers: reduce latency
         available services: within a region new services and new features aren't avaialbe in every region.
         pricing: pricing varies region to region and is transparent in the service pricing page.
@@ -293,6 +289,7 @@ AWS CERTIFIED PRACTIONER:
         route 53 (dns service)
         cloudFront(content delivery network)
         WAF (web application firewall)
+
     MOST AWS services are region-scoped:
         Amazon EC2 (IaaS)
         Elastic Beanstalk(PaaS)
@@ -309,7 +306,7 @@ in management console:
     if service not available you can switch the region.
 
 shared responsilbity model diagram:
-    if defines what is your responsiblity and what is aws's
+    it defines what is your responsiblity and what is aws's
     customer is responsible for security in the cloud.
     AWS is responsible for security of the cloud.
         hardware etc,availability,compute,database,networking,regions,edge location.
@@ -317,6 +314,7 @@ shared responsilbity model diagram:
     you can't abuse the cloud.
 
 first AWS service:
+
     IAM: Users & Groups
     -------------------
     IAM: identity and access management,Global service

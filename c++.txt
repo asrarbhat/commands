@@ -741,6 +741,196 @@ OOP:
 
 
 
+udemy c++:
+    it is good to create a folder and then src folder in it for source code.
+    programming is like an instrument,you have to practise a lot.
+    c++ is both procedural and OOP.
+    c++11 onwards is called modern c++ and earier is called classical c++.
+    c++ 1979
+    .cpp or .cc for .h extention.
+    std::cout<< insertion operator,it inserts into output stream.
+    std::cin>>n; extraction opearator.
+    g++ gnu c++ compiler.
+    g++ -Wall -std=c++14 main.cpp -o main
+    compilation + linking is called build.
+    .obj in windows and .o in linux for object code.
+    the c++ headers do not atleast some of them do not end with .h as it doesn't have to be a module it could be inbuilt in compiler etc or it doesn't need to be a file,secondly since c++ and c are compatatible and there is string.h implementation and in c++ we have string class so there was a collsion,for some time people used .hxx or .H but eventually not using any was selected.
+    during debugging start from top to debug as first error can cause other.
+    compiler warnings should not be ignored,they are potential problems/bugs eg variable not used or not intialized.
+    int if uninitialized have garbage value.
+    linker error,when library missing,usually becuase path variable problem,and linker is having hard time to build an executable.eg extern int x; and it cannot find x anywhere.
+    extern int x;not in me in some other module.
+    linker error is not compiler error and are tricky to solve.
+    Runtime error -> use exception handling.
+    logic error are bugs.
+    90 keywords in c++
+    cin,cout are not keywords,main,#include are not keywords these are identifiers.
+    << stream insertion opearator,>> stream extraction operator,:: scope resolution operator.
+    
+
+object oriented programming:
+    prodcedural programming focuses on functions.
+    vector,string are c++ classes.
+
+    Account franks_account;
+
+    declaring a class:
+
+            class Class_Name
+            {
+                //declarations;
+            };
+
+            eg 
+
+            class Player
+            {
+                std::string name;
+                int health;
+                
+                void talk(std::string text);
+                bool is_dead();
+            };
+
+
+            Player *enemy=new Player();
+            delete enemy;
+
+            Account accounts[] {franks_account,jims_account};
+            std::vector<Account> accounts1;
+
+    you can even define classes within main function.
+
+    class name should be in uppercase.
+
+    Player frank;
+    Player hero;
+    Player *enemy {nullptr};
+    enemy=new Player(); to create it in heap.
+    delete enemy;
+    frank.name;
+    hero.name;
+    string are initialzed to empty string.
+
+        
+    you can even intitiize values in class;
+    like int a=3;
+    for any type.
+
+    accessing class member:
+        Account frank;
+        frank.balance=22;
+        frank.deposit(1000);
+
+        for pointers
+        called reference operator.
+        frank_poiter->balance==22;
+        frank_pointer->deposit(1000);
+
+        or (*frank_pointer).balance();
+        etc 
+
+    methods:
+        void talk(){
+            std::cout<<name; //where name is an instance variable.
+            balance+=2;
+        }
+    
+    class Member Access Modifiers:
+        public: 
+            accessible everywhere.
+        private:
+            accessible only by members or friends of the class.
+        protected:
+            used with inheritance
+
+        everything you declare that point forward would belong to that one.
+
+    class Class_Name{
+        public:
+            //declarations
+        private:
+            //declarations
+            by default,everything is private.
+            used for information hiding.
+            for both methods and instance variables.
+    };
+
+    you get compiler error if you access private member.
+
+    eg 
+        public:
+            bool withdraw(double amount){}
+    
+    class methods can be implemented inside class or outside using scope resolution operator.
+        classname::method_name
+
+        eg void Account::set_balance(double bal){
+            balance=bal;
+        }
+
+    class can be declared in .h file and implemented in .cpp file 
+
+    eg Account.h
+        class Account{
+            private:
+                double balance;
+            public:
+                void set_balance(double bal);
+                double get_balance();
+        };
+
+        in Account.cpp provide the implementation.
+         on top include 
+            #include "Account.h"
+            void Account::set_balance whatever.
+            and implement all such methods.
+        
+        in main:
+            #include "Account.h" 
+            you don't include .cpp file.
+        
+        you can use block guard to check if already imported.
+
+        if you are using string in class,add the same at top in .h file.
+
+    constructors and destructures:
+        constructors are used for initialization
+        you can overload them,name is same as class ,has to be public
+        public:
+            Player();
+            Player(std::string name);
+            Player(std::string name,int health,int xp);
+            there is no return type.
+            you can also have 
+            Player(int health);
+            different constructors can have same number of arguments.
+
+    destructures are special member methods,name is same as class proceeded with a tilde(~)
+    invoked automatically when an object is destroyed.
+    no return type and no parameters.
+    only 1 destructor is allowed in a class and cannot be overloadead.
+    useful to release memory and other resources.
+
+         it is public 
+         ~Player();
+         delete enemy ; and 
+        even gets called for members that are not dynamically allocated,when scope ends.
+    c++ provides default constructor and destructure.
+
+    for constructors:
+        Player slayer;
+        Player frank {"Frank",100,4};
+
+    order of destruction is reverse in a scope.
+
+    if you define a constructor,c++ will no longer generate a constructor.
+    you have to use your own constructor now.
+
+    each constructor much have unique signature,for the compiler to tell apart.
+
+    members are given memory even before constructor is called.
+    
 
 
 

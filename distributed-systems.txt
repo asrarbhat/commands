@@ -25,7 +25,7 @@ LECTURE 1
     we can have partial failures.
     or some part of network is broken.hence partial failures make distributed systems hard.
 
-    it is hard of make performance increase linearly with increase in size of system. it take a lot of careful design to do so.
+    it is hard to make performance increase linearly with increase in size of system. it take a lot of careful design to do so.
 
     somes problems have good known solutions whereas some don't
 
@@ -36,7 +36,7 @@ LECTURE 1
     Raft is for automatic cut over - fault tolerance.
     this course is about infrastructure for applications/that clients use.
 
-    INFRASTRUCTURES:
+    INFRASTRUCTURES for applications:
             STORAGE  //a lot known
             COMMUNICATION
             COMPUTATION //eg mapReduce 

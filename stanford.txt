@@ -1,0 +1,145 @@
+programming paradigms:
+---------------------------------------------------------------
+lecture 1:
+    c,assembly,c++,concurrent programming,scheme,Python
+    c is procedure oriented,just a hierarchy of functions calling functions/functions.and you manipulate shared data using pointers,procedural programming is a kind of imperative programming. it is verb oriented,i.e function name is a verb saying what it accomplishes.here you have a function and you give some data as an argument,whereas in c++ you go my object arrow do this.the first thing you see is object not a procedure thats why it is object oriented and not procedurally oriented.
+    object oriented programming is not just about using classes,it is a way of thinking.
+    c and c++ are not even related from the point of view of programming paradigms,they just share the syntax.
+    concurrent programming is very useful in networking.there could be synchronization problems with concurrency.
+    with functional programming,you rely on return value,but not in C,c++ as using pointers there are very often the side effects.
+    scheme is a representative of functional programming.
+    with functional programming there must be no side effects.you synthesize partial results and build on top of them.
+
+lecture 2:
+    c/c++
+    
+    data types:
+        bool,char,short,int,long,float,double
+        short int long are for scalar numbers.
+        char for characters.
+        bool for boolean.
+        double,float for real numbers.
+
+        char is 1 byte,short is 2,int is 4 ,long is 8, float is 4,double is 8.
+    
+    binary digit -> bit
+    technically a bit can be stored in a single bit 0/1
+    eight bits is a byte,with 256 possible values.
+    in char 'A' is represented as 65 in binary 01000001 that is 2^6 + 1 and that is how you can figure out the rest as well easily,as only second from right is 1. 'a' is 97 as 01100001 two ones after first zero and then 1 from the begining.
+
+    short is 2 bytes there are 2^16 possible values and first bit is sign bit. 0 means positve and 1 means negative.and negative values are stored in 2's complement and sign bit is not complemented.take complement and add 1.to convert a positive number into negative,just make first bit 1 and do 2's complement of the rest.this representation of negative numbers makes addition very easy.just add like decimals.
+
+    short and char are compatible, char ch = 'a'; short sh=ch; it would just prepend a byte to it,it is easier to convert smaller data into bigger one,and for bigger to smaller you need type casting.
+    and when you typecast short into a char,its most significant byte/second byte is considered and char is always unsigned.
+
+    think of negative numbers in binary like postive numbers except zeros and ones are reversed and counting starts from 1: cool
+
+    when you convert int into short,it would just copy last 2 bytes or give error.sign is undeterministic but for short to int sign is preserved as it can see the first bit and copy that bit for the rest.
+    all 1's is a -1 in binary.
+
+    for floating point representation:
+        given a 32 bit pattern
+            first bit is sign bit.
+            next eight bits are unsighned int representing exponent
+            and remaining 23 bits represent the mantissa.
+            1.exp * 2^(exp-127)
+        given a number : to conver it into floating point just keep dividing by 2 to get the form 1.exp * 2^(exp-127)
+
+        same for double,you get 1,11,52 and in substraction use -1024.
+
+        when you assign an int to a float,it has to evaulate and invent new bit pattern.and 5 is represented as 5.0 and hence 1.24 * 2^2 
+        float f=*(float *)&i; where i was an int,this can be used to evaulate an integer as a float.eg. 37 as int would be almost 0. type convertion of pointer to an integer into a floating point pointer does not effect the integer.
+        *(short *)&f; where f is a a float,it would only take first 2 bytes not the last ones. as it would go to the address and read 2 bytes.
+
+lecture 3:
+    if you want to read first byte of a double,just point use *(char*)&d;
+    if you read a short as a double you would read that short as well as next 6 bytes.
+    big endian and little endian has nothing to do with it,it is too low in abstraction level.
+    little endian   4 3 2 1   usually the linux mahchines
+    big endian      1 2 3 4   windows etc 
+    so at byte level you would get different results but not at this level of abstraction.
+
+    struct fraction{
+        int num;
+        int demom;
+    };
+    struct fraction pi; this would be given 8 contiguous bytes and the address of the struct is coincident with its first field.\
+    pi.num=22;
+    pi.denom=7;
+
+    (fraction *)&(pi.denom) would now treat four bytes of denom and next four bytes as a struct fraction.
+    hence pi.denom would be pi.num of this new struct.and its denom would be somewhere else and you could write or override to that value.you can do it in loop to read whole address space of that program.
+    
+    int array[10];
+        it gives 40 contiguous memory locations.
+        array is synonymous with address of first locations.
+        array[11] you could override something that is not in the array.
+        there is no bounds checking in raw arrays in c/c++
+        it would even tolerate negative numbers.
+        if you want to read whole thing as bytes,you could treat whole thing as a char array and point a char pointer to the begining and start reading the same way.
+        array+k  <>  &array[k]
+        * is dereference operator.
+        *(array+k) <> is same as array[k]
+
+    structs with array inside of them:
+        struct student{
+            char * name; pointer to variable length name is cool.
+            char suid[8];
+        }
+        this is also in contiguous memory one after another,in the order they appear in struct.
+    
+    array points to first element and adding one moves to next element,doesn't matter how big the size of element is.
+
+    dynamically allocated string in heap is delimited by \0 and you can point to it from anywhere.
+
+    strcpy would also override if more characters given.
+    you can even use ptr[3] for a pointer that is not an array it doesn't care and would go to 3rd position from it and start reading or writing.
+
+    empty string is "" is \0 in memory.
+
+    basically c/c++ works at byte level,doesn't matter how big or small an entity,the rules remain same.
+
+lecture 4:
+    void swap(void * vp1,void * vp2,int size) void means i don't have knowledge about the pointer type hence making it generic.
+    {
+        void temp=*vp1; error,as there is no type void.only pointer can be void.
+        char buffer[size];gcc allows you to define size that depends on parameter.
+        memcpy(buffer,vp1,size); copies size number of bytes from vp1 to buffer.
+        memcpy(vp1,vp2,size);
+        memcpy(vp2,buffer,size);
+    }
+    swapping strings is easy and the name is pointers and just exchange the pointers like any two variables.as pointers store the address.
+    don't write code that takes void pointers as it is prone to errors unless no other easy way to do it.
+
+    generic linear search:
+    we can't do pointer arithmetic on void pointer for example we cannot add 1 to it.
+    
+    void * lsearch(void * key,void * base,int n,int elemSize)
+    {
+        for (int i=0;i<n;i++)
+        {
+            void * elemAddr=(char*)base +i*elemSize; as base is void type and we cannot add anything to it.we can directly assign a pointer to void * as it is like going from more specific to less one.
+            if (memcmp(key,elemAddr,elemSize)==0){
+                return elemAddr;
+            }
+        }
+        return NULL;
+    }
+
+lecture 5:
+    a function can take pointer to a function as parameter as well.
+    (int x,int (*ptr)(void *,void *)) and all you have to pass is name of the function.
+    you can assign void pointer to any other in cpp,as the cast is implicit.
+    char * notes[] is not same as char notes[][]; as char * notes[] is memory efficient.
+    sizeof char* is same as char** in fact all pointers have same size,we write specific type for readabiltity.
+    an array of char * which is basically an array of strings is easy to linearly search.
+
+    if you have double pointer and you want single pointer :   * ( char**)vp1,this could be used to go to any address in memory by just typecasting int * to int ** and then use **ptr to get value of that address.
+
+    you can implement generic data structures as well.
+    
+
+programming Abstractions:
+------------------------------------
+lecture 1:
+    logistics
