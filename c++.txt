@@ -766,7 +766,232 @@ udemy c++:
     90 keywords in c++
     cin,cout are not keywords,main,#include are not keywords these are identifiers.
     << stream insertion opearator,>> stream extraction operator,:: scope resolution operator.
+    c++ preprocessor is a program that processes our program before compilation,it strips all comments and replaces by single space.
+    preprocessor directive starts with # pound symbol/hash
+    #include<iostream> #include "myfile.h"  #if #elif #else #endif etc 
+    it replaces preprocessor directive with that file and preprocesses that file recursively.
+    you can use #if etc to write condition for preprocessor for windows and linux etc.
+
+    c++ preprocessor doesn't understand c++
+    comments /* hi */ or //hi 
+    #define #undef 
+
+    your code should be self documenting.
+    don't comment obvious things.
+
+    you can have multi line comment at the top,describing the program.
+    you can modify comment when you modify the code.
+
+    int main{
+        //code 
+        return 0;
+    }
+    int main(int argc,char * argv[])
+    {
+        return 0; this return is send as code to the caller.
+    }
+     0 means successfully done 
+
+    main is starting point of a program.
+
+    Namespaces:
+        name given to a piece of code 
+        why std::cout and not cout 
+            std is a namespace for c++ standard namespace,third party libraries will have their own namespace.
+        scope resolution operator:
+            ::
+        namespaces are used to avoid naming conflicts like module.function() in python we have namespace::cout() 
     
+    using namespace std;
+    cin>>n;cout<<n; but this brings whole namespace.
+
+    using std::cout;
+    using std::cin;
+    using std::endl; only brings these ones.
+    cout<<n; etc 
+
+    basic IO using cin and cout.
+    cin,cout,cerr,clog are objects representing streams.
+    cout is standard output stream.
+    cin is standard input stream.
+    cout by default is console.
+    cin by default is keyboard.
+    cin>>a>>b; data processed only when enter is pressed.
+
+    white spaces are ignored in cin,even tabs. and act as terminators.
+    like  ,    123    ,is as good as ,123
+    cin treats number as the type of variable to assign to,
+    cin reads from buffer.
+    10.5 is treated as 10 0.5 if you were looking for int and double 
+    inputs are read from memory called buffer and not from screen.it reads from buffer using pointer.
+    
+    variables:
+        variables are abstracion for memory locations.
+        they have type and value in static type.
+        they must be declared before they are used.
+        string name,Person james. etc
+        letters,numbers,_ 
+        can start with _ 
+        can use camelCase or snake_case
+        declare variabes right before you use them.
+       
+        int age=21; c like intitalization
+        int age (21); constructor initialization
+        int age {21}; c++ 11 list intitalization;
+        they have garbage value if not initialzed.
+        better names:
+            int width; is not as good as int room_width;
+        global varaibles are initialized to 0;
+        global variabes are not good programming practise.
+        char 8 bit 
+        char16_t,char32_t, for more.
+        by default signed.
+    
+    floats power -38 to 38 
+    double -308 to 308
+    bool: 8 bits, true is non zero and false is 0;
+    char a {'j'};
+    single quotes for char.
+    in c style intitalization we get overflow and that is % size;
+    but in list sytel we get error that says doesn't fit,when assigning.
+    bool b {false};
+    sizeof(int)
+    sizeof(double)
+    sizeof(variable) we can omit () for varaibles
+
+    use <climits> CHAR_MAX , INT_MAX,etc 
+
+    const double pi {3.3};
+    just add const at the begining.
+    don't use #define for constants in modern c++,as hard to find errors,these are called defined constants.
+    always intitiize variables,and use psedudocode to solve problem first.
+    double d=2.3e23;
+
+    Arrays and vectors:
+        compound data type: made up of other types.
+        collection of elements
+
+        Arrays:
+            fixed size,same type,stored in contiguous memory,indexed from 0,no checking if you are out of bounds.iteration for processing,always initialize as they containn garbage,very efficient.
+        
+            declaration: int test_scores[5];
+                         double temp[n];
+                         const double temp[n];
+                         double t[10] {0};  all to zero.
+                                    {3,5} rest to 0
+                         int arr[] {1,2,3};
+            accessing elements:
+                arr[0]
+                cin >>arr[0]
+            name of array is address of first element of array.
+            no bounds checking in c++;
+            char vowals[] {'a','e'}
+            cin>>vowels[2];
+            arrays contain junk by default.
+            {100} first 100 rest 0
+
+            2D array:
+                int arr[2][3]
+                int arr[n][m]
+                cin >> arr[1][2]
+                int arr[][] {{1,2,3},{4,5,6}};
+            we rarely use arrays,we use vectors now.
+        
+        vectors:
+            dynamic arrays are vectors 
+            part of c++ standard library.
+            an array that can shrink its size at execution time or grow.
+            very efficient,can provide bounds checking.
+            can use sort,reverse,find and more.
+            
+            #include<vector>
+            using namespace std;
+            vector<char> vowels;
+            vector<int> test_scores;
+                for empty vectors.
+            vector<char> vowels(5); containing 5 characters initialized to 0;
+            vector<char> vowels {'a','b','c'};
+            vector<double> temp(365,80.0); of size 365 and all initialized t 80.0 
+            vectors are object oriented.
+            we use iteration.
+            accessing using  arr[1] or arr.at(1) to assing arr.at(1)=3; arr.push_back(3);
+            gives error if index out of bounds,arr.size() for size 
+            2d vector:
+                vector<vector<int>> movie {{1,2,3},{4,5,6}};
+                movie[0][0]
+                movie.at(0).at(1)
+                to add a vector movie.push_back(vector2)
+
+            at checks bounds [] might not check bounds
+            always use inbuild methods to use an object.
+    
+statements and operations:
+    expressions return a value,
+    statements are instructions.
+    n1 {1} is initialization it is not assignment,n=23 is assignment.
+    l-value is location,r-value is value stored in that location.
+    n=m=1000; works. as right to left.
+    int/int gives floored int.
+    PEMDAS 
+    the output type is as that of most expressive one,called type coersion.
+    statements contains expressions.
+    statements end with ;
+    promotion and demotion:
+    avg= static_cast<double>(amount); for type conversion.
+    (double) is old style and don't use it.
+    now i know why it is not liked when you use c like syntax in c++.
+    12.0 == 11.99999999999999999999999 because of how they are stored in memory.example keeping on dividing by 2 and put in memory accordingly.finally understood it. gives true,it looks at precision.for double,float for ints they have to be same.
+    not !,and && ,or || both ways accepted.
+    not has precedence then and then or,as not is a unary operator.
+    also there is short-circuit evaluation,stop if result gotten.
+    relational first and then logical.
+    precedence:
+        [] -> . () left to right 
+        ++ -- not * & sizeof   -(unary) right to left 
+        rest left to right 
+        = and ?: are right to left.
+
+control flow:
+    switch arugment has to evaluate to integer type.
+    for(int i=1,j=2;j<3;l--,j++){}
+    for(vartype var_name:sequence){} for c++ 11 onwards.
+    for(int score: scores){} for (auto score: scores)
+    auto figures out on its own.
+
+characters and strings:
+    characters are integers mapped to ASCII 
+    in c++ : c style string and c++ strings.
+    in c++ strings we have string objects like vectors.
+    #include<cctype.h> isalpha() etc in it for characters,isalnum() etc 
+    in c style \0 null terminated strings,stored in contiguous memory.
+    char myname[] {"frank"}; \0 added automatically.
+    char name[40] {"hello there"}; all other \0 
+    char filename[20] {};
+    cin>>filename; cout<<filename;
+    strlen() returns size_t it is unsigned int type.
+    strcpy() to copy the string.
+    cin reads only one token.
+    std::sting class in standard template library (STL)
+    #include<string> also continuous in memory,safer,dynamic size.
+    string s {"hello"};
+    string s; creates an empty string.no garbage value.
+    string s2 {s3};
+    assigning s1=s2 works.
+    concat s1+s2 but "abc"+"d" is illegal as for two c type literals,should be atleast one c++ string literal.
+    s[0] or s.at(0)
+    for (char ch: s)
+    can also do for(int ch : s)
+    ==,!=,>,< etc all work for these strings and can compare to c style as well.
+    it compares content and not reference.
+    str.substr(0,4);
+    .find("this")
+    .length();
+    s1+="hi"
+    getline(cin,s1)
+    getline(cin,s,'x') read till x is encountered.x is a delimiter.
+    
+
+
 
 object oriented programming:
     prodcedural programming focuses on functions.
