@@ -1,0 +1,41 @@
+to land your dream job
+FAANG:  FACEBOOK,APPLE,AMAZON,NETFLIX AND GOOGLE.
+there are other fang like companies. eg. microsoft,linkedin,whatsapp etc.these have also multi billion valuation.
+there could be different interview processes.but core remains same.
+
+process begins with assigining you a recruiter,gut chuck interview 15-30 minutes.
+then you have an interview with someone from engineering,it would be 1 hour video call where you get to solve one or two technical problems.
+
+in this course you would learn to solve these technical problems.
+
+then there is an onsite interview,this is whole day,with 5 different interviews with 4 engineers and one hr culture interview,you solve the same kind of technical problems,diffent engineers to avoid bias.
+
+three keys to technical interviews:
+    technical knowledge comprising of data structures and algorithms.
+    critical and abstract problem solving
+    communication.
+
+indices start from zero and if you need nonzero numbers add one to indices .
+
+STEPS:
+
+step1: verify the constraints.
+        are all the numbers positive or can there be negatives,
+        are there duplicate numbers in the array,
+        will there always be a solution available,
+        what do we return if there's no solution.
+        can there be multiple solutions.
+step2: turn these edge cases into test cases.say on paper.
+think about a brute force solution and its time complexity.
+double check for errors.
+test your code for all test cases.even in interview.
+figure your time and space complexity of your algorithm.
+make tradeoffs between memory and compute to get ideal algorithm.
+
+use hashmap for making your lookups O(1)
+using hashmaps is the best trick for performance.
+
+
+check if two pointers can solve the problem,say with different speeds over the linked list or array and second choice shoudl be using a hashmap.
+
+
