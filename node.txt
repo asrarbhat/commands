@@ -95,6 +95,111 @@
     React uses event driven programming.
     you can have multiple listeners for same even p.on("hi",function1) p.on("hi",funciton2) and both will get executed when event occurs.
 
+    node modules:
+        we can't build everything from scratch, it is redundant, build on top of what other people have already build.
+        we use require to get code from somewhere else.
+        const http=require("http");
+            it executes the module and returns module.exports
+        const req = http.request("http://www.google.com",(res)=>{
+            res.on('data',(chunk)=>console.log(chunk));
+            res.on("end",()=>console.log("end"));
+        })
+        req.end(); //very important as it causes the request to b send.
+
+        similarly https for https requests.
+        
+        const {request}=require("https");
+        or use get function instead, then no need to end or assign.
+
+        with event driven prgramming we use callback functions and closures.
+        
+        node uses commonJS modules.
+        module.exports={send,recieve}; //variables,classes,functions etc 
+
+        ES6 has its own module system.
+            import * from "./index"
+        even node.js supports them from 13.2
+        import {send,recieve} from './request';
+        import * as m1 from "./requests";
+        no module.exports
+            but export={your exports}
+            you have to name module as mjs wehre m is module or put type="module" in package.json 
+            otherwise treated as commonjs module. even in entry point file
+            "./requests.mjs"
+        in commonjs module system it looks for .js file first then .json file and then .node file.
+
+        node caches modules when you load them,hence loaded only once.
+            as it checks if was already loaded but you get different thigns from it when loading second time: won't print if console.log in it for second time.
+            this cache is global 
+            console.log(require.cache) // to see details.
+                hence when you import same module in all modules,it is only loaded once.
+        you can't edit modules in your file .
+        if you try it creates that thing in that file only like overiding.
+
+        if you put index.js in a folder,you can import that folder when you use require. it resolves index.js in that folder.
+            eg index.js in folder with many files.js
+                export whole thing from index.js in that folder.
+                to avoid chaining while importing like m1.requests.send
+            but don't use it package.json is better as you can mention entry point to a module in it.
+            
+        package is a collection of files/modules 
+        each package should have a package.json 
+
+        package.json in a folder makes it a package.
+        in package.json in "scripts" in "start": "node abc.js"
+            package.json is entry point to a package.
+            npm run start or npm start, now to run that command.
+        ES6 modules / esm or echmascript modules.
+
+        over time ES6 would be adopted.
+
+        axios:
+            require("axios")
+            axios works in both browser and node.
+
+            supports promise baed API.
+                axios.get("https://www.google.com").then((response)=>console.log(response);).catch((err)=>console.log(err)).then(()=>console.log("done)); //then after catch is always executed.
+            exception in versioning ^0.80 only path versions 0.8.0 and <0.9.0
+                ^1.2.0 can be less than 2.0.0
+        
+        package-lock.json contains exact versions and repository links etc.
+        hence hepls to isntall exact versions.
+        
+        npm audit fix : in case to fix any security vulnerablities.
+        npm audit : to see if any issue
+        
+    # for comments in a csv.
+        the first line : header : name of columns 
+        each row is a data entry.
+    you can add any script to package.json 
+    require supports package.json 
+    to read csv:
+        csv-parse best one.
+        npm install csv-parse 
+        const parse=require("csv-parse);
+        parse is a funciton
+        uses stream API of node 
+        reading data line by line
+        instead of all.
+        hence better for performance as no need to wait for all in memory.
+        parse() returns an event emitter.
+        since it only deal with streams we create one first.
+        const result=[]
+        const fs=require("fs");
+        fs.createReadStream("abc.csv").on("data",(data)=>result.push(data);).on("end",()=>console.log("done"));
+        also use on("error",()=>whatever)
+        it gives use binary results.
+
+        use 
+            fs.createReadStream(whatever).pip(parse()).on().on().on()
+            you can do processing like filtering etc
+            pipe adds a function to pipeline and parse returns a row.
+                you read as stream line by line, and parse returns a row.
+                like readable.pipe(writabe);
+            in parse 
+                parse({comment: "#",column: true}) each row as json.
+            now we get an array of obejects that was cool.
+        
 
 #Mosh Hamedani:
     node is used for creating backend.

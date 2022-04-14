@@ -1,0 +1,284 @@
+google
+
+    the part of economics concerned with large-scale or general economic factors,such as interest rates and national productivity.
+
+missouri state univeristy: principles of Macroeconomics.
+
+class 1:
+    economics is a social science,it is about how people behave just like political science or history or anthropology.
+    economists develop models of how people interact in market.
+    we economicists always believe people are always motivated by their self interest.
+    we use numbers to measure how things are going like GDP (gross domestic products)
+    we are insterested in government policies, what they do when GDP goes down, to make it grow at steady rate. 
+    terminology in economics might be different from what they mean in daily life.
+    
+    father of economics: adam smith
+        he wrote a book in 1776 called the wealth of nations.
+        he was a scottish economist.
+
+        legend say as he crossed the border to england,he realized that everything is better,people were richer,etc and pretty much everything was better,and he asked why,the language and the culture were same,same religion etc. so asked what makes nations wealthy.Up until that we had a system called mercantilism which says what makes a country rich is gold and silver.the idea was you want more gold and silver into the country,hence a lot of exports.you provide products and services in return of gold and silver,and thats what makes a country rich.maximize exports and minimize the imports.adam smith says it is not right.also in 1776 declaration of indepedence also happens,and it is not a coincidence.people in america were like,there is this king and he tells us what to do and we think we can do better ourselves as well. Adam smith says that an invisible hand can solve a lot of economic problems.At that time france had 13000 regulations on how to build a chair. And of course that makes making a chair very hard. Adam smith says you don't need those regulations and people who make good products are gonna stay in business and those who don't will not stay in business. you don't need government with all those regulations,just like in 1776 in america that we don't need people from across the ocean to tell us what to do. we are smart enough to figure things out by ourself. invisible hand is a way to make economy in a state to grow at optimal rate.
+
+    economic problem in detail:
+
+        how to turn resources into goods and servies
+            resoures ------------> goods and services 
+            this is what economics deals with 
+        
+        and these resouces are limited and scarce, and we have to use these resouces to make goods and services,hence goods and services are also going to be limited and scarce,so which goods and services do we produce and how are we going to produce them.and which we use to build those goods and services,hence making economics a decision science.its not about stocks and bonds,they do have stuff to say about that. it is about how and which sets of resouces are we going to turn into goods and services,and how to distribute those goods and services. the study is of the fact how do we get from limited resources to goods and services.
+
+        if your broker knew which stocks to buy,he would not be working.
+
+        terms:
+            scarcity: the fact that there are insufficient resources to produce all goods and services that people want,so we have to make a choice.
+
+            economic goods: things that are scarce and desirable beyond what is freely available,it doesn't have to be tangible. Leisure time is a good that we want.
+
+            economic bads: things that are undesirable,eg pollution,crime.
+
+            economists analyze what economic goods we want and what we don't want and how we are going to achieve that given a limited resources ----cool definition.
+
+            given a pizza that has both peparoni and cheese,and your wife wants cheese only,then the part that has peparoni is an economic bad for her,hence there is no universal definition of economic good or bad and it changes from observer to observer.
+
+            positive economics : looks at "what is" ,these are testible e.g the federal budget deficit is 300 billion dollars,increasing the minimum wage increases the unemployment among black males.it doens't need to be true,it maybe,it should be testible.it is a testible hypothesis,you can collect data and test it.
+            
+            normative economic : looks at "what should be or what ought to be" ,these are value judgements. e.g the federal budget deficit should be smaller,the minimum should be increased.this is not testible.
+
+            so basically you want something and economics tells you how to achieve it and what will be the consequences.
+
+            generally we want to do positive economics.
+
+class 2:
+
+    resources:
+        four kinds:
+            land : all of natural resources,minerals,forests,water,arable land.
+            labour: all of physical and mental talents of men and women. football players,doctors,janitors,computer guys etc.
+            capital: manufactured aids in the production process. capital is not money. boards,chalk,distribution network etc
+            entrepreneurship: combine land,labour and capital to create goods and services,basically the incharge and someone who comes with ideas.
+
+            land is limited.
+            labour is limited.
+            capital is limited.
+            entrepreneurship is limited.
+
+            since they are limited,they need factor payment.land can be used for housing,retail stuff,buildings,farm,park,factory,etc and if we want the land is not used for farm,buildings etc and all alternate purposes we have to rent it. they factor payment for land is "rent".
+
+            similary men and women can do a lot of things like sales,farming,waiter,janitor,etc and to make them do what you only want them to do you have to hire them from these alternatives,the factor payment for labour is "wages". the bigger the list of stuff you can do the better the wages.
+
+            capital: building: for education,homes,mall,gym,day care, etc ,if a lot of uses for a capital better it is,factor payment is called "interest"
+
+            you combine all of them,an entrepreneur combines and gets a factor payment called "profit"
+            the more the uses or highly valuable the output of production,better the profit.
+
+            the factor payment is reflection of alternate uses.
+
+        important ideas that we keep in mind in economics:
+            - opportunity cost: using resources to produce one good,and diverge those resources away from production of alternate goods,these alternate goods sacrificed to create the original good is the opportunity cost to produce the original good.
+
+                    when a big chain stores wanted to open a new store,120 year old tree stood in the way,rather than cutting it down the chain store pain 100k to have it transplaned,the practise has become more popular and it gives positive publicity and attracts the croud.
+
+                        100k to move the tree: the opportunity cost here is 10 dollars to buy a tree hence we could have planted 10000 trees,or just cut it down and saved a lot of money,or just donated that money.
+                
+                    the opportunity cost of me watching this lecture is sleep,watching some good web series etc
+
+                    "the opportunity cost is the highest valued alternative"
+                
+                every decision we make has an opportunity cost,otherwise it wouldn't be a decision.
+            
+            - people know that resources are scarce and will attempt to economize : given a set of choices that have equal cost,we will choice one with highest benefit. or choices with equal benfits we would choose lowest cost.
+
+                    eg same job in different cities,we would choose one near home. we save money on gas and can live with family.
+                
+            - incentives will alter people's behaviour : if grades were given based on random chance nobody would study for exams. if paid based on weight,you would make glass thicker.if based on area,we make it thin. hence incentives decide the behaviour.
+
+            - economic agents (decision maker) make decision at the margin(people examine the marginal benfits vs the marginal cost) marginal means additional.
+                if marginal benefit>marginal cost then we want to do it,otherwise not.
+
+                eg 90 marks gives S so we don't shoot for 100 as it takes a lot more effort than to go for 100.the effort to go from 90 to 100 is a lot more than 10 percent. here the marginal costs are huge and marginal benefits are nothing.
+
+                however going from 0 to 40 doesn't take a lot of effort,but the marginal benefits are remarkable, hence people should make decisions based on MC and MB.
+            
+            - information is important but costly to obtain. we need information to help us make better decision.information helps us to choose and to calculate marginal benefits and marginal costs.
+            collect information until the marginal benefit of collecting the information is more than or equal to marginal cost of collecting the information.
+
+                    eg. do you call all people from gas stations to see who has cheapest gas. the marginal cost of collecting information on all gas station prices is larger than the benefit,as they are only going to vary by a few cents,but it takes time and calling bill.
+
+                    same for choosing the restaurant.
+
+                and you can't necessarily get full information,and you might make wrong decisions,and sometimes you don't have information about the marginal cost and benfits of collecting information itself. hence such wrong decisions are part of not having enough information.
+
+                think of most efficient answer as hitting the bulls eye,it is hard to hit at the center,and with more and more information we get closer and closer to the center and it gets harder and we get closer. margin cost is like trying to hit the bulls eye at the center,and benfit is like how valuable is it to hit the bulls eye.
+
+
+class 3:
+
+    things to do and things to avoid:
+        like last five points in last class.
+        - economic actions can generate long run effects that are different from short run effects.
+            eg. federal aviation admin is considering regulations on children under the age of 2.like child who is younger than 2 doesn't need to have a seat but they want them to have extra seat for safety as it is hard to react when kid is in your lap even in buses.
+
+                but making a child buy seat increases the cost to fly for a person to fly,hence people would drive instead,but flying is safer than driving,flying is even safer than walking. hence admin wanted safety but now kids are in more unsafe environment.
+
+            eg if car milage on average should be 25 in a company,and if they make 15 one then they have to also make 35 one to average out to 25,but it is hard to make 35 one,so you make cars smaller and lighter to get 35,and todays cars the bumper is made up of plastic and is unsafe.and turns out "corporate average fuel economy standards" is responsible for 2000 deaths every year in america. it changes the structure of cars.
+
+            hence you get something entirely different from what you actually intended.
+        
+        - value is subjective: value cannot be measured objectively.
+            if i think my house is worth 300k,you can verify it by checking if someone is ready to buy it at that price.
+
+            if you want to save a tree from being cutting down,your value of that tree is a lot more and if you start living in that tree to save it,you will have immense opportunity cost for it,where as for the guy who is cutting it down,it might be just a piece of wood.
+
+        
+        hence value of things change from people to people,there is no way to put a single value on a thing.
+
+    things to avoid:
+
+        - violation of ceteris peribus: everything else equal.
+            basically look at one thing changing at time.rest should be same.
+
+            eg if you got a field that gives 100kg every year,and next year you apply 10% more fertilizer and 10% more pesticide,and we get 130kg.how much from fertilizer and how much from pesticide? we don't know.
+
+            year after that we put 10% fertilizer only so we can say that fertilizer added 10 but we cannot say that pesticide added 20,as two things are changing and these might be interacting as well,hence the only way to figure it out is to use pesticide only to get the output.
+            say we get 10% by pesticide as well.
+            it is difficult to figure out what is working when there are multiple things at play,we have to isolate and observe changes individually.
+
+        - introducing bias : it would be normative economics.
+            eg. changing scale of the graph to make one guy look better than another guy.
+
+            eg low income people read to children 25 hours from age 0 to 5
+            and middle income people head 1000-1700 hours for the same.
+            and the data came from 22 low income households,and for middle income she used her own child john.
+
+                and certainly this data is highly biased.
+            
+            eg giant wild fire in colorado,burnt around 11000 acres,which is about 17 square miles. hence 4.1 miles of square,hence 4.1 miles doesn't seem that bad where as 11000 miles seems a lot. and you don't care about 4.1 miles.
+
+class 4:
+
+    things to avoid:
+
+        - not defining your terms:
+            otherwise you might be talking about something completely different.
+            eg capital is money for finance people and for economist it has nothing to do with money and money is just and piece of paper and capital is manufactured aids.
+             
+             and if an economist and a finance is talking about capital,they might not be talking about the same thing.
+
+            similary the profit is money left over for finance people,but for economist we also talk about explicit costs like money and implicit costs like opportunity cost.
+
+                for finance profit= revenue-cost
+        
+        - the fallacy of composition:
+            what is true for the individual is true for the group.
+            standing up in a stadium might give you better view,but if everybody stands up it would be good for everyone.
+            sometimes it might be true. the fallacy is in assuming.
+        
+        - post hoc fallacy: correlation is causation:
+            if you things are moving together,maybe in opposite direction,but that doesn't mean one is responsible for the moving of other or causing it.it may be true,the fallacy is in assuming.
+
+            eg. education and income are heavily correlated,which one causes another.in us 20% people with graduate degree earn less than high school kids.
+    
+    graphs:
+
+        graphs allow us to visualize the relationship between the indepedent variable and dependent variable,the indepedent variable changes on its own and the dependent varialbe changes as per dependent variable.
+
+        we can have a positive relationship for negative/inverse or complex.
+        complex has both positive and negative components to it.
+
+        eg number of beers consumed vs blood alcohol conentration,it is positive relationship.we put indepedent variable on x-axis. and we can extrapolate it.the curve can be represented in using some function.
+
+        in two 2d graph everything else remains constant,only those two quantities are under scrutinity.
+
+        complex relationships like parabolic,negative means decreasing strictly and postive means increasing strictly.eg profit might be parabolic.
+            
+class 5:
+    resources ----> goods and services.
+    less resources produce less goods and services.
+    even if we use all resources we will have limited number of goods and resources.
+    
+    production possibilites curve:
+        full employment:
+            using all available resources. we don't want resources idle.
+        full production:
+            use resources where they will have the greatest effect on output.
+            eg oranges cannot be grown in northern canada,even if you use whole employment.hence it would be full employment but not full production.
+        assumptions:
+            the economy is operated efficiently: full employment + full production.
+            resources/factors of production are fixed in quantity.
+            factors of production are fixed in quality/ like the labour are are getting educated
+            technology is fixed : our knowledge of how to turn resources into goods and services.
+                these assumptions can be thought of a snapshot at a time.
+            
+        two goods, pizza and textbooks.
+            if we devote all resources to make textbooks we can make 10 textbooks 0 pizzas , or we can make 4 pizzas, 0 books, 7 textbooks 2 pizzas etc.
+            the graph between textbooks vs pizzas is a linear decreasing graph,and you make it continous as it is possible.
+            this curve is called production possibilites curve.
+        production possibilites curve: the curve for possible productions.
+
+        which one is best:
+            there isn't any best best,it is a normative issue.
+            but anything under the curve would be suboptimal use of quantity of resources and anything over the curve is not possible as the resources are limited.
+            the points on the line are better than points inside the area, and that is not normative, that is positive economics.
+            all points on the line have same preferability.
+        
+            moving from point A to Point B ,you gain 1 pizza, you lose one book,opportunity cost is 1 book.
+            next gain 1 pizza,lose 2 books and son on,hence the curve doesn't need to be linear. opportunity cost may vary fro one point to another on the curve.
+
+            law of increasing opportunity cost:
+                as you make more units of a good,the opportunity cost of making more increases.
+                why? 
+                resources aren't perfect substitutes for each other.pizza and book are made up of different resources.you have to release resources that are good at making pizzas to get resources that would be used to make a book.And people who are good at doing one thing would take time and effort to master another one.
+
+                similarly for healthcare vs education, it is like an inverted parabolic.
+                it remains true only under the above assumptions eg the technology remains same etc.
+
+                eg if a country that only produces pizzas starts making cars,initially the resources are are good at producing cars would be used and then later resources that are not that great woudl be used.
+
+            if level of resources change, or change in quality of resources or level of technology changes or legal or social structures change, our production curve would shift out or in accordingly.
+
+class 6:
+    division of labour:
+        method of breaking down some taskinto their parts. and each person does a part.
+        Allows society to make more goods and services.
+        Allows people to take advantage of their skills.
+        specialize at something and trade that, instead of learning everything.
+        you can produce more as a society if you specialize.
+        worker that specialize and become very skilled at their tasks,eg carepentry,etc. the more time you do them the better you get at them and you get faster.
+        allows to adopt to mass production techniques.
+
+        Absolute advantage:
+            when an econmic agent can make more of a good than another economic agent in a given time ,could be a person,company, country etc.
+        Comparative advantage:
+            when an economic agent can produce a good at a lower opportunity cost than anther economic agent. basically cheaper.
+        Comparative advantage is what decisions are based on. opportunity cost is the deciding factor.
+        buy from an agent that has Comparative advantage over you. eg buy from china at 2 rupees instead of producing at at cost of 5 rupees worth something else. 
+        
+        You should do where you have Comparative advantage and trade with people who have Comparative advantage over you on other things.
+
+        hence trading is a Comparative advantage game.There is demand and supply because of you having a Comparative advantage.
+
+        Hence trade is beneficial for both the parties.
+
+        law of increasing opportunity + Comparative advantage results in trade.
+        eg grow rice in US as US has a lot of land,and land in US is cheap.And land in japan is very expensive as japan is a small country. Japan in turn should focous on Electonics,or nintendos etc.
+        hence in ego don't ignore Comparative advantage.
+        similarly US doesn't have skilled labour,India has skilled labour.Hence people in US want labour from India,China.
+        unskilled labour: factory workers.
+        skilled labour: eg engineers,hence US makes aircrafts and it is capital intensive and india doesn't have capital as india as 3% of capital,as US has more skilled labour than india.
+
+        Economic questions:
+            What is to be produced?
+            How much of each to we produce?
+            How is the output to be produced?
+            How is the output to be distributed?
+            Can the system adapt to change?
+
+            Three answers:
+                Traditional economy:
+                    based on traditions, you would do what people before you did,like father like son.
+                Planned Economy:
+                    beauracrates decide what you do. They decide who is gonna do what,How and where.
+                Market Economy:
+                    based on supply and demand.
+
+class 8:
+
