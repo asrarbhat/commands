@@ -5,13 +5,7 @@ google
 missouri state univeristy: principles of Macroeconomics.
 
 class 1:
-    economics is a social science,it is about how people behave just like political science or history or anthropology.
-    economists develop models of how people interact in market.
-    we economicists always believe people are always motivated by their self interest.
-    we use numbers to measure how things are going like GDP (gross domestic products)
-    we are insterested in government policies, what they do when GDP goes down, to make it grow at steady rate. 
-    terminology in economics might be different from what they mean in daily life.
-    
+
     father of economics: adam smith
         he wrote a book in 1776 called the wealth of nations.
         he was a scottish economist.
@@ -279,6 +273,638 @@ class 6:
                     beauracrates decide what you do. They decide who is gonna do what,How and where.
                 Market Economy:
                     based on supply and demand.
-
 class 8:
+    market: institution/mechanism that brings together buyers and sellers.
+    Demand: is willingness and able to buy at a specific price. its magnitute varies from price to prize.
+            you take data form whole in the market and draw a graph of that for that data and you can get the same data again tommorow and get different curve.
+            demand for one day is quanity demanded. and what happends everyday to curve is demand.
+    law of demand: ceterris peribis, as price increaes, the quanity demanded decreases. it doesn't say anything about demand of that thing in market.
 
+    demand has more to do with, how people feel about it buying it.
+    market demand curve is the demand curve for all businesses added.
+
+    determinants of demand:
+        taste and preference:
+            increase in taste and preference increases the demand.
+        increase in demand means at every price now market is willing to buy more / curve shifts to right.
+        number of consumers: increase the demand, eg if more old people then more heathcare hence more insurances.
+        income of consumers: as income increases , the demand of normal goods increase and the demand of inferior goods decreses.
+        price of related goods also contributes.
+        the quality is assumed to be best when talking of good.
+        when you put high price on iphone you are trying to tell people samsung is not as good as iphone as otherwise people would go for substitutes.
+
+class 10:
+    
+
+##########################################################################################################
+
+class 1:
+    economics is a social science,it is about how people behave, just like political science or history or anthropology.
+    economists develop models of how people interact in market.
+    we economicists always believe people are always motivated by their self interest.
+    we use numbers to measure how things are going like GDP (gross domestic products)
+    we are insterested in government policies, what they do when GDP goes down, to make it grow at steady rate. 
+    terminology in economics might be different from what they mean in daily life.
+    tip: if you know what comes in exams,then with 20% effort you can get upto 70% marks.
+
+class 2:
+    economics: the study of how people use time and material resoures to improve their well being.
+            we study how those decisions affect others in society.
+            we study policies designed to effect economic decisions of people.
+            it is a social science,limited to the aspect of how people behave with respect to the resources they have.
+            microeconomics: looks at the economic behaviour of individuals (consumers,employees,business etc)
+            bahaviour is motivated by self interest. This is an axiom to study economic behaviour.
+            these economic decisions have broader impact.eg pollution,because you choose cheaper car, if you apply for a job,someone else doesn't get that job. Basically decisions act like a chain reaction. Figuring out this chain would be great.This is where Macroeconomics comes up.
+
+            Macroeconomics looks at the overall state of economic conditions.
+            government policies can affect economic activity.
+                eg regulate pollution,so cars that produce pollution should be junked, hence market for new cars would be created. 
+                If government thinks you are not saving enough for yourself,so they take it from your paycheck for your retirement.
+                If we don't make decisions that government thinks is appropriate then government would come up with policy for us to make those decisions,these decisions could be good or bad for us bad certainly government wants it to be good for the whole economy.
+                eg people consume a lot of cigrattes,so lets tax it hugely.
+            economic decisions are made by individuals and not the organisations. And those individuals they are self-interested within the economy.
+            Economic decisions are constraied, you don't get what you want. constraints imposed by nature,laws technology,market conditions (other people). Eg you want to be rich but laws constraint you from stealing. Policy makers might mutate these constraints. Natural constraints are hard to change, laws might be amended.
+
+            resources are required to produce goods and services, nature says we not giving you free stuff from sky. If you want to build cars,you need tools,labour etc 
+
+            resources:
+                productive resources:
+                    land,labor,capital,entrepreneurship.
+                    labor: human resources to do the work.
+                    land: natural resources,fishes,birds,soil,literal land,gold,air,water etc all fall under the land resources.
+                    capital: not provided by nature, not human. eg iron from soil refined to build steel,now stell is a capital good. nature + human => capital resource. To build car you need steel, steel have itself  been build and you want to build something else from it.glass same way.
+                    entrepreneurship: human resource,it is humans organizing resoures and making decisions,hires,designs,plans, sell it.
+                    entrepreneur is the residual claimant. it could be negative.
+                    entrepreneur checks if market is small or large.
+
+                    productive resources are limited in quantity.
+                    workers are limited.we have child labour laws also, we have old people.
+                    term: social security: money government takes to give you back when you get old,like a pension monthly.
+
+                    some people have used all clean air by pollution, some people have used all water by dumping waste in water. Hence clean air is a limited resource.
+
+                    gas stations abondoned are not bought by anybody because say there has been an oil spill and government if checks the soil would ask of you to clean it which would cost a lot of money. Hence even there is limit to clean soil.
+
+                    if population is not growing: then even labour force might be shrinking.
+                    labour force contains all people that can work,whether it is an engineer or a janitor.
+    
+    scarcity: desires of people outstrip resources, it doesn't mean shortage, it means we want more than what is produced.scarcity leads to choice,we have to choose.Hence there ain't no such thing as free lunch. if you want something you have got to give something up. if there were no scarcity we would get everything we want.
+
+    own definition of economics: it is about how people make decisions in a world where they can't have everything.
+
+class 3:
+    everything has a cost due to scarcity. In a day there are 24 hours, and you cannot be at two places simultaneouly, hence you choose and decide.
+    prodution possibilty curve:
+        if you can produce X, or Y. how much X and Y you could produce that is production possibilty curve. you could make only X or only Y or both to some extend. the graph is linear and decreasing.
+
+    opportunity cost: what you give up, now that you made a decision of what to do.
+
+    the price of going to college is increasing rapidly.
+    the price of health care is increasing rapidly.
+
+    the more valuable something is the more the price.
+    because of scarcity a rationing/allowance mechanism is needed: some way of deciding who gets what and how much. eg first come first served, religion, political affiliation eg communist countries, physical attractiveness, strongest, market economy: willingness to pay highest: probably the best one. 
+    Being rich doesn't mean you can have everything, even you limited resources, and you have to make choices. To overcome the shortcomings of market economy as poor might not get a shot,government comes up with policies.
+    market failure:  when market fails to do what most people think it should do.
+
+class 4
+    people base their decisions on a comparsion of benefits and costs.
+    people care about marginal(incremental) benefits and costs.
+    economic theories are complex stories explaining econmic behaviour,based on facts and assumptions,concepts (like opportunity cost) and we develop an explaination or prediction.
+    sometimes economic theories work and sometimes they don't .
+    economic laws: theories that stand the test of time.
+    law of demand: other things equal,price goes up,people buy less.
+    logical falacies:
+        fallacy of composition: understanding the parts you don't understand whole thing and vice versa.
+                                the whole is not sum of parts,it may be true sometimes but not always.
+    positive econmics: what is and prediting. eg inflation will be more next year.
+    normative econmics: what should be. eg taxes should be halved next year.
+
+    positive econmics is like mathematics.you don't care who is the president.
+
+class 5:
+    The production possibilties model:
+        it is concave to the origin(below linear curve), ideally it should be linear.
+        if the resouces are same for both products, the curve is linear then.
+        eg the resources at producing wheat are not as effective at producing houses.
+        the opportunity cost increases as we increase the size of resources to be utilized.
+        ideally we want constant opportunity cost.
+
+        lesson: you can be better at one thing and you should do that thing, instead of something that you are not good at.
+
+        anything outside the surve is unattainable,and points on curve and below it are attainable.
+
+        if point is below curve it means resources are staying idle/unemployed.
+
+        the points outside curve represent scarcity.
+        the point you choose on curve is the the choice you make.
+        hence you have to make choice,there is scarcity,there is opportunity cost,and there are a bunch of optimal resources of resources which we have to choose from.
+
+        when the economy grows the curve moves out. Now something that was unattainable is now attainable.
+
+        us econmomy grows say 2/3 % every year.
+        the rule of 72: tells how long it takes for a variable to double in value, this is a rule of thunb, 72=R X T where R is percent.
+
+        what makes an economy grow:
+            more resources (it ships curve up)
+            better technology
+
+            land isn't growing as a resource,the labor force is not increasing, hence in modern world they aren't the ones boosting the economy.
+
+            entrepreneur are the source of econmomy.
+            capital also contributes to econmomy eg computers,hammers,trucks
+                capital good is a good produced by people and used to produce other goods.
+            
+            government might give entrepreneurs benefits like no tax just to boost an econmomy.
+
+            human capital: comes under capital,it is the idea of investing in workers in order to make the worker more productive. eg education etc 
+
+            you have to make a balance between the resources you use for consumer goods and capital goods.
+            it is also concave to the origin. capital goods would lead to growth in econmomy but to do so you have to invest less in consumer goods hence there is an opportunity cost.
+
+class 6:
+    accumulation of capital would lead to economic growth.
+    every human has a production possibilty curve within his/her head.
+
+    how does an economist know if a public policy is a good or bad one?
+        benefit,and opportunity cost are the two things to weigh based on.
+        eg heathcare policy: increase taxes for better health system, but now people cannot buy things. How about an Employer should pay for the heathcare of their employees, He/she won't hire new employees and exising employees would work extra time, hence less jobs. or Lets have doctors who work half an hour for free, people would no longer want to be doctors. 
+            Hence if there is a policy, there is a cost.
+            hence after careful analysis of a policy based on cost and benefit we choose a policy.
+            in political policies politicians only talk about good things and hide the opportunity cost.
+        
+        production possibilty frontier tells you, given resources what can you have.
+
+        inflation is an increase in prices.
+
+    Trade is between two countries, if it is within a country we call it commerce or buying and selling.
+    you can achieve something outside production possibility frontier by Trade, you can have best of all worlds, if you are good at something produce it and trade within other countries for what you are not good at.
+
+    or just produce something that you are really good at and produce it more than needed and trade the surplus.
+
+    trade:
+        specialize in producing the good for which the nation's opportunity cost is lowest.
+        it is the law of Comparative advantage: produce things where you have Comparative advantage.
+        trade is great for both the nations.
+        trade off your surplus.
+        it is important to trade after specialization.
+
+        if your country has abundance of certain kinds of resources then you should specialize or trian people for that resource.
+
+        trade allow you to have maximum of both outputs without opportunity cost.
+
+        you need to know which country has Comparative advantage over you and trade with that country the resources where you have Comparative advantage to all.
+
+        in trade both sides win.
+
+    Three questions every country much answer:
+        what will be produced?
+            pick a point on Possibility frontier curve.
+        How to make it?
+            laws, institutions to do it, customs, etc 
+        goods are made for whom?
+            a rationing mechanism. eg highway for everybody with toll booths.
+        
+        even socialist,communinist countries also have to answer these questions.
+        US had a great deal of sucess with answering these questions and people adopt also the same policies.
+        US uses market econmomy.(it uses supply and demand as parameters to decide)
+
+class 7:
+    what goods will be produced?
+    how will it be produced?
+    who gets to consume these goods?
+
+    in US we leave it upto market price (buyers and sellers) that is the the government policy for the most part. There are some non market decisions also.
+
+    we let consumers decide what to be produced which then producers produce.
+    business people decide how to produce these goods.
+
+    market: market is not a square where everybody comes to buy things.
+        market is all buyers and sellers of a particular good or service.
+        it is a collection of people.
+        these people could be located anywhere.
+        market for econmics is not confined to place.
+        think of market in terms of people.
+        market exchanges are volantary 
+        people trade at market places,you can always say no to a deal.
+        positive sum exchanges: both sides expect to gain.
+        zero sum game: one persons gain is another persons loss.There is nothing new added.
+        negative sum game: net is negative.
+
+        trading is a postive sum game.
+        volantary actions are positive sum game.
+
+        in trade both parties want to do ahead, for each transaction. in most of the cases that happens. Unless there is come sort of fraud.
+
+        there are billions of transactions happening everyday from something something as simple as buying a pepsi.
+
+        people in market:
+            a buyer,a seller, or neither.
+            neither are ignored.
+
+        the behaviour of buyers is described by the law of demand.
+            as the price of the good rises,the quantity demanded declines and vice versa.
+            own question: does it apply to necessities like medicines.
+            it is not a universal truth. But it works for most of the times in real world. since it works most of the times, it is called a law.
+            since it is a law you don't need to verify it, it has already been verified.
+
+            demand curve is linear and decreasing.
+
+            why? 
+            self interest, if car costs too much i don't want to buy it. Where as it is less than earlier the opportunity cost is less hence i can buy it now.
+            less price means the purchasing price of your money is more.
+
+            substitution effect of a price increase : if a good's price goes up, people tend to buy less  of it and substitute othe goods.
+
+            there are substitutes for pretty much everything.
+            if this car is expensive i will buy a basic car that is cheap.
+
+            higher price invokes lower demand.
+
+        law of supply:
+
+            as the price of a good rises, the quantity supplied of that good increases and vice versa.
+            this is how sellers behave.
+
+            here we are dealing with cause and effect:
+                price changes and it causes suppliers to react.
+            
+            here we have a postive or direct relationship between price and quantity.
+            higher price invokes higher production.
+
+            why?
+            it means marginal cost is lower than marinal benefit.
+            also it is not about one company,it is about market,so if price increases new players would start producing.
+            more price means more money coming in, means more resources for money.
+            it is linearly increasing.
+            think of it as supplier's goal is to produce and with more price he/she would have more money to produce,it is just a matter of having more resources.
+            
+            even at low price, a peron would make more and more but he/she can't as the resoures as limited but as the price increases the resources also increase.
+
+            note: a shop has to comply to prices in the market,doesn't matter for how much a shoperkeeper bought it for.
+
+            both in a same graph gives you supply and demand curve. where supply is of all sellers not just of one seller and same for demand of all buyers.
+
+            higher price would lead to higher production,but less demand so you get surplus of resoures.hence you produce more than demand.
+            and surplus is sold at sale, sale means price goes down,hence you produce less and now there is less surplus,and it keeps happening until you reach point of intersection.
+
+            similarly if price is less and you produce less,there is deficit/shortage of that good as the demand is more and supply is less. so now same thing is sold at higher price because of too many people there to buy until we hit the point of intersection of the two curves.
+
+            the key is to know these two curves,as in where they lie on the graph. 
+            as long as there is surplus,the price is too high.
+
+            supply curves tells us the behaviour of seller,and demand curve tells us about the behaviour of buyers.
+
+            quantity demanded = quantity supllied.
+                the market is in equillbirum.
+                equillbirum price: the price where quantity supplied equals quantity demanded.
+
+            if supply is less than demand, you raise the price and vice versa, thats how you find the equillbirum price, you don't need a curve to do that.
+
+            it reality it is difficult to know the equillbirum price beforehand.
+
+        this is how pricing works in our economy.
+        for a long time people couldn't determine what drives the price of things. We didn't have model of it.
+
+        karl marx: Labour theory of value : something got value, because it was produced by labor. which certainly is wrong. he gave socialist and communist theory of econmomy. if it produces two hours then its value is twice as that thing that takes 1 hour.
+
+        some even said, how useful something is determines its value.
+
+        Alfred Marshall: about near 1908 he had seen what others have said, he said labour is as good as supply and usefulness/desire is as good as demand and both of them determine the price, it is not supply alone and it is not demand alone,both supply and demand determine the price of a good.
+
+        the price will change if these two curves shift.
+
+        like airtel,jio, price was high and we got jio also and as production increased the price came low.
+class 8:
+    supply and demand curves move sometimes on daily bases and sometimes on minute by minute.
+
+    shifts in demand:
+        if it moves outwards,it means for a given price buyers now want more goods. the price-quanity curve shifts outwards.it means demand curve shifts right.
+        change in quantity demanded: you increase or decrease price the demanded quantity changes. We just move along the curve, it is easy to explain as the price changed now the consumer demand reduced.
+        change in demand: means shifting the whole curve.
+            law of demand talks about quantity demanded similary law of supply talks about the quanity supplied,they don't talk about demand and supply (the curves as where they would be) 
+
+            price effects quantity demanded and supplied. everything else effects supply and demand.
+
+        what causes a change in demand? or what causes the shift in demand curve.
+            1. change in consumer income. More income means more people can afford, hence demand goes up and curve moves right (earlier i might have said curve moving right is not a good thing.which is not right )
+                normal goods: good for which there is this postive relation between consumer income and price. Means higher income means greater demand. 
+
+                if income decreases then the demand goes down,hence the demand moves to left.the positive relation remains same between income and demand.
+                
+                inferior goods: income increases and demand decreases, we buy more inferior goods if our income is low, eg potatos, or other low quality food when you grow poor. or a loan.
+                here there is negative relation between the income and demand. eg beer is an inferior product. so when economy goes down, income decreases then the demand of inferior goods increase. Inferior goods sell a lot during economic recessions and prices increase.
+
+                there is a little more to it,as one mans inferior good is another mans normal good and vice versa, and sometimes the change in income is not clear as if it increases for one section and decreases for another so change in demand is little hard to predict.
+
+            2. changes in total number of consumers: eg if population increases hence the demand increases at that price,hence the curve shifts to right.or if now more people come to know about cryptocurrency then its demand increases at same price. same way if population goes down.
+
+            3. changes in the price of related goods:   
+                things that cause the demand curfe to shift:
+                    complements:
+                        goods that are consumed together,eg gasoline and tires, if tires become expensive people want them less hence i won't drive that much hence less demand for gasoline. price of tires increased, decreses demand of gasoline.
+                        if tuition increases,then fewer people go and demand for books go down.
+                        if gasoline price goes up then demand for cars hence demand for tires goes down.
+
+                        hence in business you have to be familiar with complementary goods as they effect the demand.
+                    
+                    substitutes:
+                        goods that replace each other. they provide the same services and satisfy the same wants. eg two car companies, if one makes their car cheaper then people might buy their car more and demand curve for other car decreases.
+                    
+                    market size: how much does it sell eg 100 billion.
+                    substitutes are also called competitors.
+                    hence in a business you have to worry about both substitutes and complements.
+                    if one university decreases tuition then demand for it increases.
+            
+            4. changes in expected future prices:
+                if it is anounced that the price woudl go up next week, then the demand would increase and vice versa. 
+                shift in demand curve to right means more people want it for the same price, the curve is between price on y axis and quanity on x axis.
+                eg i know the share price would increase tommorow so i buy it today.
+                eg people buying petrol today as it would be expensive tommorow.
+                during inflationary period people realize that prices would increase day by day so lets buy today hence increase in demand.
+        
+    shift in supply curve:
+        change in price of good changes quantity supplied,it doesn't shift the curve.
+        quantity demanded and quantity supplied are the values under constant market size whereas supply and demand are the curves under varying market sizes.
+
+        supply is about changes in quantity supplied when price is kept constant,and demand is quantity demanded when price is constant.
+
+        these things are not about a company they are about the whole market.
+
+        1. change in the number of suppliers.if new company is created the curve shifts to the right, the supply increases for the same price. If the number of suppliers decrease then the supply curve shifts to left.
+        2. change in technology: better technology means more prodution. it is a knowledge of how to use/combine resoures. eg digging using showel or tractor, mail and now email. Resource are same,you just find a new way to combine these resources. gold mined in last 50 years is more than that from whole history. Deteriorating technology means less production, it could happen, eg to protect the environment or if forced to not use modern technology.
+        3. change in resoure prices. land--rent,labour--wage,capital--interest,entrepreneur--profit.
+            increase in prices shifts the curve to the left.
+        4. changes in taxes or subsidies. subisidy is aid by government or any other organisation.
+            if tax on prodution increases, the supply curve shifts to left. supply curve could have zero value for production even if price is non zero.
+            increase in tax, decreases the supply.
+            subsidies increase prodution hence sometimes government uses it to boost the economy.
+            government might provide fewer subsidies to save money.
+    
+
+    increase in demand: equillbirum price increases, increase in equillbirum quantity.
+    decreses in demand: equillbirum price decreases, decrease in equillbirum quantity.
+    increase in supply: equillbirum prices decreses, increase in equillbirum quantity.
+    decrease in supply: equillbirum price increases, decrease in equillbirum quantity.
+
+    these are four cases where if you know effects you can figure out the causes.
+    althogh sometimes both the curves can shift. so might need more effort to figure out.
+
+class 10:
+    shift to supply curve:
+        5. change in resource productivity. eg what if workers become more productive, it is similar to technology, eg education makes workers more productive, more experience also helps.
+            hence the production increases. vice versa can also happen example if all workers get paid the same then most productive workers will no longer work hard.
+            although land and capital don't become less productive 
+        
+    if price changes: quantity demanded changes. only price causes this change. 
+    change in demand is the shift in curve. now even at same price the demand increases or decreses.
+
+    demand curves are concepts,they don't exist our there, we just use them to understand stuff.
+
+    change in demand is not motivated by price change,it is motivated by something else like income.
+
+    same for supply curve.
+
+    this distinction is very important
+    
+    what causes prices to rise and fall ?
+        a change in demand causees cahnge in price.
+        a change in  supply causes change in price.
+        these are of more interest to economists, as they are the deciding factors.
+
+        a change in quantity demanded is the result of change in price.
+        a change in quantity supplied is the result of change in price.
+        anybody can do these two manually. Economists don't study this, in fact these things are also dependent on supply and demand.
+
+        in practise the quantity demanded and quantity supplied curve doesn't exist as suppy and demand might change every minute.
+
+        quantity demanded or quantity supplied is like a snapshot of a market where the market size remains constant and the price is the only  determining factor.
+
+    the role played by prices:
+        redistributes wealth between buyers and sellers. it takes money from one person and gives to another.
+        it sends a signal to resource owners.
+            that take resouces to place where they are more valuable.
+            hence from fixed resources you get more value.
+            it helps to improve efficiency.
+            if oranges in my place are destroyed,the signal is send oranges here as the price is going to  be up.
+            and works automatically.
+
+        command economy : like socialism or communism, unlike market econmomy, somebody makes decisions it is not about supply and demand. That person has to know where to send it. we need a lot of information for this. it is hard but market economy has easy mechanism of signals. That is why soviet union fell apart, as decisions were coming from moscow. It can lead to black market.It command economy you would have to have information about every aspect of economy.
+
+        it rations goods and resources among consumers. 
+            it could have been first come first served,
+            but in market economy we ration by price, the people who pay more get the good.
+            it is an efficient mechanism as there is no line now.
+
+        among these things general problem only know about first thing price does. 
+        
+        black market: market where you get things for less price because they are stolen or smuggled.
+    
+    price ceiling: a legal maximum price.price cannot go anyhigher than that.
+        if it is above equillbirum price,then it doesn't matter as it as good as not having price ceiling.
+        but if it is below equillbirum price, then there is less supply and more demand,but now we cannot increase price, we have shortage. Hence if there is a law that sets a max at price, it would lead to shortage, eg apartment rents in new york city have rent control,hence there will be shortage of apartments. class room space is another example, where the tuition fee is same but only 100 people can register. 
+
+        hence price ceiling is the reason for shortage.
+        if you cannot afford it doesn't count as shortage as you can have it if you buy for higher price.
+        in shortage you cannot buy it for more money.
+
+        or with respect to hours when to work or take classes, more people don't want to work at night,but both kind get paid the same.
+
+        english: take it or leave it.
+
+        market clearing price/equillibirum price: is price at which market supplied is market demanded
+
+        movie tickets cost more during lesiure hours, becuase they decide price on supply and demand to make profit but a university doesn't as they are not for profit.
+    
+    price floor:
+        a minimun prce gelow which the prcie may not go.
+        if equillbirum price is above it then nobody cares, if if equallibrium price is below it, then it would lead to surplus.
+
+class 11:
+    supply and demand etc are microeconomic concepts.
+    minimum wage is an example of price floor and it creates unemployment.
+        where there is supply of employees and demand at a given price. high demand at low price.
+        here suppliers are people 
+        hence causes unemployment for low skill people.
+        hence minimum wage effects low skill people the more.
+        is it good ,is it bad, that is normative economics.
+     same for if agricultural goods have price floor, then we would have surplus. Usually government would buy that surplus. then the government would store it somewhere or do something with it.
+     if government doesn't buy, then the surplus is sold at black market at the equallibrium price, or use surplus somewhere else or destroy it.
+
+     if equallibrium wage is 5 dollars and the minimum wage is 6 dollars, then government could force them to make it 6. Does it violate 5th amendment. does government owe this money to the Employer. But the government doesn't give it, but the law says it should, thats how the supreme court interprets the laws. Hence when it comes to serving the public you don't get paid. Many of government policies is basically taking private property to public and you don't get paid that from government.
+        5th amendment to constitution: gives you right to stay silent under oath, nor shall private property be taken for public use without paying just compensation.
+        it is called the Takings Clause of the 5th Amendment.
+        congress passes the law, president signs the law.
+
+    government policies have really high effect on majority of the things you do in market economy.
+    sometimes the government does pay.
+
+    hence government has to be careful as the constitution could backfire, the court could ask the government to pay and there could be hundreds and millions of cases hence the government has to pay billions.
+
+    price ceiling,price floor, these are government policies which could have different effects.
+
+    another policy: supply constraint.
+        a policy that limits entry into market to suppliers, or it asks existing suppliers to reduce or limit the supply, or both.
+
+        the supply curve shifts to the left and prices go up.
+        eg federal communications commision, it restricts entry into communications industry. it could be becuase of agreement between the first company and government. 
+        eg  not having nude in tv is a restriction.
+
+        there is same kind of stuff about entry to airline industry, in return government gets to decide the prices.
+
+        own thing: the curve doesn't shift if limit is more than equallibrium quantity. if below then there would be more demand than supply hence the price goes up.
+
+        blue laws: everybody country gets to decide, what could be sold on sundays, or if shops can stay open on sundays.
+            supported by people who go to church etc. But econmically it is a big thing.
+            if you are the only one then you lose, whereas if everybody does it then you get that money on monday. Hence retail people were all for it. It was customers against it.
+        
+        tabacco allotment: permission to grow tobacco. 
+
+    limiting supply doesn't mean a thing if it is above equallibrium point. Hence most of the times it is indended to be below.
+
+    supply and demand are not that easy to understand, it can get really very hard.
+
+class 12:
+    so far we have been talking about microeconomics.
+    Macroeconomics: examines overall economy.
+    we live in microeconomic world, for most of us.
+    although Macroeconomics climate does effect us, which most of the people don't understand. And we usually blame ourselves when the Macroeconomy is the one to blame.
+    similarly you might be doing good but it was Macroeconomy responsible for it.
+
+    contraction <> recession 
+    in general the economy goes up. it would reach a peak, then trough(recession) little but then expand and reach higher peak, overall it kind of increases linearly.
+    in long term economy grows.
+    this peak to peak is called a business cycle. some say it takes 5 years to go from peak to peak.
+    but business cycle can go for 8 to 10 years. And we spend more time in economic expansion.
+
+    Three concepts in Macroeconomy:
+        1. consumer price index (CPI)
+            index number that allows us to trace changes in consumer prices. 
+            if it costs more to live, then CPI is going up.
+            policy makers want price stability. That is major goal in Macroeconomy. 
+            it is a kind of average, it is not for individual products.
+        2. unemployment rate:
+            "low" employment rate or "full" employment rate is desirable to policy makers.
+        3. Real Gross Domestic Product (R-GDP)
+            growth to it is desirable by policy makers.
+        
+    overall RGDP/economy is going up over years.
+
+    Consumer Price index (CPI)
+    --------------------------
+        index of prices paid by the typical urban consumer.
+        it is the ratio of consumer spending on a specific basket of goods in the present period relative to base period.
+            CPI = (spending on basket in present period / spending on the same basedk in base period) X 100 
+        base period <> base year.
+        urban city is where it is done.
+        in base period, price is computed by multiplying frequency of each item with its price.
+
+        1. Bureau of Labor Statistics (BLS) calculates it in US. in india it is The Ministry of Statistics and Programme Implementation (MOSPI)
+            it is calculated monthly. In india is is computed for both urban and rural population seprately.
+        2. thousands of samples are taken to get data about consumer basket, from several different stores in different cities.
+        3. in USA 80% population is urban.
+        4. base period is 1982 thru 1984 = 36 months and averages them out. bais in CPI, it overstates inflation (it makes inflation seem worse than it is. eg Products improve, hence price going up makes sense but cpi doesn't care. Another bias is the places where people shop, if you take sample from an expensive shop but people buy from cheaper place ). In india base period is 2012 for 100.
+
+            Boskin commission in US said : the CPI overstates inflation by about 1.3% a year.
+            after some careful stuff, even now CPI overstates about half a percent.
+
+        THE CPI IS NOT THE COST OF LIVING, cpi is just about that basket, it doesn't include cost of living. maybe cost of living increases but it necessarily mean so.
+
+        inflation rate: inflation refers to increase in CPI, inflation rate is percentage change in CPI level.
+        inflation occurs when overall increase in price happens, not just for a specific product.
+        inflation means it costs more now to go to store.
+        then workers ask boss to increase in wage, it happens in every industry, and similary the tax rate also increases. rents go up and so forth. inflation makes people invest to make it up for it, eg gold, silver etc. eg if inflation is 6% then i would invest in land for 10% hence. inflation cause the same increase in income as well. But people with fixed income are harmed by inflation.inflation has harmful effects on economy hence it is very important for policy makers to keep prices stable, and federal reserves have the power to stablize the prices.
+            inflation = (CPI(T+1)-CPI(T))/(CPI(T)) x 100 
+        
+lecture 13:
+    
+    inflation rate:
+    ---------------
+        annual percentage increase in the CPI.
+        inflation rate= delta CPI divided by original CPI multiplied by hundred.
+        it is nice to compare with you pay increase with inflation rate to check if you are gaining or loosing.
+        you can also compare GDP increase with inflation rate, to see what percent you are producing more. just subtract inflation percentage with the GDP increment.
+
+        real income = money income/(CPI/100)
+            it gives you, income on base year, with respect to buying power.
+        
+        that market masket has hundred's of goods in it.
+
+    unemployment rate:
+    -------------------
+    to produce more goods, more workers are required and that suggests a lower unemployment rate.
+    hence usually GDP and unemployment rate are inversely related.
+
+    1. civilian ( not military ),non-institutional population (not in jail etc ), age 16 and over, can work. This is the pool of people who are potential to work.
+    2. civilian labor force, are people who have jobs and those looking for jobs.
+        this is about 2/3 of population.
+    3. labor force participation rate (LFPR)= 67% here as two thirds. CLF/population
+
+lecture 14:
+    in US 133 people were employed among civilian labor force or labor force, and 7 million were unemployed.
+    unemployment rate is only counted from civilian labor force.
+    the unemployment rate = (number of unemployment(want to work)/ the number of poeple in the civilian labor force) X 100 
+
+    it is usually below 5%
+
+    labor deparment would survey households say every month to gain data about it.
+
+    why is there unemployment?
+        types of unemployment
+            1. frictional unemployment: when people are between jobs, eg you get fired, or you quit the work, in the time that person finds job, That person is frictionally unemployed.
+                This is not a big problem, in fact it is a good thing. This way people work at the most efficient places for them.
+            2. structural unemployment: shifts in demand, eg price of oil went up, people started driving smaller cars, only foreign cars were small so poeple started buying them. Hence people who could produce big cars couldn't find place to work.Hence you thrown out of work, and there is no job for you, nobody wants to hire you. You don't have right skills. It results in people going back to school sometimes. It is more severe problem. And changes in production cost can also do the same. Wages increase so lay off some people. In japan and in certain european countries company cannot lay you off even if demand shifts, it could result in Employer not hiring new people , hence job market in europe is small as it is hard to fire them, but in US it works the other way around.
+            3. cyclical unemployment: most concerned with in this course, it is Macroeconomic unemployment, first two were because of microeconomic causes.
+                it effects everyone. it happens because of changes in Macroeconomic conditions.
+                the cause: when economy reaches its peak and we are into a recession. GDP starts decreasing, demand is less, people aren't buying and companies don't produce so people lose jobs. 
+                to fight structural unemployment or frictional unemployment you need microeconomic policies.
+                but we need Macroeconomic policy to fight cyclical unemployment.
+
+                frictional unemployment rate, calculated same way , frictionally employed people /  total labor force. same for structural unemployment rate, same for cyclical unemployment rate.
+
+                total unemployment rate is the sum of these three unemployment rates.
+
+                natural rate of unemployment U(n)= U(f)+U(s)
+                    structural + frictional.
+
+                natural rate in US is usually 4-5 percent.
+                more than that means there has been a recession.
+
+                natural unemployment rate doesn't change much over years.
+                we will discuss Macroeconomic policies to bring down cyclical unemployment.
+            
+            full empoyment: there is no cyclical unemployment.
+                all employment is natural.
+            
+            full employment act of 1946: 
+                a recession is when my neighbour is out of work, a depression is when i am out of work.
+
+                united state government would make sure that unemployment rate doesn't go too down/ we would take care of recessions. And now president would have econmic advisors for that economy is performing good.
+
+                people didn't study economy those days and people didn't learn Macroeconomics but microeconomics only.
+
+                as we learn more about economics, the chances of recession decrease.
+
+                eg of recession: big bank doesn't get money back from germany so small banks do not get money, word gets out and people try to get back money from big bank and then people panic and also do the same for their banks. Now everybody gets money from banks. But there is no money for companies to borrow, so companies cannot pay their empolyees so they fire them and so on. Usually banks failing is pivotal to recession.
+                
+                Bankrupcies, corporate failures also result in econmic miseries.
+                
+        
+
+
+
+
+    
+ideas:
+adam smiths invisible hand: who should make products : to grow econmomy or to allow people make great products, allow people to do whatever they want to do with mininal regulations, eg apple,samsung and it would lead to better outcome.
+
+company Statistics:
+    revenue/net sales: all the revenue it hs generated over a given stretch of time.
+    
+    gross profit: revenue-expenses of production (raw material,wages in factory also known as cost of goods sold)
+    
+    operating profit: operating expenses or SG&A(selling,genereal and administrative expenses) there are its overhead, companies cannot just make product and collect the proceeds,they need to hire salespeople to bring goods to market and executives who help chart etc. advertising etc or buildings for office,
+            operating profit= gross profit - operating expenses 
+    
+    net profit: 
+        extraordinary gains and losses eg sale of a building or business unit. they are not part of core business. then there are taxes etc. Once they are deducted from operating profit, the investors arrives at hte net income or net profit or net loss.
