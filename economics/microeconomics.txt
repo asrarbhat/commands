@@ -1,0 +1,31 @@
+mit microeconomics
+--------------------------------------------------------------------------------------------------------
+lecture 1
+
+what is microeconomics?
+    study of individuals and firms make decisions in the world of scarcity.
+    it is a series of constrainted optimization exercises.
+    the course is about tradeoffs/ opportunity cost.
+    for every action, you could have done something else that is called the opportunity cost.
+    economics is called dismal science as there is always opportunity cost.
+
+    supply and demand model:
+    ------------------------
+        we have models that are not always true but almost everytime, with simple assumptions.
+        "all models are wrong but some are useful" _somebody 
+
+        water diamond paradox: adam smith 
+            water is necessary for life and diamond isn't yet water is free and diamond is expensive.
+            the answer is we demand both but the supply of water is infinite and diamonds are limited.
+        the supply curve is from the point of view of firms: as the price goes up, firms want to produce more.
+
+        market failure:
+            fraud, incorrect information.
+        
+        capitilistic economy: firms and consumers decide what to produce, with a few restrictions from government.
+        capitilistic economy resulted in america becoming rich country, but it resulted in america becoming highly unequal country. Most of the wealth is with top 1 %.
+        command economy: government decides what to produce and who will produce what. This is what soviet union had. Even shirts etc were decided by government. It resulted in corruption as party members got it first, in theory it meant equality but not in practise. There are too many opportunity for corruption. 
+        There is invisible hand in within capitilistic economy. Self Interest of people and firms result in best for society (most stuff gets produced and consumed that people want )
+
+lecture 2:
+    the supply curve is about quantity supplied, it is not about one firm. The quantity is produced by an industry of different depending on price of that good at market.
