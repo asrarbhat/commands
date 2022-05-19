@@ -3,29 +3,411 @@ mit microeconomics
 lecture 1
 
 what is microeconomics?
-    study of individuals and firms make decisions in the world of scarcity.
-    it is a series of constrainted optimization exercises.
+    study of how individuals and firms make decisions in the world of scarcity (can't have everything for free ).
+    it is a series of constrainted optimization exercises. (everyone wants to have, what is optimal for them)
     the course is about tradeoffs/ opportunity cost.
-    for every action, you could have done something else that is called the opportunity cost.
-    economics is called dismal science as there is always opportunity cost.
+    for every action, you could have done something else that is called the opportunity cost. Opportunity cost is the next best thing you could have done.
+    economics is called dismal science as there is always opportunity cost/tradeoff/ nothing is free .
 
     supply and demand model:
     ------------------------
-        we have models that are not always true but almost everytime, with simple assumptions.
+        we have models that are not always true but almost everytime, with simple assumptions. These are models and not laws, these are relationships between variables under simple assumptions. We want to capture the phenomena around the world in models, such that we can teach it.
+
         "all models are wrong but some are useful" _somebody 
 
         water diamond paradox: adam smith 
             water is necessary for life and diamond isn't yet water is free and diamond is expensive.
             the answer is we demand both but the supply of water is infinite and diamonds are limited.
-        the supply curve is from the point of view of firms: as the price goes up, firms want to produce more.
-
-        market failure:
-            fraud, incorrect information.
         
-        capitilistic economy: firms and consumers decide what to produce, with a few restrictions from government.
-        capitilistic economy resulted in america becoming rich country, but it resulted in america becoming highly unequal country. Most of the wealth is with top 1 %.
-        command economy: government decides what to produce and who will produce what. This is what soviet union had. Even shirts etc were decided by government. It resulted in corruption as party members got it first, in theory it meant equality but not in practise. There are too many opportunity for corruption. 
-        There is invisible hand in within capitilistic economy. Self Interest of people and firms result in best for society (most stuff gets produced and consumed that people want )
+        levels in econmic concepts:
+            intuitive level.
+            graphical level.
+            mathematical level.
 
-lecture 2:
-    the supply curve is about quantity supplied, it is not about one firm. The quantity is produced by an industry of different depending on price of that good at market.
+        the supply curve is from the point of view of firms: as the price goes up, firms want to produce more.
+        market equillibrium: where supply and demand meet.
+        positive vs normative analysis: how things are vs how things should be.
+        
+        issues?
+
+            market failure:
+                fraud, incorrect information(about products).
+            equity concern = fairness: 
+                we could have a market where only rich people would get kidney's.
+            behavioural economics:
+                people make mistakes, they don't make optimal decisions always.
+            black markets:
+                market for illegal entities.
+        
+        how freely should economy function ?
+            capitilistic economy: firms and consumers decide what to produce, with a few restrictions from government. you let the dice roll.
+            capitilistic economy resulted in america becoming rich country, but it resulted in america becoming highly unequal country. Most of the wealth is with top 1 %.
+            command economy: government decides what to produce and who will produce what. This is what soviet union had. Even shirts etc were decided by government. It resulted in corruption as party members got it first, in theory it meant equality but not in practise. There are too many opportunity for corruption. 
+            There is invisible hand within capitilistic economy. Self Interest of people and firms result in best for society (most stuff gets produced and consumed that people want )
+            the supply curve is about quantity supplied, it is not about one firm. The quantity is produced by an industry of different depending on price of that good at market.
+
+lecture 2: preferences of utility curve : consumer theory
+    demand curve comes from how consumers make choices. It is from the point of view of consumers.
+    supply curve comes from how producers make choices. It is from the point of view of producers.
+
+    demand curve:
+        utility maximination:
+            -preferences. (what people want)
+            -buget constraints. (what they can afford)
+            our job is to maximize what people want from what budget they have.
+        
+        
+        preference assumptions:
+            completeness: you have preferences given a set of things.(two things can have same preference)
+            transitivity: if you prefer A to B and B to C then you prefer A to C.
+            non satiation: more is better.
+
+        indifference curves (graphical representation of preferences): curve which represent preferences which contain choices that you are indiffernet to .They are always having negative slope like 1/x (from non staiation, as if slope was higher that means on indfference curve both are increasing and that should not be on indfference curve,on indifference curve if one thing is more then other has to be less, otherwise it wouldn't be an indifference curve,hence slope has to be always negative.). And they don't cross, as otherwise violate transitivity (by transitivity then both curves have to be indifferent, but another curve is above one which voilates non satiation.). And only one curve for a given set of constraints(completeness). you always want upper indifference curve (as if it has equal on x somewhere it would have more y than below curve eg if you want 3 pizzas, upper curve would give you more cookies than lower.) (non satiation). there is only one indfference curve through each bundle.
+
+        utility function: mathematical function of preference/indifference curves. eg pizza vs burger.
+            utility can be used to rank choices(ordinal), they don't mean anything from their value.
+            marginal utility is derivative of utility: or the utility of next unit with respect to what you are differeniating with respect to. It is amazing. utility is synonymous to happiness. the marginal utilty decreases with more and more consumption.Hence as you consume more of a good, the next one from it won't make you as happier as previous one did. note: we are studying consumer behaviour, where consumer is not going to sell, he is going to eat it himself, that is what we are studying.
+            this is derivate of whole utility function and derivative is always positive as next unit will always make you happier.
+            eg U=sqrt(pizza quantity X Burger quanity) 
+                this function satisfies both. and we use this function a lot as it seems to agree with what we want. In this course we consider it true 
+            marginal rate of substitution: first derivative of indifference curve(where utility is constant).
+                as it tells you what you are willing to substitute of one for another.
+                it is always decreasing.
+            the more you have of a thing, the less you want next of it. And less of other thing you are willing to substitute.
+            indifference curves can be linear, but then cannot be concave to origin. as it violates law of diminishing rate of marginal utility(would be increasing). secondly as we want more of a good you would want to give up more of other good, which is not true.
+        
+                for addiction, the curve just shifts outwords everyday, the law still holds true, the second cigarette is not as good as first, but the next day you want the first cigarette more hence the curve shifts outwards.
+
+                when you enter a mcdonalds and you see first cup for 100 and 2 for 180 only. It is because they understand you want one cup and you won't buy 2 becuase of diminishing marginal utility, so to mimic your behaviour, they also decrease the prices accordingly.
+                
+                by doing this they shift the demand curve to the right.
+                although the cost of production does't change. profit still increase.
+
+lecture 3: Budget constraints and constrained choices.
+    budget constraint
+        more is better but you are limited by your budget.
+        assumption in this course budget=income
+            median household in usa has 400 dollars in bank,hence they earn during week and spend it.
+        
+        lets say you can buy either pizza or cookies from your income. And you devote your income to these two in some combination.
+
+        it is a linear curve with constant negative slope.
+        the slope of the line is negtive of price ratio.
+        the slope is called marginal rate of transformation (MRT) how you tranform one to another by choosing one over another. Just another way of looking at opportunity cost.
+    consumer would maximize the utility subject to budget constraint.
+    how graphically the consumer would want highest indifference curve that it could reach.
+    you choose the indifference curve to which you budget constraint curve is tangent to, and you can't afford anything else on that curve though.
+
+    to solve for values:
+        find tangent to indifference curve by differeniating, and make it equal to slope of budget constraint. and solve for the values.
+    
+    whole course is about marginal benefits vs marginal cost. Because it decides it to do.
+
+    poverty line: minimum money needed to survive in US for a year eg 14000 dollars. A program SNAP give you debit card that allows you to buy food if you are too poor, you can only buy food with it. They are forcing you to spend that money only on food, then constraints the choice. it is better than being poor but it is not optimal from what they think they could have done with that money. And the government does so becuase we assume that people know best, with what they can do with money. But in reality they might buy drugs.
+
+    paternalistic: we don't think they can use resources optimally.
+    also there is a pov where tax payers care about poor behind fed, and not people having money.
+
+    emperical econmics: testing theories of economics in real world.
+
+lecture 4: Demand curves and income/substitution effects
+    Deriving demand curves:
+        if you increase prices, the tangent curve changes hence the indifference curve that is optimal changes and mathematically it has now less demand for that good whose price increased.
+        prices don't change utility curves.
+        as the price goes up, you want less of this good.
+    
+    what determines the shape of demand curve:
+        the elasticity of demand.
+        e=(deltaQ/q)/(deltaP/P) percentage change in quanity/ percentage change in price  
+        e is <=0
+        if e=0 it means perfectly inelastic D 
+            no matter the price you still want the same quanity: eg insulin, used to control sugar level in blood. it happens when there is no substitute.
+        perfectly elastic means e= negative infinity:   where there is perfect substitute, eg some fast food, different brands of gum. price never changes, if you charge a little bit more you would lose everything or if you charge little less, you will have whole market even of competitions, price doesn't change.
+        in reality we have curves in between, the more the subsitutes,the more elastic they are.
+
+    from indifference curve and budget curve you can tell that income only shifts the budget curve paralley hence shifting the demand curve while the elasticity of demand curve remains same.
+
+    income shifts: icnome elastcity.
+        gamma= deltaq/q/deltaI/I  
+        if gamm>0 : normal goods
+            luxuries: gamma >1 eg branded clothes,jewellery is canonical example  
+            necessitites: gamma<1  eg food etc 
+        if gamma<0 we call them inferior goods.
+            eg fast food, when you don't have money.
+        
+    effects of price changes:
+        substitution effect:
+            the change in quanity of goods, with respect to price while holding utility constant.
+            it is always negative. you always move to the left.
+        income effect:
+            change in quanity of goods with respect to income, holding prices constant. it just shifts cost curve down.
+    if good is inferior, then substitution and income effect work against each other. as if you are poorer you want more of it even if it's price increased. price increment is as good as being poorer.
+    these two are happening simultaneously, we just decome to understand it.
+    you can theoretically get upward sloping demand curve if income effect dominate substitute effect.
+    it is called a giffen good. it is hard to happen in reality. it is only for inferior goods. eg 10 apples and 5 orange, but now oranges become expensive so you can't afford 10 apples and 5 oranges so you choose 8 apples 6 oranges,for your budget.
+lecture 5:
+    so far we were talking about consumer theory.
+    now we will talk about production theory.
+    this is about firms, here firms get to decide how much to produce.
+    producer have a production function, like consumers have utility function. Where the goal is to maximize the profits (revenue - cost)
+    one way to do it is to minimize the cost by doing thing efficiently.
+    q=f(labor,capital) 
+    little q is for firm, and Q is for market 
+    unlike utils,q is more meaniningfull for its value.
+    labor is workers, capital is machines, land, buildings etc 
+
+    variable inputs like working hours, fixed inputs are like machines, building that are hard to change.
+    in short run, labor are variable, capital is variable. In long run everything is variable.
+
+    short run productions: labor is variable, capital is fixed
+    ----------------------------------------------------------
+        hence firms only decision is, how many workers to hire.
+        marginal product of labor: delta q/ delta l 
+            assuming it diminishing => it says the next worker helps less than earlier worker, although not true everytime. But since capital is fixed, it remains true, eg 1 person digging the whole, vs 3 people or 4 people digging the whole using the same shovel.
+
+    long run production: everything is variable.
+        both workers and machines are what you have to choose.
+        just like pizza vs cookies.
+        q= sqrt(l*k) k is capital.
+        you graph the indifference curves which are here called isoquants (combination of labor and capital that produce the same output.)
+        they look same as indfference curves.
+
+        for perfectly substitutable inputs 
+            q= x+y if you can trade one x for one y 
+            they give linear isoquants.
+        perfectly non-substitutable nputs.
+            q=min(x,y) leontieff production function.
+                eg left show and right show, computer and users.
+        the slope of isoquant = marginal rate of technical substitution (MRTS)
+
+        RETURNS TO SCALE:
+            WHAT HAPPENS TO PROUDUCTION IF YOU INCREASE OR DECREASE EACH INPUT BY SAME FACTOR.
+            constant returns to scale, double inputs and output doubles.
+            increasing returns to scale, leads to more than double the output.
+                eg becuase of specialization
+            decreasing returns to scale, leads to less than double the output.
+                eg difficulty of management of workers, when there are more workers.
+            
+            it must decrease eventually as otherwise you would own the whole market,if it keeps increasing.
+        
+        productivity:
+            thomas malthus: labor and land are needed for production of food, but land is limited and the marginal cost of labor would diminish so much as we get more and more labour that, in future we would see cycles of starvation when populations increase and some people wouldn't get the job. But it didn't happen, world is more populated and more fed.
+
+            he missed productivity/Innovation.
+            hence as you get more productive you produce more, eg even though land is fixed, but with fertilizers, and other technologies we produce more and more.
+
+            famine is not becuase of lack of food it is becuase of lack of distribution, there has been no famine in a democratic nation. it it is corrpt we would have famine, there is already enough food.
+
+            this is true all around the world.
+            henry ford started the mass production of cars, by specialization.
+
+            tata nano 2500 dollars.
+
+            hence innovation is happening all the time.
+            hence over time q is also a function of productivity.
+
+            hence standard of living in a country is determined by productivity.
+            if a country is more productive then you are living good.
+            you need to be innovative to make it big. that way you also dominate the market.
+
+            there has been massive shift in productivity growth in US.
+                47-73 , 2.5% every year, every year working same you get 2.5% more.
+                73-95, now it is about 1% 
+                95-05, again 2.5% after IT boom
+                05- ,again 1% now 
+            K depends on savings, where K is capital.
+
+            turns out, computer was supposed to be next industrial revolution, it didn't happen that much.
+
+            US is focused on more productivity whereas europe is more now into leisure time as well.
+
+            productivity has increased but income hasn't increased that much, becuase it all goes to the rich.
+
+lecture 6: costs 
+    continuing producer theory to derive supply curve.
+    cost curve:
+        cost vs quantity.
+    for short run:
+        q= sqrt(l x k)
+        total cost = fixed cost + variable cost 
+        cost = capital x price of capital(rental rate ) + labor x wage
+        you can substiute q in place of l or k from above equation.
+
+        marginal cost of quantity change of cost with change in  quanity.
+         
+        since q is sqrt hence q and c curve would be parabola.
+
+        hence firms prefer to pay higher wages to highly productive employees as marginal cost is higher for another employee.
+    long run cost curve: now K is no longer fixed, in above case the K was fixed.
+        we longer only care about labor.
+        we want to find efficient combination of L and K.
+        Isocost curves are like budget curves.
+        c=wl+rk 
+        linear with decreasing slope.
+            given C it tells you what combination of w and l can you get.
+            now optimal solution would be tangency to isoquant and isocost.
+            that is the combination we want.
+            that is the combination when you are producing the most given the cost.
+        cool idea: check how much a machine would do or how much a man would and compare and decide what to chooose.
+        cost function would be function between cost and quanity, for optimal combination.
+        as the wages increase hence firms prefer machines.
+        if the rental rate of machines increase hence firms prefer people.
+        if wages increase and you still want to produce the same quantity,hence the ratio of machines would increase in your company.
+
+        long run expansion bagth:
+            usually you double the cost the prodution would double.
+            the cost curve just shifts out.
+            although it doesn't have to be linear.
+                it could be the case that the higher the cost less productive the capital or labor.
+            this is your cost curve in long run.
+        in the long run, you get to choose hence better than short run in terms of productivity.
+
+lecture 7: competition I
+    fixed vs sunk costs
+    sunk costs are long run fixed costs, something that once made can never ever be changed.
+    eg your college med school fee is sunk cost, you cannot undo it.
+    getting an office is fixed cost, you can change them over long run.
+
+    sunk cost fallacy: if you want to sell your tickets that you don't want anymore, you cannot think in terms of what you had bought it for, that is gone, that is sunk cost, you now have to think in terms of how much would you pay for those tickets now if offered, and if someone is offering you more, just sell them.
+
+    it doesn't matter how much you bought it for, now all that matters is how much would you buy it for now if you had to.
+
+    perfect competition:
+    --------------------
+        we so far were talking about the cost side, now we need to talk about the revenue side.
+        the market determines how much a firm produces.
+
+        perfect competition: many selling and competition for a homogenous good.
+        monopoly: one firm does it.
+        oligopoly: several but not as good as perfect competition.
+
+        in perfect competition: producers have no control over price, producers are price takers.
+            conditions:
+                identical products (from consumers perspective)
+                full information about prices (consumers know what every firm is charging)
+                low trasactions cost (search cost for prices and products)
+            competition is almost never perfect.
+
+            firm vs market demand:
+                Q(p) is demand from market 
+                q(p) is demand from that firm 
+                q(p)= Q(p) - s , where is whatever everyone is selling.
+            
+            lower price a little bit and everyone buys from you. make prices a little bit higher and nobody buys from you.
+
+            short run profit maximization:
+                capital is fixed and no firm entry or exit.
+                what is profit:
+                    revenue - cost ,in accouting.
+                    in econmics we consider the opportunity cost as well.
+                    how much money you have - how much money you could have(eg doing the job)
+                maximination of profits:
+                    to maximize profits.
+                        revenue - cost 
+                    differentiate profit with respect to q and we get
+                        price = marginal cost.
+                        you keep on producing  until cost of producing new is same as price.
+                        now you know, how much to produce.
+                        on average price per unit = price - average cost per unit.
+                        now also contain tax.
+                        profit = q x p - cost - q x tax 
+                        average cost increases by 10.
+                        optimal value remains the same as the tax is paid after selling, and from profit it is paid.
+
+lecture 8: competition II 
+    shut down 
+    ---------
+        you produce 0, although fixed cost remains same.
+        eg if price drops to less than cost.
+        pq < variable cost, not fixed cost 
+        or if price is above average variable cost.
+
+        supply curve is relation between price and supply.
+        since p= Marginal cost for firm, hence marginal cost is the supply curve and as p increases,MC increases hence supply increases with p.
+
+        market supply curve is always more elastic than firm supply curve.
+
+    short run equillibrium:
+        each firm has capital k and a production function q=f(k,l) we also have the cost function and 
+        we find optimal values.
+    
+    long run competition:
+        now you allow entry and exit of firms.
+        there is no fixed cost, you only worry about if you are making money or losing to shut down.
+        profits meaning entering, and loss means exit.
+        hence in the long run the profit has to be zero, as otherwise people would keep on entering and we need equillibrium. in other words marginal cost would be equal to price in market and nobody else would enter.
+        hence in the long run the price would remain constant. as new firms would enter if you raise price and firm would leave if you lower prices.
+
+        competition forces cost minimization. and each firm produces at marginal cost = price 
+
+    our assumptions that don't work in real world:
+        limited entry:
+            there is sunk cost for entry, hence people might not want to enter 
+        firms may differ:
+            we assumed firms to be identical.
+            different firms have different cost functions, hence they can make profit.
+        
+
+lecture 9: supply and demand 
+    1. shocking supply and demand curves
+        higher prices means we can produce more as we can have now more marginal cost.
+        price goes up means either supply curve shifts or demand curve shifts and same for price goes down.
+
+    why does demand curves shift:
+        change in taste, change in income, change in substituteent good/complementary good, change in market size, expectations of the future (if you expect prices to go up tommorow)
+    why does supply curve shifts:
+        changes in input costs, shift in technologies in production.
+        increase demand and more companies enter and profit of other companies decreases.
+    
+    what determines the shapes of supply and demand curves:
+
+    so far we figured out why consumers and firms behave what they do.
+
+    welfare economics:
+        measure of well being.
+        it is normative ecnomics.
+
+        consumer surplus:
+            the benefit you get above what you paid for.
+            it is how much you are willing to pay - how much you paid.
+            compensating variations: 
+                how much would you pay to be better off or worse off.
+            
+            surplus = price on demand curve - price on supply curve 
+            at equillibrium it is 0.
+            
+            this concept is for individuals.
+
+        market consumer surplus:
+            same but for whole market.
+            it is area below the demand curve.
+        
+        producer surplus:
+            willingness to supply - price 
+            it is array between price and supply surve.
+        
+lecture 10: welfare economics
+    theorem: competition maximizes social welfare
+        social welfare = consumer surplus + producer welfare
+        and equillibrium point is the place where it is maximum.
+        the area under and below is maximum there.
+        hence equillibrium is the best place to be.
+    dead weight loss: if government puts price max, and there are certain trades that could have been made but now won't happen. it would also result in inefficiency in distribution.
+    hence non market allocation of products is highly efficient.
+
+    equity: fairness, eg rich vs poor aka vertical equity.
+
+    example: adele wanted to make her tickets cheap, but professional bought and sold at black market.
+        adele created inefficient market as she was being selfish, but the professionals made the market efficient as adele was putting price ceiling.
+
+    people don't really like economics.
+    morals do matter in market, although we don't talk about them.
+
+    market is amazing almost intelligent as the most intelligent man.
+
+lecture 11:
+    
+
+
+
+

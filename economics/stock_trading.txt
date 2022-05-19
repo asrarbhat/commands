@@ -1,0 +1,352 @@
+youtube
+-------------------------------------
+    market capital: total value in dollars 
+
+    what is a stock:
+        an ownership in a company.
+        traded on an exchange (NYSE, etc)
+        types of stocks:
+            energy, material, industrials, health care, financials, IT, real estate, etc
+            about 11 sectors 
+    market capitilization: value of all stocks in dollars.
+        mega over 300 billion.
+        large over 10 billion.
+        mid 2 to 10 billion.
+        small 300 million to 2 billion.
+        micro 50 toooooo 300 million 
+        nano below 50 million.
+    
+    penny stocks: trading below 5 dollars, or have small value.
+
+    why trade stocks:
+        beat inflation 
+        grow your wealth 
+        earn a second income.
+    
+    how to buy stock:
+        you talk to stock broker,and stock broker talks to stock exchange.
+        there are a lot of brokers out there.
+        certain people might have privilage to directly buy stocks from exchanges, but that is just for institutions etc.
+    how to profit from a stock:
+        buy low sell high.
+        buy high sell higher 
+    how to calculate the returns:
+        dollar 
+            selling - buying 
+        percent
+            percentage profit.
+        R multiple
+            risk : reward
+            how much you are ready to risk for that particular trade to how much you made.
+    common trading terminologies:
+        what is long and short:
+            trade direction:
+                long = profit if price goes up.
+                short = prifit if price goes down eg borrowing shares from broker.
+                    in short selling, the potential lose is infinite.
+                
+        what is bid and ask:
+            Ask = the price you can buy at 
+            Bid = the price you can sell at 
+        what is spread:
+            difference between bid and Ask 
+            large cap stocks are more liquid (tighter bid ask spread)
+    The different types of orders 
+        market, limit, stop , stop loss.
+        market order: enter the market now.
+        pros: you know for sure you'll be in the trade.
+        you get best in the market, but you pay premium.
+
+        limit order:
+            enter only if the market comes to your desired price (pullback)
+            pros: enter a cheaper price 
+            cons: might miss the move, trading against current momentum.
+        stop order:
+            enter only if the market moves in your favor (breakout)
+            pros: enter trades with momentum.
+            cons: mgiht be a false breakout.
+        
+        stop loss order:
+            exit the trade if it goes against you.
+            pros: cut your losses 
+            cons: the market reverse back in your direction.
+    how to analyze a stock:
+        fundamental analysis: what to buy 
+        technical analysis: when to buy 
+
+
+    fundamental analysis:
+
+        you want to derive value for company from financial statments, etc 
+
+        qualitative.
+            fundamentals that can't be quantified.
+            technology disruption.
+            economic moat.
+            managment.
+
+        quantitaive analysis.
+            fundamentals that can be quantified.
+            Assets (machinery etc )
+            liabilitites.
+            Revenue, Earnings, Cash flow, etc .
+            RAtions(P/E,PB,P/CF, and etc.)
+
+        buy stocks of company whose stock price is below it intrinsic value.
+        but it is difficult, there is so much information, how do you know what is relavent.
+        although quantitaive analysis happens to be better.
+    
+    which metrics to look at:
+        earnings and net income.
+            stocks with better earnings are better. Check how earnings have increased each quarter.
+
+    Technical analysis: to time your entry.
+        Trend
+            higher highs and lows:if your peaks are higher than last peaks and your lows are higher than last lows. it is called up trend, and we want to buy this stock as we assume it is gonna go up.
+            lower highs and lows:  next high is lower and next low is lower, it is down trend and you don't buy stock here.
+            
+            200- period moving average: above 200 MA means up trends
+        Area of value 
+            area from where stock usually goes up.
+            trent line is tangent from downside.
+            here are different moving averages like 200MA, 50MA etc 
+        Entry trigger
+            candlestick Pattern: for green close is at top and open at bottom. for red open is at top and close at low.
+            if market is above 200 ma then buy as it is going up.
+            buy when  it comes to are of value.
+        
+        day trading: trading within a day to profit from fluctuatons.
+    
+    risk managment:
+    trading methods:
+        day trading
+            opportunity cost is high.
+            you capture move every hour say.
+        swing trading 
+            you capture say one move in market a day.
+        position trading 
+            daily or weekly timeframe.
+    
+    investing is long term buying and selling.
+    you expect the price to appreciate and make money.
+
+    if company performs well, the share price goes up.
+    day trading is done based on news, and patterns.
+
+    reading a stock chart:
+        candle sticks:
+            5 minutes stock chart means 5 minutes of each candle.
+            it says high and low,open and close.
+            wick show the highest and lowest the prices have gone.
+    loses are part of the game.
+    sell if price is too low. dont wait that it will go up.
+    
+udemy: mohsen
+     to learn day trading.
+     you can trade your own money, or someone else.
+
+     what is a stock:
+        a security that signifies an ownership in a company, you now a claim on their equity, their buildings, their machines, their profits etc.
+        stock <> share
+
+    why are there stocks:
+        you need capital to grow, so you give part/share of your company in return of shares. although your ownership decreases but the profit increases as your comapany grew quickly, which would have taken longer time organically.
+
+    why buy stocks:
+        pariticipate in the growth of that comapany and earn money.
+        buy low and sell high.
+        buy high and sell higher.
+    
+    how to buy stocks:
+        private company: relatively small number of owner and do not trade on public exchange.
+        public compaany : that trades on public exchanges.
+
+        before public, companies are private.
+        there is a processes by which private companies go public.
+
+        to invest in private company, you gotta know the owner and you gotta be rich. it is not easier to invest in private company.
+
+        anybody can invest in public company, and with any amount.
+
+        when talking about trading we only talk about public companies, as private companies do not trade on exchange.
+
+    market:
+        a place where you can buy and sell, eg clothing market, grocery market etc.
+        in stock market we trade/(buy and sell) stocks.
+
+        auction market: buyers bid and highest bidder wins.
+
+        stock market: it is an auction market, buyers bid for stocks and sellers ask for price, and it happens simulataneusly and that is how prices are set.
+
+        primary market: the market where stocks trade in for first time ever.
+        secondary market: every other time the stock is traded (second hand stocks)
+
+        when a company is private( you own it or a bunch of people), you want to get funded, you have an IPO ( initial public offering ), you are going to sell part of your company to public for the first time, so your company becomes bigger. There are firms that specialize in IPO's and they would do an IPO for your company. They figure out from your company what money they can get you and what is the best price for your company stock for them to sell the amount of shares they want to sell. These companies are really good at it. eg if they can raise you 100 million dollars and they are gonna sell 1 million shares at 100 dollars per share, and these shares are sold in primary market, they contact all their relationships, their banks, brokers, their biggest clients etc, very few people can get shares during IPO, we rarely get shares in primary market, only big clients usually gets. Hence on a given day, they start trading on secondary market. eg nasdaq,nyse etc.
+
+        we are never first people to get the shares ever.
+        security <> bond.
+
+    exchange:
+        market is a general term.
+        exchange is exact location where shares are being traded. These are physical.
+            eg nasdaq, nyse 
+        nowadays the exchange is electronic, earlier people would meet in townhalls and do the trading, eg every thursday.
+    
+        three main exchanges : nyse (biggest), nasdaq, amac
+            first you list your stocks on that exchange.
+            to be on nyse, you have got to be really big company.
+            nasdaq is known to have tech companies on it.
+            some companies, very rarely are interlisted ( on both )
+
+
+    broker:
+        with stock brokers, no people can trade stocks directly, they have to go through some brokers.
+        somebody who you have to go through to buy or sell.
+        like in wolf of the wallstreet, you talk to clients and convince them to buy or sell at given rates. usually it would take minutes. Now it is all automated.
+
+        now a broker is a software.
+        but you still pay commision for the paper work etc they do.
+
+    order and order types:
+    ---------------------------
+    things to put in order: 
+        ticker : abbreviation for company  eg MSFT is for microsoft.
+        side   : is it a buy order or a sell order.
+        type   : market order, limit order 
+                 market order, buy/sell immediately, no matter what the price. it is instantenous.
+                 limit order, buy/sell at better or as good as price i want. it might take time, or might not complete.
+        price  : the price you want to sell/buy at 
+        quantity: how many.
+
+    what makes prices move:
+        the order that people sent. supply and demand.
+        shares outstanding: total number of shares that you company has.
+        float: the amount of shares that are currently trading in market. a company might be holding some of the outstanding shares. the shares that trade right now is the float. eg 75%. 
+        order are at exchange, broker sends these to exchange and exchange has computer with data of two columns buyers and sellers, where each column as the sellers ask and buyers bid in it.
+        the person with better price is on top, and people with same price are ordered in time based.
+        
+        these two columns are called : level2/book 
+        level 1 is highest price from buyers and lowest price in sellers column.
+            it keep on changing.
+        until prices don't match, there will be no trading.
+        the names of these columns is bid and ask.
+
+        for market order: they are not entered to book, if you are selling, then it would directly execute the top on l2/l1 until order is fullfilled. similarly if it is buy it would directly execute top on seller side of l2/l1 
+
+        ToS: Time of sales is a table, where the exchange would report time and order quanity and price.
+        you order can be partially filled.
+        l1 still has the tops from l2. it always has.
+
+        the price of a stock is the last price that stock traded at.
+
+        if your bid is higher than the higest ask price, you buy at the price of seller, not your higher price. And if it is partially filled, then the rest of your order is entered to book.
+
+        bid: best price to buy at.
+        ask: best price from sellers side.
+        spread: difference between them.
+            if spread is high, never have a market order.
+            bigger companies have small spread, like a cent.
+        
+
+    Different players:
+    -------------------
+        differently players play differently.
+        eg a mutual fund would sell only when there is a good news.
+        hence it is important to know if a specific stock has what kind of institutional ownership, and their behaviour. And this is publicy avaiable order.
+        trading is zero sum game, for every dollar you put in your pocket, it came from someones pocket, like pocker.
+        institutional vs retail owners.
+        players:
+            traders: they have tools etc.
+            investors: keep for a while 
+            retail traders: trade from home, no info, no tools etc.
+                not that smart, so you always want to play against them and make money.
+            mutual funds 
+                apparently, mutual funds do not perform well on stock market.
+            
+            we don't predict stock price, we predict the behaviour of other players. How are other people evaluating the stock.
+            hedge funds: like mutual funds but for rich. They are more smarter. 
+                hard to win against them.
+    
+    three ways to make money:
+        going long: buy and expect it to go higher.
+        going short: you are betting that it would go down. sell at high and buy and low. you borrow the stock from broker, and sell it, and buy back at low and give back to broker.
+            there is max with what you can make, but with long there is no limit.
+            broker takes stock from other shareholders and borrows it to you.
+            And in long run, stocks always go up, but when they go down, it happens really fast, than going up.
+            short is used to make money quickly.
+        being flat: having no positions, just making money by not losing it. if you are not sure, just be flat for some time and don't lose money that way.
+
+    shortable stock <> stocks available for borrowing.
+    
+    chapter 2: technical analysis.
+    -------------------------------
+    to predict where stock is gonna go:
+        technical analysis, fundamental analysis.
+        some people only do technical analysis and some only do fundamental analysis.
+        although both are needed depending on the circumstances.
+        fundamental analysis: evaluating the stock fundamentally. reveneue, debt, managment etc.
+        technicaly analysis: you only care about price and volume of shares.
+
+        if your objective is to buy house today sell tommorow, you don't care the material that house is made up of, you just care about the price of neighbouring houses.
+        similarly if you are buying a house for long time, you would care about material etc in it.
+
+        hence if you use fundamental analysis for long term investment, and technical analysis for trading.
+        day traders, swing traders only go for technical analysis.
+
+    charts and candlesticks:
+        chart is the graph of a stock.
+            it is historical prices for that product over time.
+            it gives you an indication of supply and demand.
+        we use charts to predict future: past is the best prediction of future.
+
+        line charts:
+            time vs price but a contineous line.
+            candlestick charts are line charts with more info.
+        candlestick chart:
+            open is the opening price 
+            close is the last price of that day
+            candlestick chart tells you what exactly happened.
+            upper shadow <> upper wick 
+            lower shadow <> lower wick 
+            you can have candlestick for days to study day by day stocks.
+            tradingview.com for charts.
+        
+        where stock closed on previous day is the name as the price it would open next day. it could change depending on news.
+
+        different types of candlesticks:
+        --------------------------------
+            a candlestick can be for any period of time. 1 min, 5 min, 1 hour etc 
+
+            1. big candle:
+                    prices went up a lot, or prices went down a lot.
+                    small candles are small changes.
+
+            2. Dojis:
+                    a candle where price goes high, goes low and comes back where it started. price closed at where it started.
+                    it means it is hard to tell the next move of price, as there is indicision.
+
+                    if trend was downwards and you see a doji and then green candle, the most likely the stock is gonna rise.
+                    if trend was and one day we get a doji and next a red candle, then the trend might reverse.
+            3. gravestone and dragonfly.
+                    gravestone: goes really high but then comes back to opening price.
+                    dragonfly : goes really low but then closes at opening price.
+
+            4. shooting star and hammer:
+                shooting star: opens, goes high, comes back just above opening price. like gravestone
+                hammer: opens, goes down, comes back but below opening price. like dragonfly
+            4. bullish harami and bearish harami 
+                bearish harami: after green candle there is red which opens below and closes even but still within the body of green candle.
+                    it represents an exhaused up trend, if trend has been going up previously.
+                bullish harami is opposite.
+            5. engulfing bullish and engulfing bearish:
+                 engulfing bullish: a small red candle, followed by big green which opens below and closes higer than previous red candle. it engulfs the previous candle.
+            
+            just understand the candles, and what they say about supply and demand. dont go by the name of candles.
+            Doji means indecision, gravestone and dragonfly are better than Doji, they tell you more and you can use then for entry and exit price.
+
+            gravestone and dragonfly is the most consistent pattern, although it is not a stategy.
+            your stategy has to be based on something more robust than candlesticks.
+
+    trends, support and resistance.
+        
+            

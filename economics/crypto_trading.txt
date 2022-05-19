@@ -1,0 +1,5 @@
+maker/taker: taker is an order that trades at a market price. "maker" is an order that trades at a limited price.
+order of makers goes to order book, takers fill orders made by makers.
+makers are incentivized to provide liquidty, so they have lower ffes for their orders.
+order of takers doesn't go on order book.
+spot market: real time market, the trading there is called spot trading.
