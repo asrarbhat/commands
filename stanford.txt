@@ -1,3 +1,57 @@
+programming methodologies CS106A:
+---------------------------------
+lecture 1:
+    programming methodologies is about good software engineering principles. Its not just learning the syntax.
+    Java is the chosen language for this course.
+    Being a good programmer is like learning to write good essays, and just knowing a language doesn't make you a good essay writer. Being a good essay writer makes you a good essay writer.
+    "sometimes you have to unlearn what you have learned" ~Yoda, you sometimes pick really bad habits, and it is harder to become an essay writer from being an essay writer than from being a bad essay writer to being a good essay writer.
+    english<> a program that makes you weep, it is so good that i gotta show it to somebody.
+    english<> it was a wrong call.
+    english<> i dig honesty.
+    bug in a program : an error in a program. Debugging is removing the bugs.
+    learning a language doesn't make you great software engineer. You can learn general syntax of programming languages and then focus on software engineering principles.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 programming paradigms:
 ---------------------------------------------------------------
 lecture 1:

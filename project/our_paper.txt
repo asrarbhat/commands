@@ -1,0 +1,30 @@
+title:
+    Cryptography by Using Random Number Systems
+        Asrar Farooq bhat, Abhishek Yadav, Abhishek Tripathi, Kaushik Dhulipala 
+        Ramaiah institute of technology
+Abstract:
+    People have been interested in Cryptography for thousands of years, the idea is to make data unreadable and only the parities with key can decrypt the data. Over time we have come a long way with different ways of doing Cryptography, there are dozens of algorithms to do it, some are easy to break whereas some are almost impossible. Every Cryptographic algorithm is a way of thinking, and just because current algorithm used to do cryptography has not been breached ever does not mean we should stop looking for new ways of doing Cryptography. Cryptography using Random Number Systems is a new algorithm and a way of doing symmetric key cryptography, where the data is encrypted by treated it as a number in randomly generated number system and then converting it into a number in another randomly generated number system, which results in output data that is random with respect to its meaning, and the two generated number systems act as a key for the recieving side to reverse the process and decrypt the data. The algorithm is simple to understand, easy to implement, computationally linear in time involving just one transformation to data, and provably exponential in time in terms of breaking it.
+
+Introduction:
+    The internet is unreliable when it comes to transferring confidential data over it, and that is where cryptography comes to the rescue and gives the sender and the reciever confidence that they are the only ones who can read the data. Apart from that the usecases for cryptography are increasing day by day. To achieve the goal of cryptography we have a variety of cryptographic algorithms of different types, we are adding to that pool by introducing a new way of doing cryptography, that is efficient and easy to understand and provably exponential in time when it comes to breaking it.
+
+    the map of the paper:
+        algorithm.
+        proof.
+        implementation.
+
+algorithm:
+    1. given input data, break it into chunks of 256 bits
+    2. generate a number system of base 256 by taking a list of numbers from 0 to 255 and randomly shuffle the list now the value in nth index would represent nth number in that number system.
+    3. treat the 256 bit block as a number in the above generated number system.
+    4. generate a number system of base 255 by taking a list of numbers from 0 to 255 and randomly shuffle the list now the value in nth index woudl represent nth number in that number system.
+    5. convert the number from first number system to second number system.
+    6. store the data as encrypted data. and store the two randomonly generated number systems as key.
+    7. for decryption reverse the process.
+proof:
+
+conclusion:
+    just another way of doing cryptography.
+
+references:
+    AES.

@@ -1,0 +1,263 @@
+what is financial accounting:
+    the process of identifying, recording, summarising and analysing an entity's financial transactions and reporting them in financial statements.
+
+    step1: identify the transactions.
+    step2: journal entry, a record of a financial transaction.
+            core principal: the stuff that a business owns is equal to the stuff that business owes, things that you own are called Assets eg cash and inventories, liabilities
+
+youtube: financial accounting
+
+module 1: financial statments
+    jargons:
+        Assets, liabilities, revenue, expenses, divident, shareholders equity 
+
+    Assets: anything of "value", anything that a company owns or controls,created from past transactions that gives us future economic benefit.in my own understanding if you can sell it, it is an asset. Youth is not an asset, beauty is not counted as an asset as there is no market for it. And you can't put a number on it. eg cash, Accounts receivable (someone who owes you), inventories (produced goods), property plant and equipment (land, building, computer etc),investment etc are some of financial assets of a company.
+
+    liabilities: something you owe (that has to be repayed in future) eg loans, bills, mortgage etc anything a company owes. or any future economic obligations of a company eg Accounts payable(that you owe eg phone bills), Notes payable (bank loans, student loans etc)
+
+    shareholders equity: if you own a house that is worth 300k, and you took mortgage to own it and as of now you have 200k mortgage, if you were to sell you house today you get 100k and mortgage company gets 200k hence your piece of the pie is your shareholder equity, it is how much truly you own it.
+        300k  = 200k +  100k 
+    hence      Assets = liabilities + shareholders equity 
+    more intuitive equation is shareholders equity = Assets - liabilities
+    hence shareholders equity is the owners piece of pie.
+
+    common shares: normal kind of shares 
+    retained earnings: when you make profit in a company you can either give dividents or keep the earnings in the company, keeping the profit within the company is called retained earnings.
+
+    revenue: earnings, what happens after company does what it does, selling, tuition, fee, rent revenue.
+        it could be negative then it is called loss.
+    expenses: costs of prouduction eg wages, rent, labor etc all sources of cost.
+    divident: if profit is divided into share holders.
+
+    Accounting equation:
+        shareholders equity = Assets - liabilities
+    
+    curent asssets: assets that are expected to be liquidated (sold) within a year eg an inventory.
+    long term assets: one that you keep for years.
+        same kind of stuff for liabilities.
+    Accounts receivable are current assets as people usually pay what they owe within a year.
+    CASH is the best current assaet.
+
+    suplies is an asset that you have, supplies expense is how much you have already used up over time
+
+financial statements:
+    income statements: revenues and expenses. it captures revenues - expenses , and revenue - expenses is the profit/ net income  hence income statment tells us if the company is profitable or not. This is the first thing you look it, it is also called the statment of operations. Also called PNL, profit and loss.
+
+    statement of changes in equity: you account common shares and retained earnings, what did you do with your equity.
+
+    Balance sheet: this is second thing you look at, it lists all the assets of company, it also lists all debts/liabilities and it also shows shareholders equity, this is where you can apply fundamental theorem of accounting.
+
+    cash flow statements: how did the cash change, inflows and outflows. It is about money/cash. A company must not run out of cash.
+
+    preparing income statement:
+        in the statement at top mention, name of the company, name of the statement, and date.
+        given a list of all kinds of things that very bought sold, revenue, expenses etc.
+        here is income statement
+
+                                spacetime 
+                            Income statement
+                    for the year ended Dec31, 2024  #you can have it for quarter etc also
+        
+        Revenues:
+            shutter revenue                    $69,000
+        Expenses:
+            fuel expenses         $11,000
+            depreciation exp.      2,000
+            insurance exp.         4,000
+            telephne exp.            400
+            wages exp             30,000
+            utilities exp.         1,200
+
+            total expenses                     48,600
+
+        Net income                             $20,700    #put dollar on first entry or the net entry.
+
+        #net income in itself isn't good or bad, you have to check how much were they making for the previous years.
+
+
+    statement of changes in equity: # statement of retained earning 
+        
+                            spacetime
+                 statment of changes in equity
+                 for the year ended Dec31, 2024 
+
+                 common shares         retained earnings        Total 
+
+    jan 1, 2024    $60,000                   $10,000              $70,000       #how much worth shares company owns and how much was their retained earnings.
+    #common shares might not change, but the retained earings go up by profit at the end of the year, and we deduct any dividents.
+    Add  Net income                         20,700               20,700
+    Deduct dividents                        (3000)               (3000) # () represent negative.
+    dec 31, 2024   $60,000                   $27,700               $87,700
+    
+
+    preparing balance sheet:
+
+
+                            spacetime 
+                          Balance Sheet # statement of financial position 
+                          Dec 31, 2024 # we only date balance sheet we don't say for a year.
+                        
+            Asssets                                            Liabilities     #put assets in order of liquidity ad liabilities in terms of how urgent they are 
+        Current Assets                                     Current Liabilities 
+            Cash                        5000                    Accounts payable    2200
+            Account recieble            1000                    wages payable       1600
+            office supplies              500                Total current liabilities         3800
+        Total current assets                    6500        Long term liabilities
+        Long term assets                                           bank liabilities 45,000 
+            equipment                 30,000                total liabilities                 48,800
+            building                 100,000
+        Total long term assets       130,000                common shares           60000 #we get these two for the end of new year after calculated above.
+                                                            retained earnings       27,700 
+                                                            Total shareholder equity            87,700
+                                                            
+        Total assets                 136,500                Total L and S.E                     136,500
+
+
+financial ratios:
+    current ratio: current Assets/ current liabilities it tell you can the company pay short term bills 
+                    6500/3800=1.71   above 1.5 is considered safe,  below 1.5 means risk but this doesn't apply for big companies, it describes if you can run out of money, shareholders don't like too much of this ratio as this means there is too much of money laying still.
+    debt ratio:   total liabilities/ total assets  = 48,800/136,500=35.75, it says if company is sold off today 35 percent of assets have to go to pay debt.
+
+    equity ratio:  total shareholders equity/total assets= how much of total assets are owned by shareholders.
+
+
+module 2: journal entries.
+
+
+
+coursera:
+    you record transactions first, then you summarize using statistics.
+    financial accouting is to give summary to investors usually.
+    tax accouting for comptuing taxes payable.
+    managerial accouting for internal decision making.
+
+    SEC (securities and exchange commision) asks companies to file Annual report  called 10-K which is about 300 page.
+        10-Q is quarterly report
+        8-K Current report (for big decisions of events)
+        must be prepared accordance with generally accepted accounting principles (GAAP)
+
+        quarter reports are little bit too much as if you ship goods in one quarter and cash in next, you can't tell if it was a good deal or bad.
+        or if you buy equipment in one quarter and use them in rest of the quarters.
+        IFRS (international financial reporting standard) for more than 100 countries.
+        even GAAP would go to IFRS.
+
+        since company itself gives the statements, there is a chance of misbehaviour.
+        so the Audit committee of the board of directors provides oversignt of management's process.
+
+        SEC and other regulators take action against the firm if any violations of GAAP or other rules are found.
+        information intermediiaries like stock analysts, media etc may expoe or flee firms with questionable accounting.
+
+
+    required financial statements:
+        balance sheet: financial position (listing resources and obligations) on a specific date.
+    income statment:
+        results of operations over a period of time using accrual accouting(i.e recognition tied to business activities not cash flows)
+    statement of cash flows:
+        sources and uses of cash over a period of time.
+    staetment of stockholders equity:
+        changes in stockholders equity over a period of time.
+
+finacial statements tell how good a company is doing.
+cash flows:
+    cash flows alone can be decieving as you could be taking a lot of loans or you could be investing a lot.
+    you can divide cash into operating cash flows, investments (eg for equipments etc ), financing( borrowing and issuing stock)
+
+    hence in a company there are operating activites, investing activities, financing activites which give result in different kind of cash flows.
+
+net income:
+    using income statements: results of operations over a period of time using accrual accouting.
+    this could give better picture than just cash flows.
+    revenue: increase in owners equity from providing goods and services.
+    expenses: decrease in owners equity incurred in the process of genearting revenues.
+
+    net income or earnings or net profit = revenue - expenses.
+
+    income statements tell you what has happened and cash flows statement tells you what is coming next or what to expect next.
+
+Balance sheet:
+    all resources and obligations
+    sources: assets 
+    obligations: obligations 
+    Accounts receivable: what others owe you, it is an asset.
+    common stock: shareholders investment in your company like during ipo.
+    ratainded income = profit - divident.
+    stockholders equity: owners equity, claims on assets by owners of business, from shares and retained earnings.
+
+statements of stockholders equity:
+    we will get to it later.
+
+
+
+in detail these statements:
+    balance sheet:
+        the balance sheet equation/ accounting idenity:
+            assets = liabilities + stockholder's equity 
+            it must always balance.
+            hence if you increase or decrease one side of equation, you have to increase or decrease the other side as well.
+            key feature:
+                must always balance (double entry bookkeeping)
+                changes over a period between two balance sheets are summarized in the income statement, statement of stockholders equity and statement of cash flow.
+
+            assets: cash and noncash assets:
+            liabilities: debt
+            stockholders equity: countributed capital + retained earnings.
+
+            the differences in retained earnings from one years equation to another years equation is explained by the income statement.
+
+            the difference between the assets and liabilities from one year to another is explained by the statement of cash flows.
+
+            the difference between the contributed capital is shown by statement of stockholder equity.
+
+            retained earnings = prior retained earnings + net income - dividents.
+            if revenue increases by 100 then assets go up by 100.
+    
+    
+    Assets:  resource that is expected to provide future economic benefits( generate future inflows )
+        Accounts receivable is also an asset.
+        transactions that will happen in future is not an asset. However if one side of transaction is done then it is an asset.
+        inventory is also an asset. 
+        if you get discount when you buy something, the value of that asset is what you paid for it not what it was priced.
+        prepaid rent is also an asset. But only how more long you have it not how much you already used of it.
+        if the value of your asset increases in market, it value in your balance sheet is still for how much you bought it, its new value would make it to balance sheet if you sell it.
+        sometimes the value of a company is more on stock market than on income statements because of the brand value, which we skip in accouting statments.
+
+    liabilities:
+        an obligation based on current or based benefits or goods.
+        you recieve something and that creates an obligation.
+        eg borrowing from bank so you an obligation to pay back with interest.
+        Accounts payable: when you owe to supplier, it is a liability.
+        Income tax payable: it is also a liability in return of government allowing you to do business in that country. You can estimate them.
+        you make a lot of estimates in accouting when you don't have enough information. so you put your best estimates on financial statements.
+        contracts signed without getting benefits yet are not liabilities.
+        basically contracts don't make it to accouting statements.
+        salaries payable, are also liabilities.
+        interest is not liability when you take the loan as you can pay it back without interest, only that part of interst is liability of which time has passed.
+
+    stockholders equity:
+        residual claim on assets after settling claims of creditors (assets - liabilities)
+        also called the net worth, net assets, net book value.
+        two sources of stockholders equity:
+            contributed capital(arises from sale of shares)
+            common stock(par value) when you issue the stock.
+            additional paid in capital(exocess over par value)
+            treasury stocks(stock repurchased by company)
+            retained earnings: arise from operations.
+                accumulation of net income revenue - expenses - dividents , since the start of business.
+                retained earning at end = retained earnings at beginings + netincome - dividents.
+            dividents are not considered as expense, they are recorded as reduction of retained earnings on the declaration date. if not paid on time then they become an expense.
+
+
+    debits and credits:
+        Assets = liabilities + stockholder equity  
+        begining accoutn balance + increase - decrease = ending account balance 
+        these thre equations must be in blance at all times.
+
+        Accounts and Account balances:
+            Normal Account:
+                the type of balance the account carries under normal circumestances.
+            T account:
+                A record of all changes in an accouting quantity.
+                
+
+
+

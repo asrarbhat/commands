@@ -348,5 +348,296 @@ udemy: mohsen
             your stategy has to be based on something more robust than candlesticks.
 
     trends, support and resistance.
+        the trend is your friend, don't go against the trend.
+        trends are at the core of technical analysis.
+        th principal of technical analysis is that prices move in trends and history repeats itself.
+        trend is just a direction where people are going in.
+        stocks can have up trend, down trend. side trend.
+        price don't move linearly, they fluctioate.
+        up trend: higher lows and higher highs.
+        sideways trend: low and highs are almost same.
+        downtrend: lower lows and lower highs.
+
+        trends tend to persist (remain in that direction)
+            don't bet against the trend.
+            mathmatically it is proven that it is more likely to follow the trend.
+        uptrend line: given an uptrend draw a line connecting all lows, it is the slope of the trend.
+
+        trends don't last forever, the trendline break is the point where trend breaks.
+        always draw a trendline.
+
+        you draw two trend lines, one to the lows and one to the highs. and both of them together is called a channel. Hence a stock moves within that channel. you can have up channel, down channel or side channel.
+
+        you buy at lower part of channel and you sell at higher part of channel.
+            it is very unlikely that stock would escape the channel.
+        with technical analysis you guess your entries and exits.
+
+        these trendlines serve as support and resisitance.
+            support means it doesn't let it all.
+            resistance, is something that price can't go through.
+
+            lower trendline can be treated as support line, stock bounces off the support.
+            upper trendline acts as resistance. stocks reflect from resistance.
+
+            you buy on the support and you sell on the resistance.
+
+            channels and trends are used all the time.
+
+            you can do this within the day, or within a week etc.
+
+            you can trade on sideways trend as well,buy on the support and sell on resistance.
+
+        why does stock bounce off the support:
+            it is a self fullfilling prophesy, you are not the only one who knows it. everybody follows it hence at the support the demand increases and at the resistance, the supply increases.
+
+        where is support and resistance usually:
+            near round numbers. eg 100, 200, 50,10 because so many people send orders with price and they don't put random decimals. that is why they are often round numbers and when price reaches there it cannot break it.
+
+            so if you want to buy and you support is 450, buy it at 451 as there are a lot of buyers at 450 and demand goes up hence prices go up. hence buy a little bit above support, and sell a little bit below resisitance to put some people behind you.
+
+            never send your order at round number.
+
+            role reversal:
+                if stock breaks out of your channel, if it goes up then your resistance is now the support and if it goes down then your support is now new resistance. and in round numbers it is very common.
+                it is again a self fullfilling prophesy.
+            finviz.com to check which stock is near which trendline.
+
+            going by the trends is a basic/noob strategy, it could make you money although.
+            don't look at something that nobody is looking at, because prices are going to be moving because of other people. You have to crack when are they gonna sell in huge volumes and prices will drop and when are they gonna buy in huge and prices are gonna go up.
+
+            you can short or go long.
         
+        trend lengths:
+            you will have different trend lengths on same chart for different time scales.
+            you could have an up trend within a down trend, that is short term.
+            so which one to look at:
+                look at all of them.
+                and ofcourse it depends on how long you want keep the stock.
+                best one time to trade would be when trends on all scales are in same direction.
+                    all trends of all scales are aligned, although for intraday you would only focus medium and short term trends, and not on long term trends.
+            for daily trends, the people would usually be same and thinking the same, whereas for monthly or yearly trends the people would be different how would sell or buy at trendlines.
+            hence during intraday, the support and resistance tend to be stronger because the people are same and they would do things as per trend lines.
+        
+    chart patterns:
+        patterns on chart that could indicate reversals.
+        at the end of the day, charts are created by emotions of people.
+
+        head and shoulders pattern:
+            one of the most famous pattern.
+            there are two shoulders, one on left and one on right and a head.
+                in other words, two sideways trends and in between there is one big peak.
+                there is left and right shoulders.
+            the support is called the neckline.
+            after the right shoulder, the theory says it is going to break the neckline and go low, indicating to sell the stock.
+            everybody sells at the second shoulder, again a self fullfilling prophesy.
+            if everybody sees a head and shoulder, then it would certanly break. If you are the only one who sees it, then it won't break.
+        double top pattern:
+            two tops (like m) then it would have hard time to break that resisitance. usually it means there is a big seller there and every time prices reach top, the sellers would execute and it cannot go any further.
+            it would keep on going to that top and return.
+            it would usually be a round number.
+
+            double tops mean more in intraday, as on monthly scale it wouldn't mean the same seller.
+
+        multiple tops:
+            like double tops, there are multiple tops now, now it makes that double theory hypothesis even more strong and more and more people put their sell orders there and make it even stronger.
+        double bottom:
+            like double tops but at bottom. it would usually be a round number, and a lot of people would have buy orders at those bottoms. maybe a big buyer has a big order there.
+        multiple bottoms:
+            like mulitple tops, and people who recognize patterns make the patterns even stronger.
+        
+        triangles:
+            ascending triange: there is top that is same but the next low is higher than earlier low,hence making a triangle. In other worlds, the support is going up. Buyers are more willing to buy at that price. And at the converging point, the stock breaks, either high or low. Dont buy at the breaking point as you don't know where it would break.
+            descending triangle is the opposite, the buyers are willing to buy at only lower prices but ther is a support. and it would gets to a converging point.
             
+            wedge: the sellers are selling at lower prices and buyers are buying at higher prices and at the corner it would break in one direction and everyone would buy in that direction.
+        cup and handle:
+            sudden drop, the slow drop and then it raise like a U and then it it does't fluctioate.
+        rounding bottom:
+            drop and increase, but not as sharply as cup and handle.
+        
+        the idea is not to remember patterns, but to understand the behaviour of buyers and sellers.
+    
+    VOLUME:
+        in technical analysis we look at the prices and volumes.
+        volume is the quantity of shares that were traded.
+        you need enough quanity to be traded for that price to mean anything.
+        volume confirms price.
+        with increased volume, prices would go up or down.
+        when there is news, there is high volume.
+        always look at volume.
+        there is low volume and prices go up. there is almost no chance of continuation.
+        there would be high change in volume and then prices would change drastically.
+        high prices at low volume mean nothing and same for low prices.
+
+        average volume: average volume say of 3 months.
+        relative volume:    relative to average volume.
+        go in the direction where strong volume is heading.
+
+    Indicators:
+        a tool that we use that is a calculation based on price and volume.
+        indicators are used for technical analysis.
+
+        bollinger bands:
+            lines above and below the fluctioating stock prices. it is very unlikely for stock to escape bollinger bands.
+            it is kept n standard deviations above and below moving average.
+            assuming stock prices are normal in nature now you can apply 68-95-99 rule.
+            default 2 standard deviations.
+            if stock prices go out of bollinger bands, it is very likely that it would come back.
+
+        RSI (relative strenght indicator)
+            to see if a stock is overbought or oversold.
+            it is a number between 0 and hundred.
+            RSI = 100-(100/(1+RS))= average gain/(average gain + average loss) times 100
+            RS= Average gain/Average loss
+            eg for last 14 days.
+            average gain= average of all green days.
+            100 RSI means overbought as green candles are dominating.
+            0 RSI means oversold.
+            rule of thumb: below 30 oversold, over 70 over bought.
+            when stock stops being overbought from above you can sell it and when stock stops being oversold, you buy it.
+            you can't apply it on any kind of stock.
+            different strategies for different kind of stocks.
+        
+        Average True Range(ATR)
+            it is average amount it moves in a day.
+            you add ranges of all candles (high - low) and divide by number of candles.
+            for all candles it is high - low even if candle is red.
+            high ATR means high fluctioation.
+            with ATR you decide how much money you can make on that stock.
+            you can't make 1 dollar profit on a stock that only moves 0.3 dollars a day on average.
+
+    risk and money managment:
+        it is most important aspect of trading.
+            expectancy:
+                the expected value is an anticipated value for a given investment. 
+                    dot product of probability and outcome.
+                it is the value which you approach if you do experiment infinite times.
+                for a prifitable investment, expectancy is more than investment.
+                in other words, the investment shouldn't be as good as gambling.
+
+                if you play against probability, you might get lucky a few times, but in the long run, you will lose.
+
+                think of it is the probability of going up/down when you buy sell stocks.
+                buy stocks where probability is not fifty fifty.
+                the farther things are from fifty the better.
+
+        an uneducated buying of stocks is a gamble.
+        gambling is random.
+        educted betting is gambling based on postive expected value.
+            it would make you money in long run.
+        casino is gambling, educated betting is buying stocks.
+        stock market is a zero sum game, for every dollar you make, someone loses a dollar.
+            the goal is to make your odds high by your strategy.
+        
+
+        batting average: the average probability that a trader is right= number of profitable trades/ total trades.
+
+        win/loss ratio: the ratio of average prifitable tafes over the average unprofitable trades.
+            eg if on average your trades gain 10% and on average you lose 5% then it is 2:1 
+        even 65%  batting average is gold. don't root for 100%.
+
+    risk managment:
+        risk: an action or an activity that has a potential to go wrong.
+        systematic risk: undiversifiable risk / volatility/ market risk is inherent to the entire market.
+        unsystematic risk: specific risk / diversifiable risk or residual risk. it is specific to industry. eg if oil industry is doing bad then the risk is only affecting it. it can be reduced through diversification. CEO resigining is a unsystematic risk. diversification is buying different stocks of different kinds so overall you are less in risk.
+        systematic risk is not diversifiable, as it is true for whole market.
+
+        risk acceptance:
+            you accept the risk. that you could lose money and you understand it.
+        risk avoidance:
+            i can't take the risk so you don't want to trade.
+        risk limitation:
+            stop losses: if loss is more than 10% you sell doesn't matter what.
+            you can put it below the support.
+        risk transferance:
+            there are certain products that you could buy to reduce risk they are called options.
+        
+        risk avoidance and risk limitation is most used ones.
+    
+    money managment:
+        maximum risk per position should never exceed 5%.
+        2% is ideal.
+        there is a very real probability that you take 10 losing trades in a row.
+
+        when you lose 20%, in next deal you have to make more than 20% to get back to zero.
+        hence it gets hard to get to zero as you lose more and more money.
+
+        hence try to not lose like 50% or even 20%.
+
+        hence don't lose more than 2% in a trade.
+        hence you can survive fluctiovations.
+        when you are small capital, you might need to take more risk. But as you become bigger the risk has to be smaller.
+
+        don't think it will go up, if it goes down then sell.
+            just accept the loses at that moment.
+        
+    position sizing:
+        combining risk and money management.
+        basically how many shars to buy and how to buy them.
+        different methods.
+        simple position sizing:
+            position size = (max loss per trade)/ amount you can lose per share. amount you can lose per share can be seen from chart, just see the difference between buying price and stop loss. and position size will give you how many shares you should buy.
+
+    Trading psychology:
+    --------------------
+        it is more important than risk managment, technical analysis, having solid strategy.
+        it is hard to handle your emotions, to handle loss and profit.
+        most of the times you lose because you couldn't handle your emotions.
+        treat gain and lose rationally. don't lose yourself if you lose money.
+
+        loss aversion:
+            one of the most prominent biases.
+            the theory states: losses have a bigger negative impact than equivalent gains have positive impact. (2 times more negative)
+
+            you often make decisions based on what you lose and not what you gain.
+
+            when you have a gain say 10k and you lose 5k out of it, you don't sell as profit doesn't mean much. as they feel like they lost 5k and they don't look at the 5k they made.
+
+            loses feel worse for same value of gain.
+        
+        endowment effect:
+            the theory that states: that we place more value on something that we own than if we didn't own it.
+            hence the longer you own something, the more you value it, which adds to value that is not real.
+            as soon as you buy a stock you would feel it is going to go up for no reason.
+            so be strong emotionally.
+        
+        status quo bias:
+            the theory states: we prefer staying in our current situation/state than changing situation/state.
+            there is a base line and you don't want to go up or down from that.
+            eg you don't want to change your social media platform that you are using. or the programming langauge.
+            you hold to a stock that is not changing for far too long and you lose money in the long run.
+        anchoring effect:
+            the theory states: That we anchor to the first decision/information when making subsequent decisions.
+            eg you hear a news that some company is making amazing drug for cancer so you buy the stock. and it doesn't go up and just fluctioates a little bit but you still stick to that nes even if hte ceo sold shares.
+
+            consider every other information and evaulate farely the value of your stock.
+
+        confirmation bias:
+            theo theory states: that we search for information tht confirms our beliefs.
+             eg googling: why is milk bad for me.
+        genes and instutions:
+            humans have been on earth for 200,000 years.
+            instincts come from our genes.
+            eg loss avertion
+            we have things in our genes to protect ourselves, which we no longer need.
+            and we need to unlearn these behaviours.
+            and money represents, shelter, status to us right now.
+        greedy: you don't sell on time. you fear that it would keep on going up and you would miss that.
+        fear: you sell quickly as you start losing. And you regret later.
+
+        HENCE DON'T LET FEAR CONTROL YOU, LET THE CALCULATIONS AND STRATEGY DRIVE YOUR decision.
+
+    tools:
+        finviz, you can see heatmap there as well, it also has screener to see different kinds of stocks for your portfolio.
+        
+
+
+
+    
+
+youtube:
+    going public can take upto 4 months.
+    it is no good having a 100% of company worth nothing.
+    feel good about diluting your equity,
+    during dilution each shareholders percentage is equally diluted.
+    dilution is what happens at IPO.     

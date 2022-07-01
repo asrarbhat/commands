@@ -365,7 +365,7 @@ class 3:
     the more valuable something is the more the price.
     because of scarcity a rationing/allowance mechanism is needed: some way of deciding who gets what and how much. eg first come first served, religion, political affiliation eg communist countries, physical attractiveness, strongest, market economy: willingness to pay highest: probably the best one. 
     Being rich doesn't mean you can have everything, even you limited resources, and you have to make choices. To overcome the shortcomings of market economy as poor might not get a shot,government comes up with policies.
-    market failure:  when market fails to do what most people think it should do.
+    market failure:  when market fails to do what most people think it should do. when allocation of goods and services produces net loss in economy.
 
 class 4
     people base their decisions on a comparsion of benefits and costs.
@@ -1515,32 +1515,33 @@ lecture 31:
         the supplier of money is federal reserve, and the banking system.
 
         what is money?
-            money is anything that is generally accepted payment for goods and services.
-            it doesn't need to be tangible, it just needs to be generally accepted.
+            money is anything that is generally accepted (for all kind of good and services) payment for goods and services.
+            it doesn't need to be tangible(eg bitcoin), it just needs to be generally accepted.
             generally is the key term here.
 
             money is generalized purchasing power.
 
+            if you can only buy specific things with it, then it is barter then it is not money.
             Barter refers to a system where one purchases goods with other goods, rather than money.
             A lot of things have served as money, like shells, tobacco, feathers etc.
-            on pacific island of Yap limestone roksare used as money.
+            
+            on pacific island of Yap limestone rocks are used as money.
 
-            more money means more demand for good and services hence result in inflation.
+            more money means more aggregate demand for good and services hence result in inflation.
         
         why people use money ?
             money performs certain functions, it provides certain services, and people like these services:
-                1. unit of account.
+                1. unit of account. (metric to measure market value of things)
                     a measuring rod of value, we use money to compare value of things.
                     it provides standard way of measuring values.
 
-                    in barter system we have n choose 2 / n(n-1)/2 number of relative prices for n products. hence it is a hard to keep track of every potential price, and it is highly volatile and prone to scams, as it is hard to figure out if the deal is good or not whereas when price is told in dollars, comparison is earier to figure out if it is a good or bad deal. And it needs heavy information requirements. hence it has high transactions cost. Hence people would avoid market transactions whenever possible. Hence buying things would become less common.
+                    in barter system we have n choose 2 / n(n-1)/2 number of relative prices(around half a million for just 1000 goods, and there are more than 1000 goods in an general store) for n products. hence it is a hard to keep track of every potential price, and it is highly volatile and prone to scams, as it is hard to figure out if the deal is good or not whereas when price is told in dollars, comparison is earier to figure out if it is a good or bad deal. And it needs heavy information requirements. hence it has high transactions cost. Hence people would avoid market transactions whenever possible. Hence buying things would become less common.
 
                     in around 2500BC in sumer(iraq) people started using silver as their unit of account.
-                    hence they would write prices in terms of silver. Because barter system was inconvinient. they would price things in terms of silver but they might pay using other goods with equivalent price.
+                    hence they would write prices in terms of silver. Because barter system was inconvinient. they would price things in terms of silver but they might pay using other goods with equivalent price.in money economy you only keep track of n prices for n goods.
 
-                    in money economy you only keep track of n prices for n goods.
-                2. it is a medium of exchange.
-                    it is the things used to carry out exchange. you hand over money for goods and services.
+                2. it is a medium of exchange.(exchange becomes easier)
+                    it is the thing used to carry out exchange. you hand over money for goods and services.
                     in barter system, you might want some shoes in exhange of fruits but the person with shoes might not want fruits, hence the requirements for transactions are 
                         "double coincidence of wants"
                     but for money you only want single coincidence.
@@ -1556,14 +1557,13 @@ lecture 31:
                 3. its a store of value.
 
 lecture 32:
-
         in barter economy the production cost would be more as we add transaction cost to it, hence it would shift supply curve to left and prices would be more.
-        in money economy prices get lower and production curve shifts to left, hence money increases standard of living, for people who pariticiple in these tranactions.
+        in money economy prices get lower and production curve shifts to right, hence money increases standard of living, for people who pariticiple in these tranactions.
 
         money makes it possible to have more production hence better world.
     3. money is a store of value.
-        you can store money. although you can hold stocks, perls etc as well. so money is not unique here.
-        if prices go up, then money is not a great store.
+        you can store money. although you can hold stocks, perls, diamonds etc as well. so money is not unique here.
+        if prices go up, then money is not a great store. Hence for long time, money is not a good store. In russia they spend their currency but they don't store in their own currency.
     
     money evolved in the marketplace, it was not invented by government.
 
@@ -1579,7 +1579,7 @@ lecture 32:
     money is always changing: like a car, so make it even better. People invent new kind of money with more desirable features. more convineint etc.
 
     coins came in 640 BC in turkey.
-    with Alex the great, he conquers and finds a lot of gold and stamped a lot of coins. Hence coin was now even in india by 330BC 
+    with Alex the great he saw these coins, he conquers and finds a lot of gold and stamped a lot of coins. Hence coin was now even in india by 330BC because of alex, to even middleeast, africa etc Hence Alex spread the idea.
 
     paper currency came in china in 900AD.
         but they printed too much and destroyed their economy.
@@ -1587,10 +1587,12 @@ lecture 32:
     bank deposit money:
         in italy, venice.
         you put money there and you get interest.
+        and banks would make money acting as exchange for different kind of currencies.
 
         in england in 1600 AD 
-            goldsmiths, they would store gold, so goldsmith started taking some fee.
+            goldsmiths, they would store gold in vault, so goldsmith started taking some fee.
             you get a reciept.
+            later on they would become the banks.
         
         in US 1789 
             they had banks, that would take gold and silver and give money or checkbook.
@@ -1598,17 +1600,18 @@ lecture 32:
         EFTS :
             electornic funds transfer service.
             liek ATM etc 
+        and now we have crypto.
         
 lecture 33:
     government controls money in modern day.
     Forms of Money:
         currency (C) paper notes and coins.
-        checking deposits:
+        checking deposits:(if you can write check to withdraw money)
             commercial banks
             savings and loans 
             mutual savings banks 
             credit unions 
-        depository institutions 
+            all these are called depository institutions (they accept money from customers)
 
     M =money supply
     M = C+ DD , demand deposit, demand deposit is what you can get anytime, wheras savings deposit you pledge to put it there for some time. or you can use check to pay to someone else.
@@ -1619,14 +1622,14 @@ lecture 33:
         some of this money is overseas.
         panama uses US dollar as its currency.
 
-    russia uses their currency to spend but dollar to store as their currency is under inflation.
-    half of above is outside US right now.
+    russians uses their currency to spend but dollar to store as their currency is under inflation.
+    half of above is outside US right now(cash outside US about 250 billion dollars).
 
     where does currency come from:
-        US federal depeartment
-            on cotton and economy.
-    total reserves of Banks:
-        vault of cash plus deposits at the Federal Reserve (the fed )
+        US federal department
+            on cotton and lenin. That is 40% of total but what about the rest of 60%
+    total reserves of Banks(TR):
+        vault of cash(on premise) plus deposits at the Federal Reserve (the fed ) called the reserve deposit.
         it is the cash they have. Bankers put reserves in fed.
     the required reserve ratio:
         set by Fed, eg 0.10 is 10% in US.
@@ -1646,11 +1649,20 @@ lecture 33:
     networth/wealth/capital:
         assets-liabilities 
     
-    fundamental idenity of accounting:
+    fundamental identity of accounting:
         Assets = liabilities + capital 
+        or capital/networth= assets - liabilities
             by definitions.
         double entry bookkeeping:
             every single transaction has two entries. if you buy a car,you can give money and take car,so you get a car as an asset and you give money as an asset, or you can buy car as an asset and have debt as a liability.
+            two columns: Assets on one side, and liabilities and capital on another.
+            eg 
+                    assets          liabilities+wealth
+                    -10000 Tom's DD 
+                    +10000 car 
+
+                    +10000 car        +10000 liability
+            developed in venice in 1300's
 
     Assume that:
         people hold no currency 
@@ -1661,13 +1673,13 @@ lecture 33:
         deposit the 1000 at banks.
 
         increase in money supply : 1000 dollars 
-        now you deposit and you get check in money, hence no change in money supply.
+        now you deposit and you get checkin money.
         bank keeps required reserve of 10% and loan rest.
         loan is an asset of bank.
         now money supply is 1900 dollars.
         but now even this person would save 900 dollars in bank and process repeats.
         
-        hence each dollar injected into the economy by the Fed give srise to a money supply that is several times as large as the original 1. Hence there is a multiplier.
+        hence each dollar injected into the economy by the Fed gives rise to a money supply that is several times as large as the original 1. Hence there is a multiplier.
 
         the multiplier is 1/r 
 
@@ -1692,15 +1704,15 @@ lecture 34:
 
     the federal reserve system 
     --------------------------
-        started in 1913, because banking systems were not stable.
+        started in 1913, because banking systems were not stable. Economy would fall every now and than because of banks.
         it was supposed to provide an elastic currency (the supply should grow and shrink to meet the demand)
         Act as lender of last resort to banks experiencing runs. ( for banks who are running out of money )
             as if you don't lend, that bank would run out of cash and it would close its door and the panic would pass to next bank.
 
             1929-33, the fed failed to step in and lend cash to banks experiencing runs, in this episode 1/3 of all banks faield the result was The great Depression.
 
-            it took fed upto 1950 to figure out how ot do things.
-        we got more modern fed in 1935 by laws.
+            it took fed upto 1950 to figure out how to do things.
+        we got more modern fed in 1935 by laws. Now it has responsibilities to manage economy, fight inflation etc.
 
         responsibilities:
             it is governments bank.
@@ -1717,22 +1729,22 @@ lecture 34:
         member banks -> ordinary commercial banks, privately owned. about 3500 banks.
         federal open market committee: 7 members plus 5 presidents of reserve banks. 
             they are main policy making group.
-        they put money in economy by buying treasury security/bonds from people or banks. Hence new dollars enter the economy.
+        they put money in economy by buying bonds from banks. Hence new dollars enter the economy.
         the fed would sell bonds to take money out of system.
         there is multiplier effect both times.
-
+        more supply of money makes demand for goods and services high and prices rise.
         the fed has three main policy tools:
-            1. open market operations: carried out by FMOC 
-                purchases and sales of government securities (bonds) by the Fed.
-                it is the most used policy to control the money supply.
-                FMOC meets 9 times per year.
-                interest rates decline when Fed purchases bonds. and price of bonds increase.
-                internest rates go up if Fed sells bonds. prices of bonds decline.
+            1. open market operations: carried out by FOMC 
+                    purchases and sales of government securities (bonds) by the Fed.
+                    it is the most used policy to control the money supply.
+                    FOMC meets 9 times per year.
+                    interest rates decline when Fed purchases bonds. and price of bonds increase.
+                    internest rates go up if Fed sells bonds. prices of bonds decline.
 
 lecture 35:
 
             2. discount rate policy
-                Fed loans to banks = discount loans. The interest rate for these loans decides how much banks will take loan. This interest rate is called Discount rate.  
+                Fed loans to banks(when they need it) = discount loans. The interest rate for these loans decides how much banks will take loan. This interest rate is called Discount rate.  
                 this changes a few times a year.
                 it is set by federal reserve banks.
                 each federal reserve bank sets its discount rate.
@@ -1741,7 +1753,11 @@ lecture 35:
                  it changes almost never say after 10 years.
                 10% for medium sized banks.
                 3% for small banks.
-    
+                money deposit multiplier 1/r
+                in reality there is always some currency outside bank as well and there is some cash sitting there for bank as well the multiplier then is Money supply/C+TR  which could be 3 etc.
+            all these to control money suppy in market.
+            if less discount rate,more money supply,or just purchase bonds.
+            if more discount rate, less money supply,or just sell bonds.
 
     MONEY AND ECONOMY
     -----------------
@@ -1751,16 +1767,19 @@ lecture 35:
             key element of classical economics.
             money supply X velocity of spending( number of times a year an average dollar is spent) = price X quanity
             MV is total expenditure per year.
-            PQ is toal reveunues recieved.
+            PQ is total reveunues recieved.
+            p is price level
+            three equal sign means equal by definiton.
 
             spending = selling 
 
             it was used for the quanity theory of money (classical macro model)
 
                 MV=PQ 
-                if V and Q are constant, then increase M and P increases and vice versa.
-            
-                keynes was like production increases without change in price, that Q would increase with increase in M.
+                if V and Q are constant(as gdf grows slowly say 5% a year. but if you increase money supply by 300% there will be inflation), then increase M and P increases and vice versa.
+                change M and P changes proportionally.
+
+                keynes was like production increases without change in price, that Q would increase with increase in M. if demand increases, and aggregate supply was parallel to x axis at certain price.
 
                 classical view would win under full employment, as there can't be more production.
 
@@ -1800,19 +1819,22 @@ lecture 36:
         money supply would shift by fed policy.
         if money supply increases, gdp would increase.
         if money supply decreases , gdp would decrease.
-    k shows strength of money demand.
+    k shows strength of money demand. increase in money demand(1/v) would mean high slope would mean decrease in gdp as people now want money to have.
 
     what makes people want more money balances:
         reduced interest rates on bonds and savings accounts.
         reduction in inflation rate.
         people are paid once a month than once a week.
 
+    everything said so far is always true as we are talking about nominal gdp, hence within gdp we don't know if it is Q increasing or price. hence even inflation increases gdp.
     
 lecture 37:
+    there would have been no inflation had the production curve been horizontal line,at certain price.
 
-    but in real life, the production curve  is not horizontal, it is increasing hence when the demand curve shifts for money to right, the gdp increases but prices also increase. in aggregate curves.
+    but in real life, the production curve (Q vs P)  is not horizontal, it is increasing hence when the demand curve for Q( decresing slope)  shifts right, the gdp increases but prices also increase. in aggregate curves.
+    at constant price level only q would increase but supply q is not horizontal.
 
-    in most of economic theories, people ignore the supply side and assume that supply can increaes indefefinitely.
+    in most of economic theories, people ignore the supply side and assume that supply can increaese indefefinitely.
 
     with increase in demand of money, prices so up/ inflation.
     gdp also goes up, unemployment rate decreases.
@@ -1822,13 +1844,13 @@ lecture 37:
         the inflation/unemployment tradeoff resulting from a change in aggregate demand.
     
     If AD increases, Real Gdp rises and unemployment declines,(short term effect )
-    eventually wages and other factor prices  will increase so SRAS decreases. hence supply curve shifts to the left.(this is long run)
+    eventually wages( as economy is strong and demand for labor is high) and other factor prices  will increase so SRAS decreases. hence supply curve shifts to the left.(this is long run)
 
-    in short run (increase in AD) : more inflation,less unemployment.
-    in long run: more unemployment, more inflation. And it might last for a few years.
+    in short run (increase in AD) : more inflation,less unemployment. say for 12 months
+    in long run: natural unemployment, even more inflation. And it might last for a few years. 2-3 years.
 
     hence there is short run tradeoff between inflation and unemployment.
-    in long run both would  increase.
+    in long run inflation increases.
 
     inflation:
         an ongoing increase in the general price level.
@@ -1836,8 +1858,9 @@ lecture 37:
 
         two kinds of inflation:
             one short inflation:
-                it is one time thing, eg workers demand higher wages, and hence price also goes up, or if there is no harvest and price goes up. it happens for one time.
+                it is one time thing, eg workers demand higher wages, and hence price also goes up, or if there is no harvest and price goes up. it happens for one time. and then everything is now the new normal. 
                 if aggregate demand goes up we get higher prices.
+                it is not a problem as per most policy makers.
             continuous:
                 this is what policy makers struggle with.
                 shift in curves very often not just one time.
@@ -1858,27 +1881,29 @@ lecture 38:
         here you have exchange of currencies.
         demand and supply decide price.
         and it is a huge market, about 1 trillion per day.
-    
-    there are exports and imports in trade.
-    there is also trade in services.
+        most active market in the world.
 
-    credits : positives
-    debits : negatives
+    there are exports and imports in trade.
+    there is also trade in services not just goods. And US sells a lot of services.
+
+    credits : positive sign
+    debits : negative sign 
 
     credits: funds flowing into US.
     debits: funds flowing out of US.
 
     credits and debits have to balance at the end.
 
-    Balance of payments:
+    Balance of payments: (all credits and all debts summed at the end and they are equal at the end.)
         1. balance on current account.
-            exports of goods/services is credit, and imports is debit
+            trading good and services
+            exports of goods/services is credit (you get paid), and imports is debit
             income from US assets overseas is credit, eg if you own a home in foreign country that is on rent. payments for foreign assets in the US is debit.
             net unilateral transfers abroad: could be credit or debit, a gift etc. 
 
             for 1998 671 billion of exports of goods and 919 billion dollars of imports.
             balance of trade -248 billion dollars.
-            a lot of people think it is a bad thing. that we are not selling as much as others are selling us.
+            a lot of people think it is a bad thing. that we are not selling as much as others are selling us. But they leave out services.
             exports of servies  260 billion dollars, 182 billion dollars of imports.
 
             balance on current accounts -200 billion dollars.
@@ -1890,7 +1915,7 @@ lecture 38:
             net would be sum of them.
             266 billion dollars for that year. that means foreigners like to investing in US.
         3. official reserve balance.
-            gold,etc 
+            gold,foreign exchange as government has to pay for it(debit) etc 
         4. statistical discrepancy.
             sort of error term.
 
@@ -1899,14 +1924,55 @@ lecture 38:
         the final number has to be 0. after you sum all of them.
 
     in foreign exchanges:
-        we have supply and demand.
+        we have supply and demand of currency in a foreign exchange market.
         and you have equillibrium exchange rate.
+        federal reserve would intervene to stablize the price of their currency.
+    
+    balance of payments:
+        at the end all have to sum to zero. except for the foreign reserves etc 
+        if current account is negative, that doesn't mean you are bad at producing. since the payments have to balance and both curent and capital accounts can't be positive.
+        higher investment in US would increase the exchange rate, as a result you can't sell to many goods at that price to foreigners.
+        the stronger the dollar the more US people want to invest in other countries as stocks etc are cheaper. same for goods.
+
+    exchange rate: rate of a given currency.
+
+
+wikipedia:
+    money:
+        commodity money: money whose value comes from a commodity of which it is made.
+        representative money: money that has no value intrinsically, but represents value.
+        fiat money: money that is not backed by any commodity such as gold or silver. It derives its value from being declared by a government.
+        counterfeit money: currency produced without the legal sanction of the state or government.
+        currency: notes and coins.
+        total money = currency + money in banks 
+        barter 100000 years old.
+        commodity money gave rise to representative money when banks gave reciepts for commodity money and those reciepts started to act like money.
+        gold standard: backing your paper notes by gold.
+        after world war 2 most countires adopted fiat money.
+        modern money theory people state fiat money is backed by taxes, as the taxes create demand for currency they issue.
+        fungible: interchangeable, mutual substitution.
+        money supply: money that people can spend at any point in time.
+        money: m1 is currency plus demand deposits, nm2 is m plus savings accounts and time deposits,m3 is m2 plus large time deposits. m1 is only most liquid financial instruments.m0 is the actual money issued by central bank of the country.
+        creation of money:
+            central bank minting coins / printing banknotes M0 called narrow money/legal tender.
+            bank money or broad money it is M1/M2 created by banks.
+        liquidity: how easily can something be traded for another.
+            money is most liquid asset, and for high liquidity there is low transaction fees.
+        representative money could be backed by commodity.
+        the value of fiat money comes from who is issuing it.
+        in us 1 trillion is m0 and 9 trillion m2 
+        when gold was used as backing the money supply would only increase if gold back increased. And whenver new gold was found it would cause inflation. If rate of gold mining couldn't keep up with econmic growth it would cause deflation. Deflation was more common during those days.
+        control of money in economy in fiat money: monetary policy. The goal is maximum employment, stable prices, moderate long term interest rates.
+        money system can fail and result in barter system.
+
+        money laundering: concealing the origin of money, obtained from illegal often.
+
+    monetary policy:
+        increase money supply to increase empoloyment during a recession. it would result in inflation also. and exchange value will be low so other countries can also invest.
+        decrease money supply to reduce inflation, it results in unemployment and possibly a recession.
+        
         
 
-
-
-
-    
 ideas:
 adam smiths invisible hand: who should make products : to grow econmomy or to allow people make great products, allow people to do whatever they want to do with mininal regulations, eg apple,samsung and it would lead to better outcome.
 
@@ -1950,3 +2016,141 @@ GDP PPP
     eg in us you can buy it for 2 dollars and in japan you can buy it for 6 dollars.
     hypothesis: doesn't matter where you are, it should cost the same in a common currency, but there are deviations from it. But it is decreasing at 15% per year.
     
+---------------------------------------------------------------------------------------------------------
+International trade:
+    comparative advantage:
+        absolute advantage: 
+            when you can produce more in terms of magnitute.
+            it doesn't account for the things for how much resources were spent to have absolute advantage.
+        lebron james is better labor than you, that is absolute advantage, but he can do better things.
+        comparative advantage means having lower opportunity cost.
+        hence trade is about lowering everyone's opportunity cost.
+        just draw a table of all possibilites and enter opportunity cost in terms of other goods they could have instead produced, like opportunity cost of one computer produced, or one shirt produced.
+        
+        trade increases aggreagate wealth, that doesn't mean all are in profit. As a whole it is good for the groups.
+
+        sources of comparative advantages:
+            climate/geography/ natural resources 
+                a place can have comparative advantage in mutiple industries.
+            Factor proportions:
+                low skill/ high skill labor 
+            trade causes division of labor, and it leads to specialization, and afte specialization they get comparative advantage.
+            institutions:
+                finance: banks if you need a lot of money 
+                labor market flexibility 
+        trade results in variety and variety results in overall welfare of each individual of population.
+        trade reduces prices as each product is made for larger population.
+        places start to look similar with trade.
+
+        gravity equation:
+            the further away two countries, the weaker the trade attraction.
+            Trade = G E1 E2 /D^2 
+            as cost of trade would be high.
+            trade cost vary from product to product.
+            trade cost is usually about 170% 
+            if tariffs go up, the company would register itself in your country and start producing within to avoid tariffs.
+            in trade there are movement of goods, capital and people and companies choose one of these depending on the circumstances.
+        tranportation costs fall over time.
+        during 19th century tariffs were really high, now they are smaller.
+
+    the shipping container has been the big breakthrough. The cargo container is also stardardised for cranes etc to work easily with standardization. It helps in loading and unloading, otherwise it was done by men, that did cost a lot of money. Now a days port doesn't have much men there. It increased trade by 730% , this is an amazing technology.
+
+    trade could destabilize the prices within the country and people within the country can lose jobs, thats why tariff laws are chosen accordingly.
+
+    tariffs increase prices.
+    if you import high taxes on imports that country would impose high taxes on your exports.
+    freer trade is associated with high economic growth.
+    tariffs could be for government revenue than for other things within country.
+
+    why are there tariffs:
+        overall tariffs fall over time.
+        worker protection 
+        foreign policy 
+        tariffs would be high on imports if the supply is inelastic.
+    
+    trade increase demand as prices go down at world scale.
+    tariffs raise the world price.
+    because of tarrifs, domestic comsumption falls and domestic production increases and both decrease the welfare.
+    government policies can be highly irrational for a economist.
+    tariffs vs quotas: both used to protect the domestic industries by artificially raising the prices in the domestic market. Quotas restrict the quantity of a good imported from anotehr country. Tariffs are a charge levied on teh value of goods imported from another country. Tariffs generate revenue for improting country's treasury, but the value of quota aka quata rent, goes to the foreingn exporters whoa re aboel to sell goods at higher prices. In both cases the domestic consumers of the importing country pay the costs of tariffs and quata rents. Tariffs are collected by a customs authorites as goods enter a country.
+
+    WTO: world trade organisation
+         oversees trade agreements that countries part of WTO sign.
+         Forum for negotiating settling and enforcing trade disputes.
+         It is kind of court and you can be fined.
+         eg if europe gives subsidies to european airlines in contract to boeing which is american airline.
+         155 members.
+         based in geneva, switzerland.
+         they might ask to lower the tariffs.
+         TRIPS is part of it that looks for Intellectual properties.
+         They want Non discrimination, transparency.
+         process takes 5 years to join.
+         The goal is to make trade as free as possible.
+         The goal is to increase trade.
+         Tariffs happen to be biggest barrier for trade.
+         Does WTO even make a difference? apparently free trade is happening closer anyway.
+
+    The Green Revolution:
+        many people are fed because of it.
+        it means increment in agriculture.
+        by the use of innovations and science.
+        using mechanised vehicles, fertilizers,etc 
+        and allow industries to take care of food prodution.
+        And it resulted.
+        it resulted in higer yields, about 4 times.
+
+    Multinational corporations: MNEs 
+        when a company sets up factories and retail outlets in different countries.
+        Foreign direct investment: putting a plant in different countries.
+
+        raises wages, productivity, in the country they operate in and they spread useful products around the world.
+
+        you can have single factory and then you export, or if trade costs are high you can setup factories at other places. This way you avoid tariffs.
+
+        setting plant somewhere else: horizontal FDI 
+        vertical: you build each part of your product from a place where it is cheap to build and assemble somewhere. eg apple manufctures parts from different countries and assembles in china.
+        as china has cheap labor. r&d where skilled labor is cheap, production where less skilled labor is cheap.
+        veritcal MNE"s growing faster than horizantal.
+
+        gains of multinationals:
+            higher wages.
+            infrastructure improvement.
+            spread skills.
+
+    two myths about multinational:
+        their market capital is more than that of country, they are bigger than countries gdp's. Don't confuse stocks and flows, GdP is flow each year. capitalization is a stock, look at the sales to compare with gdp.
+        exploitation in poor countries: of labor, paying small amount. But they get to have the job. Singapore is one that was poor and allowed multinationals and now they are rich.
+        Haiti is place where foreign investors went away and now they are poorer.
+
+    To means beurocratic rules and nepotism results in lower productivity in firms.
+    
+    industrial cluster: multiple factories/industries in a small place.
+        eg hollywood, silicon valley etc 
+        usually first firm enters eg california is good for filming all year around, but it could also be random.
+        A second firm sees that by locating near the first firm, it can take advantage of specialized labor, supplies, shippers, and ready made infrastruture so a second firm enters at same location.
+        and so on.
+        eventually we get a cluster.
+        cluster becomes the lowest place for cost.
+        costs fall first in clusters.
+
+    similar countries tend to trade more.
+    when a country produces something in abundance, they export the surplus.
+
+    intra firm trade:
+        same firm trading goods across countries from its plants.
+        about 1/3rd of world trade is intrafirm trade.
+
+    intra industry trade:
+        exporting and importing same kind of good.
+        example importing ferrari and exporting tata.
+
+    supply chain:
+        old idea:
+            build supply chain within your country.
+            supply chain is the sequence of processes involved in production and distribution of goods.
+            it is hard to achieve.
+        now a days a country produces just a part.
+        those who try old idea usually fail.
+        
+
+

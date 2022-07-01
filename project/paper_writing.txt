@@ -1,0 +1,14 @@
+sections:
+    title/cover page, abstract,introduction, methodology, results, conclusion, references
+
+    in title or cover page, your study's title, It also needs your and any co-writers names and institutuional affiliations if any.
+                eg 
+                    The Effects of Food Insecurity on Schooling Performance
+                    Kayla Yang and Nicole Brighton
+                    University of California, Davis 
+    Abstract:
+        An abstract is a detailed summary of your study. It should include broad overview of the paper, your research question, the significance of your study, methods of research, and findings. Don't list cited works in the abstract.
+    
+    Introduction:
+        tells the reader what problem your study is attempting to solve.
+    
