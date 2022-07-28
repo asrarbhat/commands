@@ -6,6 +6,7 @@ JRE: java runtime environment,to run the program by user,it contains JVM and cla
 java 1.2 = java 2 product similarly for jdk 16.
 
 jdk contains compiler and runtime environment.
+google jdk download to downlaod it. It will install jdk, and it comes with compiler as well as runtime environment.
 
 editor: intellij,eclipse,netbeans.
 
@@ -51,7 +52,7 @@ introduction:
     " " for strings.
 
     System is a final class.
-        and out is a static field in it.
+        and out is a static field in it of type PrintStream.
     PrintStream is java.io.PrintStream
 
     final class System{
@@ -116,7 +117,7 @@ introduction:
 
             Date now=new Date(); //new allocates memory in heap.
 
-            now.getTime()
+            now.getTime() //10 digit "long" time.
 
         in java we have 8 primitive types.
 
@@ -158,7 +159,7 @@ introduction:
             Arrays.toString(number)   => overloaded method for all kinds of arrays.
         int[] numbers={1,2,3};
         numbers.length;
-
+        field <> attribute.
         Arrays.sort(number); it is an inplace sort.
             sort is also overloaded.
         
@@ -180,7 +181,7 @@ introduction:
         integer division gives integer.
 
         x++,x--,++x,--x
-        augumented/comound operator
+        augumented/compound operator
             x+=2
         implicit casting byte>short>int>long>float>double
             to more expressive it is done implicitly.
@@ -218,7 +219,7 @@ introduction:
         .nextInt()
         to read a character next().charAt(0);
         .nextLine().trim() is cool.
-    
+    Abstract class: can't create objects.
     Math.pow(a,b)
     don't use magic numbers in your code,use final variables.
 
@@ -233,7 +234,7 @@ introduction:
             left to right evaluation and short circuiting.
         ||,!
     
-    variable names hasDegree,isEligible/
+    variable names hasDegree,isEligible
 
     if (boolean expression){
 
@@ -345,7 +346,9 @@ introduction:
         you get a .jar file.
 
         to run a jar file 
-            java -jar abc.jar
+            java -jar abc.
+        
+        {} is called code block.
         
 ---------------------------------------------------------------------------------------------------------
 
@@ -365,8 +368,8 @@ OOP:
 
     problem solving:
         process of defining a problem,identifying and comparing different solutions,and picking one that best solves that problem with respect to context and contraints.
-    we choose programming paradigm based on text.
-    oops for graphical interfaces etc.
+    we choose programming paradigm based on cotext.
+    oops for graphical interfaces etc. Functional is good for reliability.
     we can use multiple paradigms in a single project.
 
     benefits:
@@ -407,7 +410,7 @@ OOP:
         all objects are set to null by default,gives rise to NUllPointerException,doing things to null object hence always intitiaze reference types.
 
         primitive types are stored in stack and reference types in heap.
-        the value of a reference type is an address in heap.
+        the value of a reference type in stack is an address in heap.
 
         oop is a way of thinking,not just fields methods and classes.
 
@@ -417,15 +420,17 @@ OOP:
 
         unused objects by garbage collector.
 
-        procedural programming is using function call and doing things as your alogrithm says.
+        procedural programming is using function call and doing things as your alogrithm says. Main method would be very bloat. And it is not OOP.
+        sphagetti code: code where everything is linked to everything else.
+        you can copy class from one project and use it somewhere else in another project.
 
         encapsulation:
             bundle the data and methods taht operate on the data in a single unit called class.
             we just want related things together and things become easy to keep track of.
 
-        write as independent code as possible.
+        write as independent code/class as possible.
 
-        try to have methods no or very less parameters and provide data via constructor.
+        try to have methods with no or very less parameters and provide data via constructor.
         methods in Main were static as there is no object there.
         obj.salary=20 works
 
@@ -439,7 +444,7 @@ OOP:
         sphetti code: everything is connected to everything else and it is messy.
 
         can 
-                throw new IllegalArgumentException("salary cannot be zero");
+                throw new IllegalArgumentException("salary cannot be zero"); //in validator of field
 
         make fields private.
 
@@ -478,13 +483,13 @@ OOP:
         constructor:
             method that puts objects in initial valid state.
             which is minimal requirement.
-            a special method that is called when  we careate a new object.
+            a special method that is called when  we create a new object.
 
             java automatically creates constructor puts all to default called default constructor.
 
             public class Employee{
                 private int a;
-                public Employee(int b){ //java creates this automatically if you don't and this is what you call after new.it has no return type.
+                public Employee(int b){ //java creates this automatically if you don't and this is what you call after new.it has no return type. This time default constructor is not called.
                     b=a;//not recomended,call b=setA(b) to set and do validation etc.
                 }
             }
@@ -495,7 +500,7 @@ OOP:
             not a nice practice to use method overloading
             constructor overloading also not recomended.use defualt arguments instead.
 
-            calling overloaded method of same name this(a,b,c) only for constructor this way.
+            calling overloaded method of same name this(a,b,c) only for constructor this way, as there is no other way to call the constructor.
 
             overloading makes sense if you are doing to two integers and then overloading for two doubles.
 
@@ -540,6 +545,7 @@ OOP:
     in procedural programming we just have a bunch of funtions calling each other.
 
     each class should have one kind of responsibilies.
+    you have to import dependencies in each class individually.
 
     the great thing about static method is that you don't need to create objects before using them and it is nice.
 
@@ -551,7 +557,7 @@ OOP:
     inheritance: third principle of oop
     -----------------------------------
 
-    to reuse code and have.
+    to reuse code and have common behaviour in one place.
     there is baseclass/parent/parent class,sub/child.
     put all common code in one super class.
     eg public class UIcontrol{
@@ -618,7 +624,7 @@ OOP:
         upcasting is automatic,hence can be given as input.
 
         for downcasting:
-            var t= (Textbox) control;
+            var t= (Textbox) control; (control is a UIControl object)
             now you can use Textbox methods as well.
         parent is not necessarily a child,hence downcasting would give error if here control was not Textbox that was casted into UIcontrol earlier.
 
@@ -677,7 +683,7 @@ OOP:
         String class is final as String is immutable.
     
     deep inheritance not recomended,it causes coupling.
-    java has no multiple inheritance as diamond problem,ambiguity,which one to choose of fields and methods.
+    java has no multiple inheritance as diamond problem,ambiguity,coupling,which one to choose of fields and methods.
         YAGNI : you aren't gonna need it.
 
     INTERFACES:
@@ -762,12 +768,13 @@ OOP:
         or just put the dependency as input to a method so we don't use it anywhere else hence rest of the code is independent,called method injection,where the parameter is interface type not class type.
 
         divide your inteface into small intefaes foucsing on single capability.
-        it is called inteface segregation principle.
-
+        it is called inteface segregation principle. Each interface in different file. One interface can extend another. It can extend multiple interfaces.
+        
         constructor injection is the best way,as it exposes all dependency.
 
         the coupling with interfaces is small and limited to interfaces.
 
+        from java 8.
         you can have fields in interface,they are static,and public and cannot cannot change hence final,don't use them.could be used to have magic numbers in one place.but still don't use them.
 
         interfaces are just contracts and why should other classes even know of such constants as the classes uses the interface will be aware of its existence and it doesn't make sense.
@@ -817,12 +824,12 @@ OOP:
         
 
 course 3:
-----------
+------------------------------------------------------------------------------------------------------
     concurrency:
     -------------
     Thread class in java.lang package.
     sout(Thread.activeCount()) it is a static method.
-        one normal and one garbage collection etc.
+        one normal and one garbage collection.
         sout(Runtime.getRuntime().availableProcessors())
 
         Thread t1=new Thread()
@@ -845,7 +852,7 @@ course 3:
         you can create thousands of threads in a loop.
 
         joining a thread.
-        t2.join() wait for t2 to complete.like downloading a file and then waiting for it to complete then start scanning it with next thread.
+        t2.join() wait for t2 to complete.like downloading a file and then waiting for it to complete then start scanning it with next thread. put this in try catch also.
         if you use Thread.sleep in main thread and it is UI then UI will freeze so be careful there.
 
 
@@ -857,14 +864,14 @@ course 3:
         
         concurrency issues:
             shared resources.
-            like shared data,called race condition.
+            like shared data,called race condition: multiple threads racing to do modify a resource. sometimes two modify but only once is done. solved by atomic code.
             or if one modifes and another doesn't see that is called visibility issue,different threads get different view.
             we should write thread safe code.
         
         the class with run can have constructor etc as well or any other methods as well.
         even with join you have to handle InterruptedException. as it is as good as sleep.
 
-        you should create a list of threads and and add to them and you can use join for any of them later.
+        you should create a list of threads and and add to them and you can use join for any of them later. List<Thread> threads = new ArrayList<>();
 
         stratagies to write thread-safe code.
             not sharing data: confinement.
@@ -880,26 +887,27 @@ course 3:
         
         confinement:
             like creating an array for input to each thread and each thread modifies the given element for them in array and at the end we combine the result accordingly.
+            you create objects of runnable class in a list so you can access results stored in that object later.
         locks:
             import java.util.concurrent.locks.Lock;
             private Lock l= new ReentrantLock();  Lock is an interface.
             before critical section
             l.lock();
                 CRITICAL CODE     
-            l.unlock(); //this should be in finally section if it can throw an exception.
+            l.unlock(); //this should be in finally section if it can throw an exception. as otherwise things would be locked, and even though it is private, all threads of this class are bound to it.
 
             the synchronized keyword:
                 no need of locks.
 
                 instead a method with critical section
-                synchronized(this){  "this" here is called a monitor
+                synchronized(this){  "this" here is called a monitor object
                     critical section
                 }
                 for all objects of that class only one thread will execute that code.
-                passing this is a bad practise here,as monitor object is associated with this then if you can using another monitor as this as monitor object again then you cannot even enter that code.as synchronized would associate lock with an object,which you want to be modifed carefully.causes unnecessary waits.
+                passing this is a bad practise here,as monitor object is associated with this then if you are using another monitor as this as monitor object again then you cannot even enter that code by another thread while one is running.as synchronized would associate lock with an object,which you want to be modifed carefully.causes unnecessary waits.
 
                 hence use 
-                synchronized(total){ here you can create new Object as total then put any critical code inside even if you don't use total ever,it is kinda naming critcal sections.
+                synchronized(total){ here you create new Object as total then put any critical code inside even if you don't use total ever,it is kinda naming critcal sections. you just create a object by the name "total" as private so lock is associated with it.
                     critical code 
                 }
 
@@ -907,7 +915,7 @@ course 3:
 
                 }
                 this is as good as using synchronized(this)
-                which is not the good practise.
+                which is not the good practise. now this whole method is synchronized.
 
 
         the volatile keyword:
@@ -919,7 +927,7 @@ course 3:
             every object has wait and notify. inherited from Object class
             some variable v
             v.wait(); current threads goes to sleep until other thread changes v.
-            wait until its value changes or some thread changes it,handle uninterrrupedException here as well.and have to call it in synchronized block,where the monitor is same block.
+            wait until its value changes or some thread changes it,handle uninterrrupedException here as well.and have to call it in synchronized block,where the monitor is same object that you use wait on.
             v.notifyAll() after changing.
                 in synchronized block
                 or just v.notify() if only one thread waiting.
@@ -949,7 +957,7 @@ course 3:
             Collection<Integer> collection=new ArrayList<>();
                                         = Collections.synchronizedCollection(new ArrayList<>());
                                         now all the methods have synchronization code.
-                                        even method is synchronized now.
+                                    
         
             they use locks.
         
@@ -970,7 +978,7 @@ course 3:
 
         functional interface:
             an interface with single abstract method.
-            can have default methods though/with implementation ones.
+            can have default methods though/with implementation ones.//bad practise.
 
         package xyz;
         public interface Printer{
@@ -999,6 +1007,7 @@ course 3:
                     sout("hello");
                 }
             })
+            //greet takes an object of type Printer
             here now we created a class with no name, it is called anonymous inner class.
         
         java 8 gives us lambda expressions as better alternative.
@@ -1020,10 +1029,10 @@ course 3:
 
             Printer printer=message -> sout("hi");
 
-            lambda expressions are objects used to represent anonymous classes.
+            lambda expressions are objects used to represent anonymous functions.
 
-            you can access static fields in the inner lambda expressions directly.
-            and you can even access instance methods.
+            you can access static fields of class in the inner lambda expressions directly.
+            and you can even access instance methods in enclosing method.
 
             this in lambda expression refers to enclosing object,where as in anonymous classes it refers to the anonymous class itself.
 
@@ -1082,7 +1091,7 @@ course 3:
                         Consumer<String> print=item->sout(item);
                         Consumer<String> printUpperCase=item->sout(item.upper())
 
-                        list.forEach(print.andThen(printUpperCase)) it calls second consumer on item not its output as there is none of its output.
+                        list.forEach(print.andThen(printUpperCase)) it calls second consumer on item not its output as there is none of its output. you get aAbBcC as printed.
                         andThen is a default method in consumer interface.
                         you can use:
                             print.andThen(printUpperCase).andThen(print) so on and so forth.
@@ -1142,6 +1151,7 @@ course 3:
                 
 
                 in java functional interfaces can be used to do functional programming.
+                                                                                   
     Excepiton Handling:
         what are exceptions:
             NUllPointerException is a class in java.lang
@@ -1168,6 +1178,7 @@ course 3:
 
             var reader=new FileReader("abc.txt")
                 throws fileNotFoundException.
+                you have to put it in try except, as compiler wouldn't let you get away without handling the potential exception.
             
             unchecked Excepitons or runtime exceptions,these occur during run time, like passing Null as an arugment,these are programming errors. these should be prevented from happening in the first place with good programming pracitses and a lot of testing and automated testing.
 
@@ -1184,8 +1195,8 @@ course 3:
             
 
             Hierarchy of Exception classes in java:
-                    at top Throwable class with defines common characteristics of all Exceptions like error message in stacktrace.
-
+                    at top below Object class is Throwable class with defines common characteristics of all Exceptions like error message in stacktrace.
+ 
                     below it are two classes  Exception  and Error 
                     Error and all its subclasses represent errors that are external to our application.
                         like out of memory 
@@ -1224,7 +1235,7 @@ course 3:
                     the order of the catch blocks matters,as if it caught the exception already,put more specific exceptions at the top.
                 
                 combining exceptions
-                    catch (IOException | ParseException e){
+                    catch (IOException | ParseException e){//eg when different lines in try block can give different exceptions.
 
                     }
             
@@ -1238,6 +1249,7 @@ course 3:
                 finally{
                     release resources,databases,network etc. but it cannot read what is is try as try has local scope so declare variable before. if needed set it to null. can use if to check if the variable is null. you might need to even handle file closing.
                     finally is always executed,if exceptions occur or not.
+                    even closing files can throw an exception.
                 }
 
             better way of releasing external resources:
@@ -1247,7 +1259,7 @@ course 3:
                     this is called try with resource statment
                     no need to close resources explicitly,the java compiler would transform it into above type.and  add finally block.
 
-                    for this to work the this class should implement AutoClosable interface.
+                    for this to work the theses classes like reader here, should implement AutoClosable interface.
                 }
                 you can create multiple objects like
                     try(
@@ -1279,8 +1291,9 @@ course 3:
                     }
                 }
                 now java compiler forces user to put it in a try catch block.
+                without throws compiler won't force caller fo this method to handle, and if the exception is unhandled it won't compile without using throws.
             
-            logging of error in real world applications is important.
+            logging of error in real world applications is important. in catch block you should log it first.
 
             if the code in catch gets executed,we are not telling the user the error happened.
             as if we just printed something in terminal from server side,and something should happen in client side as well.
@@ -1300,7 +1313,7 @@ course 3:
 
             
             custom exeception:
-                public class MyException extends Exception{
+                public class MyException extends Exception{ //extend Runtime for unchecked instead.
                     optionally takes a constructor
                     public MyException(String message){
                         super(message);
@@ -1356,8 +1369,8 @@ course 3:
         we can do it with Objects but it is not a good practise.
 
         so we have Generics.
-
-        public class GenericList<T> { here ti s a parameter for class,can use any letter T,E T is used as it stands for Template/Type E is for element.
+        generic is, us making code independent of type.
+        public class GenericList<T> { here t is a parameter for class,can use any letter T,E T is used as it stands for Template/Type E is for element.
             private t[] items= new T[10]; this gives error as it cannot instantiate T, as it does't know what type it is so we use.
             private T[] items=(T[]) new Object[10];
             private void add(T items){
@@ -1406,7 +1419,7 @@ course 3:
                 public int compareTo(User o){
                     < return -1 or negative 
                     == return 0
-                    > return 1 or positive 
+                    > return 1 or positive if current is greater than o.
                     to use u1.compareTo(u2)
                     
                     like 
@@ -1427,8 +1440,10 @@ course 3:
                 }
                 same for public class Key<U,V>{
 
+
                 }
-            
+            if a class implements comparable, you can directly use < > == on it.
+
             Generic classes and inheritance:
                  instructor is subclass of User,you can assign instructor to User or use inplace of it,but cannot pass GenericList<instructor> for GenericList<User> to solve it you need to copy one by one or use wildcards.
                  as GenericList of instructor is not a subtype of GenericList of User.as internally all use Objects.
@@ -1442,11 +1457,11 @@ course 3:
                     we can have multiple wildcard,we can assign results of that to an Object class object.
                     
                     we can restrict the wild card values.
-                        ? extends Number and now you can store these in Number variables in that class.
+                        ? extends Number and now you can store/read these in Number variables in that class.
                         but you cannot add to this list as you don't have access to the anonymous class created so you can use ? super Number here ? will be be now super class of Number hence we can add and cannot read.
                 }
 
-
+    Collections framework:
         used to deal with colletion of objects.
         
                     Iterable interface
@@ -1491,7 +1506,7 @@ course 3:
 
         eg.
          inside our GenericList,create another class 
-         private class ListIterator implements Iteraotr<T>{
+         private class ListIterator implements Iterator<T>{
              private GenericList list;
              private int index=0;
              public ListIterator(GenericList<T> list){
@@ -1554,7 +1569,7 @@ course 3:
 
         the Comparator interface.
             similar to Comparable inteface.
-            implements Comparator<classname>
+            classnameComparator implements Comparator<classname>
             public int compare(classname 01,classname 02){
                 
             }

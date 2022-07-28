@@ -2,7 +2,7 @@ MIT
 
 LECTURE 1:
     what is psychology and economics, or behavioural economics?
-        it is a field of academic research that studies the joint influences of psychologicla and economic factors on behaviour.
+        it is a field of academic research that studies the joint influences of psychological and economic factors on behaviour.
         it is an attempt to take insights from biology to make economic models more realistic, hence more prediticive so we can come up with better policies.
     
     old assumptions:
@@ -31,4 +31,6 @@ LECTURE 1:
     we just focus on important deviations.
 
     very often prices are the most important aspect of choice, morals etc also play a small part.
+    
+lecture 2:
     

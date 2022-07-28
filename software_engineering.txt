@@ -25,3 +25,7 @@
 - typically name of a use case is a verb.
 - use case diagram serves as a requirements specification.
 - 
+
+
+UDACITY: software Architecture and Design:
+    
