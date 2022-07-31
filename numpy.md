@@ -9,7 +9,7 @@
 - lists are 10x to 100x slower than numpy
 - arrays are homogenous.
 - hardware level support of numpy
-- numpy uses SIMD processor.
+- numpy uses SIMD processor and utilizes cache.
 - numpy is written in c
 - %% time is a magic command to record execution time.
 - one billion squares in 198 seconds.
@@ -67,11 +67,11 @@ arr=np.hstack([arr1,arr2])
 - arr.shape (3,) means those columns as there were multiple rows there shape would have two elements.
 - arr.dtype
 - arr.ndim
-- arr.size
-- arr.itemsize
+- arr.size  //no of elements
+- arr.itemsize  //bytes
 ## indexing
 - arr[2,3]
-- arr[2,2:4]
+- arr[2,2:4]=5   // start index: end index: step 
 - arr[:,:]
 - arr%2==0 we get a boolean array.
 - arr[arr%2==0] gives 1d array
@@ -85,6 +85,7 @@ arr=np.hstack([arr1,arr2])
 - np.zeros((4,5))
 - np.eye(4,5)
 - np.ones((3,4))
+- np.full((2,2),99) np.full_like(a,99)
 - np.random.seed(42)
 - np.random.random((4,5))
 - np.random.randn(2,3) mean 0 std 1 normal distribution.
@@ -119,6 +120,7 @@ np.linalg.inv(arr)
 np.linalg.matrix_power(A,3)
 np.linalg.eigh(arr)
 np.linalg.solve(a,b)
+np.linalg.matmul(a,b)
 ```
 ## file system
 - genfromtxt works even if some values are missing.

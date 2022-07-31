@@ -32,5 +32,23 @@ LECTURE 1:
 
     very often prices are the most important aspect of choice, morals etc also play a small part.
     
-lecture 2:
-    
+lecture 2: Overview II 
+    How do economists think about human behaviour?
+        1. goal driven individual behaviour: constrained optimization.
+            - utility function: what makes people happy.
+        risk averse: avoiding risk.
+        2. Beliefs: what do people believe about their environment?
+        3. Choice/Decision making: how do people use the above to make decisions?
+
+    psychological insights can improve our understanding of each of these components.
+
+    social preferences:
+        how do people think about themselves and others.
+        Much of classical economics assumes that people are selfish.
+        charity is like 2% of US GDP, hence people do care about others.
+        people can do stuff to feel good about themselves.
+        you could do things for to maintain a social image, that you care about what other people think of you.
+        or you might do stuff because, because doing it is necessary to survive.
+        you might do stuff just to get something in retain, perhaps a favour.
+        or you just don't like inequality in society.
+        
